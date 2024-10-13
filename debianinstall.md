@@ -15,11 +15,10 @@ Click this link [Installation media for Mac M1-M3](https://cdimage.debian.org/de
   
 -----
 #### The settings for a new virtual machine in VirtualBox - remember to check Skip Unattended Installation  
-![image](https://github.com/user-attachments/assets/483bba8a-56c4-4a14-9148-ecd9b1ab847d)  
 
-![image](https://github.com/user-attachments/assets/8ce92b28-d147-41fd-8a12-a333161d2812) 
+<img src="https://github.com/user-attachments/assets/483bba8a-56c4-4a14-9148-ecd9b1ab847d" width="50%" />
 
-![image](https://github.com/user-attachments/assets/d6278e57-5c3d-45ca-80fa-f2f437f15622)
+<img src="https://github.com/user-attachments/assets/8ce92b28-d147-41fd-8a12-a333161d2812" width="50%" />
 
 <img src="https://github.com/user-attachments/assets/d6278e57-5c3d-45ca-80fa-f2f437f15622" width="50%" />
 

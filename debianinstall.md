@@ -21,4 +21,6 @@ Click this link [Installation media for Mac M1-M3](https://cdimage.debian.org/de
 
 ![image](https://github.com/user-attachments/assets/d6278e57-5c3d-45ca-80fa-f2f437f15622)
 
+<img src="https://github.com/user-attachments/assets/d6278e57-5c3d-45ca-80fa-f2f437f15622" width="50%" />
+
 

@@ -1,4 +1,7 @@
-### Here is an example if you want to change keyboard layout in server
+### Here is an example if you want to change the server's console keyboard layout  
+
+
+Note your server's hostname is probably different but the commands are applicable to your server too.
 * Issue first the following command:
 ````bash
 student@LE18SERVER:~$ sudo dpkg-reconfigure keyboard-configuration

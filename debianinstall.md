@@ -1,4 +1,4 @@
-## Debian installation 
+# Debian server installation 
 ### Download the correct installation media (ISO-file)
 * Windows and Intel based Mac users  
 Click the Download button on [Debian site](https://www.debian.org/) 
@@ -26,6 +26,7 @@ Click this link [Installation media for Mac M1-M3](https://cdimage.debian.org/de
 <img src="https://github.com/user-attachments/assets/d6278e57-5c3d-45ca-80fa-f2f437f15622" width="50%" />
 <br><br>
 
-## Post-installation configuration 
+# Post-installation configuration 
 This can be done later in our online session.
+
 

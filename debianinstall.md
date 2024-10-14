@@ -48,7 +48,7 @@ We install UFW that sets up a firewall. UFW simplifies the process by managing i
 We want to limit access to our openssh server to users in our local network.    
 `sudo ufw allow from 192.168.0.0/16 to any port 22 proto tcp`   
 
-We install later apache2 web server and to allow local user to connect to it we add the rule below.  
+We install later apache2 web server and to allow local users to connect to it we add the rule below.  
 `sudo ufw allow from 192.168.0.0/16 to any port 80 proto tcp`  
 
 ### Web server  

@@ -1,7 +1,9 @@
 ### Here is an example if you want to change the server's console keyboard layout  
 
 
-Note: **When you ssh to your server the keyboard layout is automatically correct.** By this instruction you can change the keyboard layout that is used in the console connection.  
+Note: When you SSH into your server, the keyboard layout is automatically set correctly. However, this instruction will guide you on how to change the keyboard layout used in the console connection.
+
+To change the keyboard layout in the console, you can use the dpkg-reconfigure command.  
 
 * Issue first the following command:
 ````bash

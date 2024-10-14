@@ -37,6 +37,7 @@ It is best practice not to log in as root to avoid inadvertently issuing command
 * Add student to group sudo: `usermod -a -G sudo student`
 * Add student to group adm: `usermod -a -G adm student`
 * log out  <br>
+    
 **From now on  you have no need to log in as root when you want issue system managament commands.**
 
 

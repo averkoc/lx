@@ -1,7 +1,7 @@
 ### Here is an example if you want to change the server's console keyboard layout  
 
 
-Note: When you SSH into your server, the keyboard layout is automatically set correctly. However, this instruction will guide you on how to change the keyboard layout used in the console connection.
+Note: When you SSH into your server, the keyboard layout is automatically set correctly. However, this instruction will guide you on how to change the keyboard layout used in the console connection. Console is a terminal that is directly connected to a server - the window you get when starting a VM. Normally you don't use it - instead you connect via ssh to the server.
 
 To change the keyboard layout in the console, you can use the dpkg-reconfigure command.  
 

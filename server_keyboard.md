@@ -28,5 +28,5 @@ sudo setupcon
 ````
 * reboot  
 ````bash
-student@LE18SERVER:~$ sudo reboot
+student@debian:~$ sudo reboot
 ````

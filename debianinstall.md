@@ -14,7 +14,7 @@ Click this link [Installation media for Mac M1-M3](https://cdimage.debian.org/de
 
   
 -----
-#### The settings for a new virtual machine in VirtualBox.  
+#### The settings for a new virtual machine in VirtualBox (Windows users).  
 <mark>Remember to check Skip Unattended Installation!</mark>  
 
 <img src="https://github.com/user-attachments/assets/483bba8a-56c4-4a14-9148-ecd9b1ab847d" width="50%" />  

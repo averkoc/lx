@@ -38,7 +38,7 @@ It is best practice not to log in as root to avoid inadvertently issuing command
 * Add student to group adm: `usermod -a -G adm student`
 * log out  <br>
     
-**From now on  you have no need to log in as root when you want issue system managament commands.**
+**From now on  you have no need to log in as root when you want to issue system managament commands.**
 
 ### UFW firewall frontend    
 We install UFW that sets up a firewall. UFW simplifies the process by managing iptables, which is the underlying firewall system. 

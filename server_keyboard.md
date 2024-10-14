@@ -1,7 +1,8 @@
 ### Here is an example if you want to change the server's console keyboard layout  
 
 
-Note your server's hostname is probably different but the commands are applicable to your server too.
+Note: **When you ssh to your server the keyboard layout is automatically correct.** By this instruction you can change the keyboard layout that is used in the console connection.  
+
 * Issue first the following command:
 ````bash
 student@debian:~$ sudo dpkg-reconfigure keyboard-configuration
@@ -20,8 +21,8 @@ student@debian:~$ sudo dpkg-reconfigure keyboard-configuration
 <img src="https://user-images.githubusercontent.com/8930773/215146162-35e99b62-9e92-4287-92c9-057d96183509.png" width="800">
 
 * If you want to apply before rebooting:
-````´bash
-setupcon
+````bash
+sudo setupcon
 ````
 * reboot  
 ````bash

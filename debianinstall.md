@@ -30,8 +30,13 @@ Click this link [Installation media for Mac M1-M3](https://cdimage.debian.org/de
 This can be done later in our online session.  
 ## Overview 
 ### The sudo program
-It is best practice not to log in as root to avoid inadvertently issuing commands that modify the system. Instead we want to grant user student to issue single commands as a user root. To make this possible we install a program called sudo. The sudo program has a special setting called the setuid bit. This setting allows the program to run with the permissions of the root user, even if a regular user starts it. This way, when you use sudo, you can perform tasks that require higher privileges. When a user starts the sudo program, it checks a specific file to determine which commands the user is allowed to run.
+It is best practice not to log in as root to avoid inadvertently issuing commands that modify the system. Instead we want to grant user student rights to issue single commands as a user root. To make this possible we install a program called sudo. The sudo program has a special setting called the setuid bit. This setting allows the program to run with the permissions of the root user, even if a regular user starts it. This way, when you use sudo, you can perform tasks that require higher privileges. When a user starts the sudo program, it checks a specific file to determine which commands the user is allowed to run.
 
-
+* Log in as a root
+* Issue command: `apt install sudo`
+* Add student to group sudo: `usermod -a -G sudo student`
+* Add student to group adm: `usermod -a -G adm student`
+* log out  
+**From now on  you have no need to log in as root when you want issue system managament commands.**
 
 

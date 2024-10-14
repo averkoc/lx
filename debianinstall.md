@@ -46,18 +46,18 @@ We install UFW that sets up a firewall. UFW simplifies the process by managing i
 * Issue command: `sudo apt install ufw`
 
 We want to limit access to our openssh server to users in our local network.    
-`sudo ufw allow from 192.168.0.0/16 to any port 22 proto tcp`   
+* `sudo ufw allow from 192.168.0.0/16 to any port 22 proto tcp`   
 
 We install later apache2 web server and to allow local users to connect to it we add the rule below.  
-`sudo ufw allow from 192.168.0.0/16 to any port 80 proto tcp`  
+* `sudo ufw allow from 192.168.0.0/16 to any port 80 proto tcp`  
 
 ### Web server  
 In our first workshop we need web server. We install apache2 web server application.  
-`sudo apt install apache2` 
+* `sudo apt install apache2` 
 
 ### Logging system  
 We add a rsyslog logging system in addition to journald that already exists in our server.  
-`sudo apt install rsyslog`  
+* `sudo apt install rsyslog`  
 
 ### Intrusion detection/preventions software (fail2ban)  
 This we install and configure later.

@@ -4,7 +4,7 @@
 Note your server's hostname is probably different but the commands are applicable to your server too.
 * Issue first the following command:
 ````bash
-student@LE18SERVER:~$ sudo dpkg-reconfigure keyboard-configuration
+student@debian:~$ sudo dpkg-reconfigure keyboard-configuration
 ````  
 * Select your correct alternatives in the menus:
 

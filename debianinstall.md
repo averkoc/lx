@@ -10,7 +10,7 @@ Click this link [Installation media for Mac M1-M3](https://cdimage.debian.org/de
 * settings: 2GB memory, 20GB Disk, 2 CPUs
 * Select the downloaded ISO-file to VMs CD-station
 * Start the VM
-* Follow the installation instructions video. **I use the UTM app in the video** and to help students with VirtualBox I put the sceenclips below to help them set correct inital settings for the new VM before starting it. The only difference in the  installation process between UTM and VirtualBox is the VM creation.
+* Follow the installation instructions video. **I use the Mac UTM app in the video** and to help students with VirtualBox I put the sceenclips below to help them set correct inital settings for the new VM before starting it. The only difference in the  installation process between UTM and VirtualBox is the VM creation.
 
   
 -----

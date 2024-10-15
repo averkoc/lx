@@ -63,7 +63,7 @@ We add a rsyslog logging system in addition to journald that already exists in o
 This we install and configure later.
 
 ### Bash configuration files  (.bashrc, .bash_aliases)
-When a user logs in the commands in certain files in user's home directory are automatically executed. By customizing these files the user can tailor his/her working enviroment e.g. by defining user friendly alias names for long commands etc.
+When you log in, Bash automatically executes commands in certain files located in your home directory, such as .bashrc, .bash_aliases, .profile, and .bash_login. By customizing these files, you can personalize your environment, such as by defining aliases for long commands
 
 
 

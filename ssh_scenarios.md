@@ -18,7 +18,7 @@ you connect first time to the server. If you answer yes, the fingerprint will be
 the question is not asked in the logins in the future.
 
 ## Permission denied (publickey)
-Typically production servers don't allow password based authentication. My Practice exam Linux server in Azure approves password based authentication only for a limited time during an exam so that students can copy there public key to server into their /home/.ssh/authorized_keys using ssh-copy-id in their own computers. If you have not copied the public key and try to connect to server when password based authentication is disabled the following happens.  
+Typically production servers don't allow password based authentication. I allow password based authentication for a short duration on my practice exam Linux server in Azure during the exam. Durint that period students shoud copy their public key to the server using ssh-copy-id in their own computers. If you have not copied the public key and try to connect to server when password based authentication is disabled the following happens.  
 
 ````bash
 alpine:~$ ssh student@debian

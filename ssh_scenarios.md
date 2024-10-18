@@ -65,7 +65,14 @@ If the change is legitimate, you need to remove the old host key from your known
 **In Linux** run the following command to remove the old host key:
 `ssh-keygen -R debian`
 
-After removing the old key, try connecting to the server again and the situation is like your first connection to server:
-ssh student@debian
+After removing the old key, try connecting to the server again and the situation is like your first connection to server:  
+
+````bash
+alpine:~$ ssh student@debian
+The authenticity of host 'debian (192.168.1.7)' can't be established.
+ED25519 key fingerprint is SHA256:WLMyeSME9J6w0eeYBrvFzKCTVxX5DQWnQdquu13JnSY.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+````
 
 

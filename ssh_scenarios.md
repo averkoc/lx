@@ -13,7 +13,8 @@ ED25519 key fingerprint is SHA256:WLMyeSME9J6w0eeYBrvFzKCTVxX5DQWnQdquu13JnSY.
 This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ````
-This prompt indicates that the server’s fingerprint is not yet in your ~/.ssh/known_hosts file. This is normal when connecting to a server for the first time. If you type yes, the fingerprint will be stored in your ~/.ssh/known_hosts file, and you won’t be asked this question again for future logins.
+This prompt indicates that the server’s fingerprint is not yet in your ~/.ssh/known_hosts file. This is normal when connecting to a server for the first time. If you type yes, the fingerprint will be stored in your ~/.ssh/known_hosts file, and you won’t be asked this question again for future logins.  
+Note: The same prompt will appear even if you have configured key-based authentication and used ssh-copy-id to copy your public key to the server, but have no prior connection to the server. This is because the server’s fingerprint still needs to be verified and stored in your ~/.ssh/known_hosts file.
 
 ## You have not copied your public key to a server and password based authentication is not allowed.  
 **Permission denied (publickey)**  

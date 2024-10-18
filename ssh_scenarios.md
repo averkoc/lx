@@ -14,7 +14,7 @@ This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ````
 This prompt indicates that the server’s fingerprint is not yet in your ~/.ssh/known_hosts file. This is normal when connecting to a server for the first time. If you type yes, the fingerprint will be stored in your ~/.ssh/known_hosts file, and you won’t be asked this question again for future logins.  
-Note: The same prompt will appear also when using ssh-copy-id in situation where you have not had any prior logins to the server.
+Note: The same prompt will appear also when using ssh-copy-id in situation where you have not had any prior logins to the server. 
 
 ## You have not copied your public key to a server and password based authentication is not allowed.  
 **Permission denied (publickey)**  

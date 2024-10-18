@@ -42,4 +42,12 @@ Original contents retained as /home/student/.ssh/known_hosts.old
 alpine:~$ 
 
 ````
+ssh-copy-id not done
+
+````bash
+alpine:~$ ssh student@debian
+student@debian: Permission denied (publickey).
+alpine:~$
+````
+
 

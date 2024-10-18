@@ -3,9 +3,9 @@
 
 This guide covers various scenarios students may encounter when working with SSH key-based authentication.
 
-## Scenario 1: The First Connection ("Do You Trust")
+## Scenario 1: The First Connection (Message like -"The authenticity of host can't be established")
 
-When you connect with ssh to a server for the first time, you'll see a prompt like:
+When you connect first time with ssh client  to a server, your ssh clien gives a prompt like:
 ````bash
 alpine:~$ ssh student@debian
 The authenticity of host 'debian (192.168.1.7)' can't be established.

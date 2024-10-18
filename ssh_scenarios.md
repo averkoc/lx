@@ -20,8 +20,9 @@ the question is not asked in the logins in the future.
 ## You have not copied your public key to a server and password based authentication is not allowed.  
 **Permission denied (publickey)**  
 
-Typically production servers don't allow password based authentication. I allow password based authentication for a short duration on my practice exam Linux server in Azure during the exam. During that period students shoud copy their public key to the server using ssh-copy-id in their own computers. Even if you have created the key-pair in your computer but not copied the public key to the server and try to connect when password based authentication is disabled the following happens.  
+Typically, production servers do not permit password-based authentication for security reasons. However, during practice exam, I temporarily enable password-based authentication on my Linux server on Azure. This allows students to copy their public key to the server using ssh-copy-id from their own computers.
 
+It’s important to note that if you have generated an SSH key pair on your computer but have not copied the public key to the server, you will encounter the following kind of message when trying to connect to server: 
 ````bash
 alpine:~$ ssh student@debian
 student@debian: Permission denied (publickey).

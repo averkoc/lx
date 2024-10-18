@@ -3,7 +3,7 @@
 
 This guide covers various scenarios students may encounter when working with SSH key-based authentication.
 
-## Scenario 1: The First Connection (Message like -"The authenticity of host can't be established")
+## Your first connection to a server  
 
 When you connect first time with ssh client  to a server, your ssh clien gives a prompt like:
 ````bash

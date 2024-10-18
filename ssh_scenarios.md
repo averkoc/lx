@@ -1,7 +1,7 @@
 
-# SSH - session related scenarios
+# SSH -sessions related scenarios
 
-This guide covers various scenarios students may encounter when working with SSH key-based authentication.
+This guide covers various scenarios you may encounter when working with SSH authentication.
 
 ## Your first connection to a server  
 

@@ -61,7 +61,7 @@ In production environments contact your system administrator to verify if the ho
 
 **Remove the Old Host Key:**
 If the change is legitimate, you need to remove the old host key from your known_hosts file. You can do this manually or using a command.
-**In windows** you need to do this manually: Open the ~/.ssh/known_hosts file in a text editor and delete the line containing the old host key for the server. 
+**In windows** you need to do this manually: Open the \.ssh\known_hosts file in a text editor and delete the line containing the old host key for the server. 
 **In Linux** run the following command to remove the old host key:
 `ssh-keygen -R debian`
 

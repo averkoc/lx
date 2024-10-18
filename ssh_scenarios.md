@@ -30,7 +30,7 @@ alpine:~$
 ````
 
 
-## Remote host identification has changed
+## Remote host identification has changed  
 
 ````bash
 alpine:~$ ssh student@debian
@@ -50,13 +50,23 @@ Host key verification failed.
 alpine:~$
 ````
 
-````bash
-alpine:~$  ssh-keygen -R debian
-# Host debian found: line 1
-/home/student/.ssh/known_hosts updated.
-Original contents retained as /home/student/.ssh/known_hosts.old
-alpine:~$ 
 
-````
+
+When encountering the “Host key verification failed” message while trying to SSH into a remote server, follow these steps to resolve the issue:
+
+**Understand the Warning:**
+This message indicates that the host key for the server you’re trying to connect to has changed. This could be due to a legitimate change (like a server update) or a potential security threat (like a man-in-the-middle attack). In our course environment the reason for warning is typically server's IP change or hostname change.
+
+**Verify the Host Key:**
+In production environments contact your system administrator to verify if the host key change is expected. They can confirm if the server’s host key was updated for legitimate reasons.
+
+**Remove the Old Host Key:**
+If the change is legitimate, you need to remove the old host key from your known_hosts file. You can do this manually or using a command:
+**In windows** you need to do this manually: Open the ~/.ssh/known_hosts file in a text editor and delete the line containing the old host key for the server. 
+**In Linux** run the following command to remove the old host key:
+`ssh-keygen -R debian`
+
+After removing the old key, try connecting to the server again and the situation is like your first connection to server:
+ssh student@debian
 
 

@@ -5,7 +5,7 @@ This guide covers various scenarios you may encounter when working with SSH auth
 
 ## Your first connection to a server  
 
-When you connect first time with ssh client  to a server, your ssh client gives a prompt like:
+When you connect to a server using SSH for the first time, you might see a prompt like this:
 ````bash
 alpine:~$ ssh student@debian
 The authenticity of host 'debian (192.168.1.7)' can't be established.
@@ -13,9 +13,7 @@ ED25519 key fingerprint is SHA256:WLMyeSME9J6w0eeYBrvFzKCTVxX5DQWnQdquu13JnSY.
 This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ````
-The prompt means that the fingerprint can not yet be found  in your ./ssh/known_hosts file. That is a normal situation which happens when
-you connect first time to the server. If you answer yes, the fingerprint will be stored to your ./ssh/known_hosts file and 
-the question is not asked in the logins in the future.
+This prompt indicates that the server’s fingerprint is not yet in your ~/.ssh/known_hosts file. This is normal when connecting to a server for the first time. If you type yes, the fingerprint will be stored in your ~/.ssh/known_hosts file, and you won’t be asked this question again for future logins.
 
 ## You have not copied your public key to a server and password based authentication is not allowed.  
 **Permission denied (publickey)**  

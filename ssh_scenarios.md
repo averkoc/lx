@@ -47,20 +47,15 @@ Offending ED25519 key in /home/student/.ssh/known_hosts:1
 Host key for debian has changed and you have requested strict checking.
 Host key verification failed.
 alpine:~$
+````
 
+````bash
 alpine:~$  ssh-keygen -R debian
 # Host debian found: line 1
 /home/student/.ssh/known_hosts updated.
 Original contents retained as /home/student/.ssh/known_hosts.old
 alpine:~$ 
 
-````
-ssh-copy-id not done
-
-````bash
-alpine:~$ ssh student@debian
-student@debian: Permission denied (publickey).
-alpine:~$
 ````
 
 

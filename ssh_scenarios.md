@@ -5,7 +5,7 @@ This guide covers various scenarios students may encounter when working with SSH
 
 ## Your first connection to a server  
 
-When you connect first time with ssh client  to a server, your ssh clien gives a prompt like:
+When you connect first time with ssh client  to a server, your ssh client gives a prompt like:
 ````bash
 alpine:~$ ssh student@debian
 The authenticity of host 'debian (192.168.1.7)' can't be established.

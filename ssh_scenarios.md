@@ -26,7 +26,7 @@ alpine:~$
 ````
 Typically, production servers do not permit password-based authentication for security reasons. However, during practice exam, I temporarily enable password-based authentication for a short duration on my Linux server on Azure. This allows students to copy their public key to the server using ssh-copy-id from their own computers.
 
-It’s important to note that if you have generated an SSH key pair on your computer but have not copied the public key to the server, you will encounter the following kind of message when trying to connect to server that allows only key-based authentication: 
+It’s important to note that if you have generated an SSH key pair on your computer but have not copied the public key to the server, you will encounter the above kind of message when trying to connect to server that allows only key-based authentication: 
 
 
 ## Remote host identification has changed  

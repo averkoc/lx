@@ -3,21 +3,21 @@
 <details open>
   <summary>Commands</summary>
   <ul style="display: inline-flex; list-style: none; padding: 0;">
-    <li style="margin-right: 10px;"><a href="#List Directory Contents">`ls`</a></li>
-    <li style="margin-right: 10px;"><a href="#Make a Directory">`mkdir`</a></li>
-    <li style="margin-right: 10px;"><a href="#Remove a File">`rm`</a></li>
-    <li style="margin-right: 10px;"><a href="#Remove a Directory">`rmdir`</a> / <a href="#Remove a Directory">`rm -r`</a></li>
-    <li style="margin-right: 10px;"><a href="#Change to Another Directory">`cd`</a></li>
-    <li style="margin-right: 10px;"><a href="#Copy a File">`cp`</a></li>
-    <li style="margin-right: 10px;"><a href="#Move a File or Directory">`mv`</a></li>
-    <li style="margin-right: 10px;"><a href="#Modify File Permissions">`chmod`</a></li>
-    <li style="margin-right: 10px;"><a href="#Change File Ownership">`chown`</a></li>
-    <li style="margin-right: 10px;"><a href="#User and Group Management">User/Group</a></li>
-    <li style="margin-right: 10px;"><a href="#Show All Groups and Memberships">`/etc/group`</a></li>
-    <li style="margin-right: 10px;"><a href="#Locate a Command">`which`</a></li>
-    <li style="margin-right: 10px;"><a href="#Pattern Matching">`grep`</a></li>
-    <li style="margin-right: 10px;"><a href="#Find a File by Partial Name">`find`</a></li>
-    <li style="margin-right: 10px;"><a href="#Archiving - tar command">`tar`</a></li>
+    <li style="margin-right: 10px;"><a href="#List-Directory-Contents">`ls`</a></li>
+    <li style="margin-right: 10px;"><a href="#Make-a-Directory">`mkdir`</a></li>
+    <li style="margin-right: 10px;"><a href="#Remove-a-File">`rm`</a></li>
+    <li style="margin-right: 10px;"><a href="#Remove-a-Directory">`rmdir`</a> / <a href="#Remove-a-Directory">`rm -r`</a></li>
+    <li style="margin-right: 10px;"><a href="#Change-to-Another-Directory">`cd`</a></li>
+    <li style="margin-right: 10px;"><a href="#Copy-a-File">`cp`</a></li>
+    <li style="margin-right: 10px;"><a href="#Move-a-File-or-Directory">`mv`</a></li>
+    <li style="margin-right: 10px;"><a href="#Modify-File-Permissions">`chmod`</a></li>
+    <li style="margin-right: 10px;"><a href="#Change-File-Ownership">`chown`</a></li>
+    <li style="margin-right: 10px;"><a href="#User-and-Group-Management">User/Group</a></li>
+    <li style="margin-right: 10px;"><a href="#Show-All-Groups-and-Memberships">`/etc/group`</a></li>
+    <li style="margin-right: 10px;"><a href="#Locate-a-Command">`which`</a></li>
+    <li style="margin-right: 10px;"><a href="#Pattern-Matching">`grep`</a></li>
+    <li style="margin-right: 10px;"><a href="#Find-a-File-by-Partial-Name">`find`</a></li>
+    <li style="margin-right: 10px;"><a href="#Archiving---tar-command">`tar`</a></li>
   </ul>
 </details>
 ## Commands

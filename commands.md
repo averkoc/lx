@@ -50,9 +50,9 @@
     - Create a new group: `addgroup webmasters`
     - Add a user to a group: `gpasswd -a student2 webmasters`
     - Show user's group memberships: `id sakari` _#This doesn't require root privileges_
-    - Remove a user from a group: (command missing)
-    - Command: `gpasswd -d`
-    - Example: `gpasswd -d student2 webmasters`
+    - Remove a user from a group: 
+       - Command: `gpasswd -d`
+       - Example: `gpasswd -d student2 webmasters`
     - Change another user's password: `sudo passwd student2`
 
 2. **Show All Groups and Memberships**:

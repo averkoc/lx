@@ -1,5 +1,6 @@
 ## A bat-file to remove a key from known_hosts-file in Windows
-removekey.bat
+removekey.bat  
+The powershell command filters out a row/(rows) that contain the host key(s). Hostname or IP is given as an argument to this bat-file.
 ````bat
 @echo off
 if "%1"=="" (

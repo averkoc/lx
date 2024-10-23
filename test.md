@@ -20,6 +20,7 @@
     <li style="margin-right: 10px;"><a href="#Archiving---tar-command">`tar`</a></li>
   </ul>
 </details>
+
 ## Commands
 
 ### List Directory Contents

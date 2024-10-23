@@ -1,4 +1,4 @@
-## A bat-file to remove a key from known_hosts-file
+## A bat-file to remove a key from known_hosts-file in Windows
 removekey.bat
 ````bat
 @echo off

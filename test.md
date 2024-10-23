@@ -1,10 +1,25 @@
 ## Jump List
 
-- List Directory Contents | Make a Directory | Remove a File
-- Remove a Directory | Change to Another Directory | Copy a File
-- Move a File or Directory | Modify File Permissions | Change File Ownership
-- User and Group Management | Show All Groups and Memberships | Locate a Command
-- Pattern Matching | Find a File by Partial Name | Archiving - tar command
+<details open>
+  <summary>Commands</summary>
+  <ul style="display: inline-flex; list-style: none; padding: 0;">
+    <li style="margin-right: 10px;"><a href="#ls">`ls`</a></li>
+    <li style="margin-right: 10px;"><a href="#mkdir">`mkdir`</a></li>
+    <li style="margin-right: 10px;"><a href="#rm">`rm`</a></li>
+    <li style="margin-right: 10px;"><a href="#rmdir">`rmdir`</a> / <a href="#rm-r">`rm -r`</a></li>
+    <li style="margin-right: 10px;"><a href="#cd">`cd`</a></li>
+    <li style="margin-right: 10px;"><a href="#cp">`cp`</a></li>
+    <li style="margin-right: 10px;"><a href="#mv">`mv`</a></li>
+    <li style="margin-right: 10px;"><a href="#chmod">`chmod`</a></li>
+    <li style="margin-right: 10px;"><a href="#chown">`chown`</a></li>
+    <li style="margin-right: 10px;"><a href="#user-group">User/Group</a></li>
+    <li style="margin-right: 10px;"><a href="#cat-etc-group">`/etc/group`</a></li>
+    <li style="margin-right: 10px;"><a href="#which">`which`</a></li>
+    <li style="margin-right: 10px;"><a href="#grep">`grep`</a></li>
+    <li style="margin-right: 10px;"><a href="#find">`find`</a></li>
+    <li style="margin-right: 10px;"><a href="#tar">`tar`</a></li>
+  </ul>
+</details>
 
 ## Commands
 

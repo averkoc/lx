@@ -65,6 +65,7 @@
 ## User and Group Management
 - **Note**: Only root (or user with sudo rights) can issue these commands.
 - **Create a new user**: `adduser student2`
+- **Delete a user account and users home directory**: `userdel -r student2`
 - **Create a new group**: `addgroup webmasters`
 - **Add a user to a group**: `gpasswd -a user group`  e.g. `gpasswd -a student2 webmasters`  
  (also `usermod -a -G group user` e.g. `usermod -a -G webmasters student2`)  

@@ -70,7 +70,7 @@
  (also `usermod -a -G group user` e.g. `usermod -a -G webmasters student2`)  
 - **Show user's group memberships**: `id sakari` _#This doesn't require root privileges_
 - **Remove a user from a group**: `gpasswd -d user group` e.g. `gpasswd -d student2 webmasters`   
-(also 'usermod -r -G group user` e.g. `usermod -r -G webmasters student2`)  
+(also `usermod -r -G group user` e.g. `usermod -r -G webmasters student2`)  
   
 - **Change another user's password**: `sudo passwd student2`
 

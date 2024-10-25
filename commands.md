@@ -75,6 +75,7 @@
 
 ## Show All Groups and Memberships
 - **Command**: `cat /etc/group`
+- Users can check their group memberships by command `id`  
 
 ## Locate a Command
 - **Command**: `which`

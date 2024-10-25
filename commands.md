@@ -1,3 +1,19 @@
+# Table of Contents
+- List Directory Contents
+- Make a Directory
+- Remove a File
+- Remove a Directory
+- Change to Another Directory
+- Copy a File
+- Move a File or Directory
+- Modify File Permissions
+- Change File Ownership
+- User and Group Management
+- Show All Groups and Memberships
+- Locate a Command
+- Pattern Matching
+- Find a File by Partial Name
+- Archiving - tar command
 
 ## List Directory Contents
 - **Command**: `ls`

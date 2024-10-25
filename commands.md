@@ -1,5 +1,21 @@
 # Commands
 
+- [List Directory Contents](list-directory-contents)
+- [Make a Directory](make-a-directory)
+- [Remove a File](remove-a-file)
+- [Remove a Directory](remove-a-directory)
+- [Change to Another Directory](change-to-another-directory)
+- [Copy a File](copy-a-file)
+- [Move a File or Directory](move-a-file-or-directory)
+- [Modify File Permissions](modify-file-permissions)
+- [Change File Ownership](change-file-ownership)
+- [User and Group Management](user-and-group-management)
+- [Show All Groups and Memberships](show-all-groups-and-memberships)
+- [Locate a Command](locate-a-command)
+- [Pattern Matching](pattern-matching)
+- [Find a File by Partial Name](find-a-file-by-partila-name)
+- [Archiving - tar command](archiving-tar-command)
+
 ## List Directory Contents
 - **Command**: `ls`
 - **Examples**:
@@ -77,7 +93,7 @@
 - **Example**: `find /etc -name *conf`
 - **Note**: The `find` command is very versatile and can be used for various purposes, including executing a command for each found file.
 
-## Archiving - tar command
+## Archiving tar command
 The important feature of tar archiving command is that it preserves ownership and permissions information.
 - **Create an archive**:
   - **Command**: `tar -czvf`

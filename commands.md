@@ -85,7 +85,7 @@
 - **Command**: `grep`
 - **Examples**:
   - `grep -n 'Apache2 Default Page' /var/www/html/index.html`  
-    Shows the line number where the text 'Apache2 Default Page' appears in the index.html file.
+    Shows the line(s) with line number(s) where the text 'Apache2 Default Page' appears in the index.html file.
   - `ls /etc | grep -E "co?nf$"`  
     Shows the files in /etc directory that ends e.g. either in cnf or conf. In this example the output of `ls` command is directed (piped) to `grep` command.
 

@@ -59,7 +59,7 @@
   - `chmod u+x,go+w mytext` _#opposite to the above_
 
 ## Change File Ownership  
-Users can change only their own files group ownership to a different group if they are members in that group. Root user (or user with sudo-rights) can change both user-owner and group owner for all files.
+Users can change only their own files group ownership to a different group if they are members in that group. Root user (or user with sudo-rights) can change both user owner and group owner for all files.
 - **Command**: `chown user:group file`
 - **Example**: `chown :course /var/coursefiles`
 

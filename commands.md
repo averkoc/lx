@@ -66,11 +66,11 @@
 - **Note**: Only root (or user with sudo rights) can issue these commands.
 - **Create a new user**: `adduser student2`
 - **Create a new group**: `addgroup webmasters`
-- **Add a user to a group**: `gpasswd -a student2 webmasters`
+- **Add a user to a group**: `gpasswd -a student2 webmasters` also `usermod -a -G student2 webmasters`
 - **Show user's group memberships**: `id sakari` _#This doesn't require root privileges_
 - **Remove a user from a group**:
-  - **Command**: `gpasswd -d`
-  - **Example**: `gpasswd -d student2 webmasters`
+  - **Command**: `gpasswd -d user group` also 'usermod -r -G group user`
+  - **Example**: `gpasswd -d student2 webmasters` or  `usermod -r -G webmasters student2`
 - **Change another user's password**: `sudo passwd student2`
 
 ## Show All Groups and Memberships

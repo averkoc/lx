@@ -63,7 +63,7 @@
 - **Example**: `chown :course /var/coursefiles`
 
 ## User and Group Management
-- **Note**: Only root (or user with sudo rights) can issue these commands.
+ **Only root (or user with sudo rights) can issue these commands.**  
 - **Create a new user**: `adduser student2`
 - **Delete a user account and users home directory**: `userdel -r student2`
 - **Create a new group**: `addgroup webmasters`

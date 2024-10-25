@@ -56,9 +56,10 @@
   - `chmod 755 mytext` _#user rwx, group r-x, others r-x_
   - `chmod u=rwx,go=rx mytext` _#same result as the above_
   - `chmod u-x,go-w mytext` _#take out x permission from user and w permission from group and others_
-  - `chmod u+x,go+w mytext` _#opposite to the above_
+  - `chmod u+x,go+w mytext` _#opposite to the above
+    <br>
   **Special permissions**
-    - setgid bit for a directory makes the files in the directory inherit the directory's group onwership.
+  - setgid bit for a directory makes the files in the directory inherit the directory's group onwership.
     - **command**:`chmod g=rwxs directory`  
 This is very practical e.g. for team members that creates files to the directory. When they create files the files group ownership is automatically set to the group that owns the directory. Typically root user sets the setgid bit for a directory to make team members work more streamlined.  
       

@@ -1,8 +1,8 @@
 # Commands
 
-- [List Directory Contents](list-directory-contents)
-- [Make a Directory](make-a-directory)
-- [Remove a File](remove-a-file)
+- [List Directory Contents](#list-directory-contents)
+- [Make a Directory](#make-a-directory)
+- [Remove a File](#remove-a-file)
 - [Remove a Directory](remove-a-directory)
 - [Change to Another Directory](change-to-another-directory)
 - [Copy a File](copy-a-file)

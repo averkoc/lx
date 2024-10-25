@@ -1,5 +1,5 @@
 # Table of Contents
-- List Directory Contents
+- [List Directory Contents](List-Directory-Contents)
 - Make a Directory
 - Remove a File
 - Remove a Directory

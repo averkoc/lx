@@ -1,6 +1,8 @@
 ## Instructions to prepare for mqtt demo
 
+
 ````bash
+# install python package management software pip
 sudo apt install python3-pip -y
 
 # verify
@@ -20,6 +22,9 @@ source bin/activate
 
 # get the demo from my repository
 wget "I give the link"
+
+# Install package paho.mqtt
+pip install paho.mqtt
 
 # start the program
 python3 mqttdemo.py

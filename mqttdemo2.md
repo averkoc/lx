@@ -1,6 +1,6 @@
 ## Instructions to prepare for mqtt demo
 
-The counterpart for this python program is mqttdemo2.html  
+The counterpart for python program mqttdemo2.py  is mqttdemo2.html  
 
 
 ````bash

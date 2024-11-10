@@ -25,7 +25,7 @@ source bin/activate
 # get the demo from my repository
 wget "I give the link"
 
-# Install package paho.mqtt
+# Install package paho.mqtt (or pip install paho-mqtt)
 pip install paho.mqtt
 
 # start the program

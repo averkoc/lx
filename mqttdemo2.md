@@ -1,5 +1,7 @@
 ## Instructions to prepare for mqtt demo
 
+The counterpart for this python program is mqttdemo2.html  
+
 
 ````bash
 # install python package management software pip

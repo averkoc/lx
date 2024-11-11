@@ -11,7 +11,7 @@
 * this exam is supervised and you must get at least 65% to pass it  
 (before this exam you must complete the chapter exams 2-18 with at least 65% average grade in your own schedule.)
 
-### This course if Pass/Faile graded
+### This course is Pass/Fail graded
 * You get Pass mark, if all workshops are accepted with full points
 * Netacad chapter and final comprehensive exam acceptance criteria fullfilled
 * Walkthroughs are accepted (some flexibility)

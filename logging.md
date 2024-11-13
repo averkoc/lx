@@ -15,8 +15,12 @@ Logging is a critical component of system administration in Linux, providing a d
 * /var/log/dmesg: Contains kernel ring buffer messages, which are also accessible via the dmesg command. This log is particularly useful for troubleshooting hardware and boot issues.
 
 ### Server applications logs  
-Besides the system level log there are server application logs that help to resolve service related problems. Examples of these are:  
+Besides the system level log there are server application logs that help to resolve service related problems. Examples of these related to our VM are:  
 * Apache: access.log, error.log
 * UFW: ufw.log
+* Most SSH related events are in auth.log
 
-* 
+## Walkthrough activities
+* Web-server related problem resolution (two example scenarios: configuration file problem, specific url-related problem)
+* Security related check - check that sudo user's account is not used from other than user's own ip-address.
+  

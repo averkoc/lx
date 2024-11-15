@@ -1,4 +1,4 @@
-Windows doesn't have ssh-copy-id command. If you want to use windows to generate keys and copy the public key to server,  
+Windows doesn't have the ssh-copy-id command. If you want to use windows to generate keys and copy the public key to server,  
 you can use the following command combination.  It copies the public key to your home directory in server.  I recommended that  
 you use Linux Desktop or even your local Linux server to generate keys and copy the public key to the remote server. It much less errorprone 
 that using the long command below, that you need to modify according to your values.  One good option is to install WSL to your windows and use it.

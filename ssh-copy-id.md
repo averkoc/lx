@@ -6,4 +6,4 @@ than using the long command below, which you need to modify according to your va
 ````bat
 type  .\.ssh\id_rsa.pub | ssh student@serverdomainname "umask 077; test -d .ssh || mkdir .ssh ; cat >> .ssh/authorized_keys"  
 ````
-**Replace the id_rsa.pub and student and serverdomainname with your own values**
+**Replace** the **id_rsa.pub** and **student** and **serverdomainname** with your own values**

@@ -8,8 +8,8 @@ import random
 broker = "broker.emqx.io"
 port = 1883
 
-topictemp = f"/linuxessentials/sakari/temperatur"
-topicpressure = f"/linuxessentials/sakari/pressure"
+topictemp = f"/lx/sakari/temperature"
+topicpressure = f"/lx/sakari/pressure"
 
 
 client = mqtt.Client()
@@ -17,11 +17,11 @@ client = mqtt.Client()
 def publish_temperature():
     while True:
         temperature = random.uniform(20.0, 30.0)
-        client.publish(topic, f"{temperature:.2f}")
-        print(f"Published: {temperature:.2f} to topic {topic}")
+        client.publish(topictemp, f"{temperature:.2f}")
+        print(f"Published: {temperature:.2f} to topic {topictemp}")
         pressure = random.uniform(1020.0, 1030.0)
-        client.publish(topic, f"{pressure:.2f}")
-        
+        client.publish(topicpressure, f"{pressure:.2f}")
+        print(f"Published: {pressure:.2f} to topic {topicpressure}")
         time.sleep(5)
 
 client.connect(broker, port)

@@ -20,7 +20,7 @@ python3 -m venv mqttdemo
 cd mqttdemo
 
 # copy my demo program
-wget https://averkoc.github.io/files/mqttdemo2_emqx.py
+wget https://averkoc.github.io/files/demo.py
 
 # activate mqttdemo virtualenvironment
 source bin/activate

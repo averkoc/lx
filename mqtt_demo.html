@@ -21,9 +21,9 @@
         };
 
         client.onMessageArrived = function (message) {
-            if (message.destinationName === "/lxweather/temperature") {
+            if (message.destinationName === "/lx/sakari/temperature") {
                 document.getElementById("temperature").innerText = message.payloadString;
-            } else if (message.destinationName === "/lxweather/pressure") {
+            } else if (message.destinationName === "/lx/sakari/pressure") {
                 document.getElementById("pressure").innerText = message.payloadString;
             }
         };

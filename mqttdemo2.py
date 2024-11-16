@@ -5,8 +5,8 @@ import random
 
 broker = "test.mosquitto.org"
 port = 1883
-student_name = "sakari"  # Replace with the actual student's name
-topic = f"/linuxessentials/{student_name}/temperaturevalue"
+
+topic = f"/linuxessentials/sakari/temperaturevalue"
 
 client = mqtt.Client()
 

@@ -25,4 +25,7 @@ Besides the system level log there are server application logs that help to reso
 (see the video)  
 * Security related check - check that sudo user's account is not used from other than user's own ip-address. 
 (see the video)
+
+## Submission
+Don't submit files. Paste your screenclips directly to ItsLearning answer box according to viedeo instructions.
   

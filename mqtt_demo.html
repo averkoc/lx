@@ -30,8 +30,8 @@
 
         function onConnect() {
             console.log("Connected");
-            client.subscribe("/lxweather/temperature");
-            client.subscribe("/lxweather/pressure");
+            client.subscribe("/lx/sakari/temperature");
+            client.subscribe("/lx/sakari/pressure");
             startKeepAlive();
         }
 

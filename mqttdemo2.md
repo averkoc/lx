@@ -19,11 +19,12 @@ python3 -m venv mqttdemo
 # go to mqttdemo
 cd mqttdemo
 
+# copy my demo program
+wget https://averkoc.github.io/files/mqttdemo2_emqx.py
+
 # activate mqttdemo virtualenvironment
 source bin/activate
 
-# get the demo from my repository
-wget "I give the link"
 
 # Install package paho.mqtt (or pip install paho-mqtt)
 pip install paho.mqtt

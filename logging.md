@@ -21,6 +21,8 @@ Besides the system level log there are server application logs that help to reso
 * Most SSH related events are in auth.log
 
 ## Walkthrough activities
-* Web-server related problem resolution (two example scenarios: configuration file problem, specific url-related problem)
-* Security related check - check that sudo user's account is not used from other than user's own ip-address.
+* Web-server related problem resolution (two example scenarios: configuration file problem, specific url-related problem)  
+(see the video)  
+* Security related check - check that sudo user's account is not used from other than user's own ip-address. 
+(see the video)
   

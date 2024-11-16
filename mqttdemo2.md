@@ -30,7 +30,7 @@ source bin/activate
 pip install paho.mqtt
 
 # start the program
-python3 mqttdemo.py
+python3 demo.py
 
 ````
 

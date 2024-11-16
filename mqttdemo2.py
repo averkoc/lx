@@ -3,7 +3,9 @@ import paho.mqtt.client as mqtt
 import time
 import random
 
-broker = "test.mosquitto.org"
+#broker = "test.mosquitto.org"
+#port = 1883
+broker = "broker.emqx.io"
 port = 1883
 
 topic = f"/linuxessentials/sakari/temperaturevalue"

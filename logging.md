@@ -27,5 +27,5 @@ Besides the system level log there are server application logs that help to reso
 (see the video)
 
 ## Submission
-Don't submit files. Paste your screenclips directly to ItsLearning answer box according to viedeo instructions.
+Don't submit files. Paste your screenclips directly to ItsLearning answer box according to video instructions.
   

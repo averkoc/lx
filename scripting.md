@@ -22,7 +22,7 @@ In this activity, you will be introduced to creating scripts. We develop some sc
 
 
 ### Script3  (script to create a shared directory for a group)
-* Create a script mkdir_shared1.sh that you can use to create a shared directory for a specific group. The script takes two arguments: the directory path and group owner. Permissions should be rwxrwsr-x.
+* Create a script mkdir_shared1.sh that you can be used to create a shared directory for a specific group. The script takes two arguments: the directory path and group owner. Permissions should be rwxrwsr-x.
 * Create a script mkdir_shared2.sh that you can use to create a shared directory for a specific group. The script takes three arguments: the directory path, permissions in numeric form and group owner.  If the creation succeeds, it lists the created directory using ls -ld command.  
 ![image](https://github.com/user-attachments/assets/314a3050-e0ea-43e7-9efc-f4f3c6943398)
 

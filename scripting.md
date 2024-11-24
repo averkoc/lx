@@ -30,7 +30,7 @@ In this activity, you will be introduced to creating scripts. We develop some sc
 
 ### General script related things  
   * user environment related scripts
-  * hashbang (shebang) row to use correct shell
+  * hashbang (shebang) row to select a correct shell
   * variables
   * control statements
   * return value

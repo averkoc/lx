@@ -14,7 +14,7 @@ In this activity, you will be introduced to creating scripts. We develop some sc
 * Create a script wt4check1.sh that tests whether directories /var/projects/teampub and /var/projects/teamsec exists. It should print the existence status for both directories.  
   ![image](https://github.com/user-attachments/assets/f4d8e723-641b-45b1-b48c-4c1cf9af85dd)
 
-* Create a script wt4check2.sh that tests whether directories /var/projects/teampub and /var/projects/teamsec exists and have correct group owner and permissions. The script returns non-zero value if some of the directory requirements are not met. This script could called be called e.g by a master test script that executes many subtests and prints Pass/Fail status for each. To test this script you can use e.g. the following:
+* Create a script wt4check2.sh that tests whether directories /var/projects/teampub and /var/projects/teamsec exists and have correct group owner and permissions. The script returns non-zero value if some of the directory requirements are not met. This script could be called e.g by a master test script that executes many subtests and prints Pass/Fail status for each. To test this script you can use e.g. the following:
    ![image](https://github.com/user-attachments/assets/903b2114-9855-421f-b407-0c48240996bc)
 
   

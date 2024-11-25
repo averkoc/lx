@@ -13,6 +13,7 @@ Walkthrough: in addition to the Debian inlcluded process related commands we ins
 
 
 
+
 ## Jobs management  
 
 You can start long running programs on the background by adding ampersand after the command name. In this way you don't need to wait until the command completes before you can issue other commands. To get the output of a background process you can redirect stdout to a file. See example below:  

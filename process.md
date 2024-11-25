@@ -19,7 +19,7 @@ Linux signals are a way to interrupt running process. E.g. when you press ctrl-c
 You can start long running programs on the background by adding ampersand after the command name. In this way you don't need to wait until the command completes before you can issue other commands. To get the output of a background process you can redirect stdout to a file. See example below:  
 `find / -type f  -name myfile > result &`  
 
-Sometimes after starting a progam you may find that it takes a long time to complete. To release your keyboard (stdin) and display (stdout) you can stop the process by pressing `ctrl-z` and continue it's execution on the background by issuing command bg `%id`, where the %id is the job number.
+Sometimes after starting a progam you may find that it takes a long time to complete. To release your keyboard (stdin) and display (stdout) you can stop the process by pressing `ctrl-z` and continue it's execution on the background by issuing command `bg %id`, where the %id is the job number.
 
 | Command | Use Case | Example |
 |---------|----------|---------|

@@ -7,11 +7,11 @@
 | `kill` | Terminate a process. | `kill PID` for default signal, `kill -9 PID` for forceful termination. |
 | `nice` | Launch a process with lower/higher priority. | `nice -n niceness command` <br> `nice -10 ./longrunningprogram`|
 
-Walkthrough draft: install **siege** web load testing application to generate traffic from one Linux VM to another that has running Apache. Run siege with different client numbers for one minute and analyze the results.  SSH to server and use **top** to monitor processes, cpu- and memory- utlilization. Possible: Use **htop** and **iftop** too (need to be installed).
+Walkthrough: in addition to the Debian inlcluded process related commands we install htop and iftop. The htop is more visual than ps and we use it to demonstrate how load affects to resource consumption. The iftop shows traffic amounts between server and clients. To simulate load we install siege load testing program to another Debian VM and generate requests to our web server.
 
-**Additional Notes:**
-- Use man pages (e.g., `man ps`) for detailed information and options for each command.
-- Be cautious with `kill -9` as it can cause data loss in running processes.
+
+
+
 
 ## Jobs management  
 

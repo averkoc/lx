@@ -4,7 +4,7 @@
 |---------|-------------|---------|
 | `ps` | Show list of running processes. | `ps -e` for all processes, `ps -f` for full details. |
 | `top` | Real-time process information, including CPU and memory usage. | `top` |
-| `kill` | Terminate a process. | `kill PID` for default signal, `kill -9 PID` for forceful termination. |
+| `kill` | Terminate a process. | `kill PID` for default signal, `kill -SIGKILL PID` for forceful termination. |
 | `nice` | Launch a process with lower/higher priority. | `nice -n niceness command` <br> `nice -10 ./longrunningprogram`|
 
 Walkthrough: in addition to the Debian inlcluded process related commands we install htop and iftop. The htop is more visual than ps and we use it to demonstrate how load affects to resource consumption. The iftop shows traffic amounts between server and clients. To simulate load we install siege load testing program to another Debian VM and generate requests to our web server.

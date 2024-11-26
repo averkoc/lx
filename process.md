@@ -7,7 +7,8 @@
 | `kill` | Terminate a process. | `kill PID` for default signal, `kill -SIGKILL PID` for forceful termination. |
 | `nice` | Launch a process with lower/higher priority. | `nice -n niceness command` <br> `nice -10 ./longrunningprogram`|
 
-Walkthrough: in addition to the Debian inlcluded process related commands we install htop and iftop. The htop is more visual than ps and we use it to demonstrate how load affects to resource consumption. The iftop shows traffic amounts between server and clients. To simulate load we install siege load testing program to another Debian VM and generate requests to our web server.
+Walkthrough: In addition to the process-related commands included with Debian, we install `htop` and `iftop`. `htop` is more visual than `top`, and we use it to demonstrate how load affects resource consumption. `iftop` shows the amount of traffic between the server and clients. To simulate load, we install the `siege` load testing program on another Debian VM and generate requests to our web server.
+
 
 Linux signals are a way to interrupt running process. E.g. when you press `ctrl-c` the Linux kernel sends a SIGINT signal to your running program. When you issue poweroff command the kernel sends first SIGTERM to all processes currently in the system. If some process doens't terminate after receiving the SIGTERM then kernel sends it SIGKILL. I demonstrate some of these signals in this walkthroug.
 

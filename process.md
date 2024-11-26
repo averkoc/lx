@@ -2,7 +2,7 @@
 
 | Command | Description | Example |
 |---------|-------------|---------|
-| `ps` | Show list of running processes. | `ps -e` for all processes, `ps -f` for full details. |
+| `ps` | Show list of running processes. | `ps -e` for all processes, `ps -f` for full details. `ps -auxf` to see process hierarchy, `ps -eLf`  to see threads, [threads](thread.md)   |
 | `top` | Real-time process information, including CPU and memory usage. | `top` |
 | `kill` | Terminate a process. | `kill PID` for default signal, `kill -SIGKILL PID` for forceful termination. |
 | `nice` | Launch a process with lower/higher priority. | `nice -n niceness command` <br> `nice -10 ./longrunningprogram`|

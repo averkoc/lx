@@ -1,5 +1,6 @@
 ## Koe  
 
+![image](https://github.com/user-attachments/assets/f4d8e723-641b-45b1-b48c-4c1cf9af85dd)
 
 ![image](https://github.com/user-attachments/assets/a50fb97c-0198-449d-bd9c-a0b452ff6e8f)
 

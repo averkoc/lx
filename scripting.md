@@ -13,7 +13,8 @@ In this activity, you will be introduced to creating scripts. We develop some sc
 ### Script2  (walkthrough 4 checking script)
 * Create a script wt4check1.sh that tests whether directories /var/projects/teampub and /var/projects/teamsec exists. It should print the existence status for both directories.
     
-  ![image](https://github.com/user-attachments/assets/c80beafd-b237-4937-8202-707823ed8ffa)
+  ![image](https://github.com/user-attachments/assets/ec422350-9af5-4ef7-86af-837f91d598ed)
+
 
 
 

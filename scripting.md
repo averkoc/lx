@@ -40,6 +40,6 @@ In this activity, you will be introduced to creating scripts. We develop some sc
   * control statements
   * return value
   * x permission to make it executable
-  * differencences between ./startdemo.sh   bash ./startdemo.sh  source ./startdemo.sh
+  * differencences between `./startdemo.sh`   `bash ./startdemo.sh`  `source ./startdemo.sh`
   * debugging
   * location

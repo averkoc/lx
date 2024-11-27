@@ -18,18 +18,15 @@ In this activity, you will be introduced to creating scripts. We develop some sc
 
 
 * Create a script wt4check2.sh that tests whether directories /var/projects/teampub and /var/projects/teamsec exists and have a correct group owner and permissions. The script returns non-zero value if some of the directory requirements are not met. This script could be called e.g by a master test script that executes many subtests and prints Pass/Fail status for each. To test this script you can use e.g. the following:
-  
-  ![image](https://github.com/user-attachments/assets/b3736eeb-7a8d-48d1-988f-800eba87c3dd)
 
-
-  
-  
+* ![image](https://github.com/user-attachments/assets/b3736eeb-7a8d-48d1-988f-800eba87c3dd)
 
 
 ### Script3  (script to create a shared directory for a group)
 * Create a script mkdir_shared1.sh that could be used to create a shared directory for a specific group. The script takes two arguments: the directory path and group owner. Permissions should be rwxrwsr-x.
-* Create a script mkdir_shared2.sh that you can use to create a shared directory for a specific group. The script takes three arguments: the directory path, permissions in numeric form and group owner.  If the creation succeeds, it lists the created directory using ls -ld command.  
-![image](https://github.com/user-attachments/assets/314a3050-e0ea-43e7-9efc-f4f3c6943398)
+* Create a script mkdir_shared2.sh that you can use to create a shared directory for a specific group. The script takes three arguments: the directory path, permissions in numeric form and group owner.  If the creation succeeds, it lists the created directory using ls -ld command.
+
+* ![image](https://github.com/user-attachments/assets/314a3050-e0ea-43e7-9efc-f4f3c6943398)
 
  
 

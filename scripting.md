@@ -34,7 +34,7 @@ In this activity, you will be introduced to creating scripts. We develop some sc
  
 
 ### General script related things  
-  * user environment related scripts
+  * [user environment related scripts and files](login.md)
   * hashbang (shebang) row to select a correct shell
   * variables
   * control statements

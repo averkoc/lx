@@ -9,7 +9,8 @@
 * **Secure server management - 3 points**  
   (WS3 - 3p) 
 * **Log-files and problem solving -1 point**  
-* **Embedded Linux - 2 points**  
+* **Embedded Linux - 2 points**
+* **Special permissions - 1 point**
 * **Process and Jobs management - 1 point**  
 * **Scripting - 1 point**  
 

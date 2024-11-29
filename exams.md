@@ -2,7 +2,7 @@
 
 ### This course is Pass/Fail graded and the following criteria must be met
 * Workshops (WS1, WS2, WS3) are accepted. Your total activity points must be at least your group's maximum points minus four. In other words, you can miss up to four points from the maximum available to your group. See [activities](exercises.md)
-* Practical exam Part1 and Part2 passed
+* Practical exam Part I and Part II passed
 * Netacad chapter and final comprehensive exam acceptance criteria fullfilled (65% average from chapter exams, at least 65% from comprehensive final exam)
   
 

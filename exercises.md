@@ -1,4 +1,4 @@
-## Linux Essentials activities total number of points is 15p
+## Linux Essentials activities - 15 points  
 
 * **Setting up the Linux test environment - 3 points**  
   (WS1-3p)
@@ -12,7 +12,5 @@
 * **Embedded Linux - 2 points**  
 * **Process and Jobs management - 1 point**  
 * **Scripting - 1 point**  
-  <summary>Click to expand</summary>
-  This is the content of the collapsible section. You can include any Markdown-formatted text, lists, or code here.  
-  <br>Can it contain multiple paragraphs.
-</details>
+
+Maybe that some groups had slightly different number of activities, check Its.

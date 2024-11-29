@@ -1,4 +1,4 @@
-## Linux Essentials activities - 18 points (*)  
+## Linux Essentials' activities - 18 points (*)  
 
 * **Setting up the Linux test environment - 3 points**  
   (WS1-3p)

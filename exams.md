@@ -1,4 +1,10 @@
-## Linux Essentials Exams and Pass criteria
+## Linux Essentials Pass criteria
+
+### This course is Pass/Fail graded and the following criteria must be met
+* Workshops (WS1, WS2, WS3) are accepted. Your total activity points are at least your group's maximum points minus four. In other words, you can miss up to four points from the maximum available to your group. See [activities](exercises.md)
+* Practical exam passed
+* Netacad chapter and final comprehensive exam acceptance criteria fullfilled (65% average from chapter exams, at least 65% from comprehensive final exam)
+  
 
 ### Practical exams Part I and Part II
 * I will send you an account and password via email to the server that is used in practical exam.
@@ -6,13 +12,3 @@
 * In the first part you configure and test keybased authentication
 * In the second part you create files and set their permissions
 
-
-### Netacad comprehensive final exam
-* this exam is supervised and you must get at least 65% to pass it  
-(before this exam you must complete the chapter exams 2-18 with at least 65% average grade in your own schedule.)
-
-### This course is Pass/Fail graded and the following criteria must be met
-* Workshops (WS1, WS2, WS3) are accepted. Your total activity points are at least your group's maximum points minus four. In other words, you can miss up to four points from the maximum available to your group. See [activities](exercises.md)
-* Practical exam passed
-* Netacad chapter and final comprehensive exam acceptance criteria fullfilled (65% average from chapter exams, at least 65% from comprehensive final exam)
-  

@@ -14,4 +14,4 @@
 * **Process and Jobs management - 1 point**  
 * **Scripting - 1 point**  
 
-> (*) **Maybe that some groups have slightly different number of activities and point values, check your group's activities and points from Its.**
+> (*) **Some groups have slightly different number of activities and point values, check your group's activities and points from Its.**

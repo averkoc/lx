@@ -12,7 +12,7 @@
 (before this exam you must complete the chapter exams 2-18 with at least 65% average grade in your own schedule.)
 
 ### This course is Pass/Fail graded and the following criteria must be met
-* Your workshops (WS1, WS2, WS3) are accepted. Your total activity points are at least your group's maximum points minus four. In other words, you can miss up to four points from the maximum available to your group. See [activities](exercises.md)
+* Workshops (WS1, WS2, WS3) are accepted. Your total activity points are at least your group's maximum points minus four. In other words, you can miss up to four points from the maximum available to your group. See [activities](exercises.md)
 * Practical exam passed
 * Netacad chapter and final comprehensive exam acceptance criteria fullfilled (65% average from chapter exams, at least 65% from comprehensive final exam)
   

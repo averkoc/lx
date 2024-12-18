@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,6 +26,9 @@
         .button:hover {
             background-color: #005f73;
         }
+        body {
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -43,10 +46,4 @@
         <div class="button">10</div>
         <div class="button">11</div>
         <div class="button">12</div>
-        <div class="button">13</div>
-        <div class="button">14</div>
-        <div class="button">15</div>
-        <div class="button">16</div>
-    </div>
-</body>
-</html>
+        <div class="button

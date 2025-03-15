@@ -5,12 +5,11 @@ def get_own_ip():
     """Get and display the IP address of the host."""
     host_name = socket.gethostname()
     host_ip = socket.gethostbyname(host_name)
-    print(f"Your IP Address: {host_ip}")
     return host_ip
 
 def send_ping():
     """Send a ping message containing the sender's IP address."""
-    target_ip = input("Enter the IP address of the target computer: ")
+    target_ip = input("\nEnter the IP address of the target computer: ")
     target_port = 12345  # Port to send the message to
     sender_ip = get_own_ip()
     message = f"Ping from {sender_ip}"
@@ -42,7 +41,15 @@ def receive_ping():
 # Main function to run both sender and receiver
 def main():
     print("Starting Ping Tool")
-    threading.Thread(target=receive_ping, daemon=True).start()  # Start receiver in a separate thread
+    
+    # Display the host's IP address at the start
+    my_ip = get_own_ip()
+    print(f"Your IP Address: {my_ip}")
+    
+    # Start receiver in a separate thread
+    threading.Thread(target=receive_ping, daemon=True).start()
+    
+    # Loop for sending pings
     while True:
         send_ping()
 

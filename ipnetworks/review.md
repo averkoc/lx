@@ -6,17 +6,17 @@
 
 
 ## IP Settings
-**Manual settings**
-- IP address
-- Subnet mask
-- Default Gateway
-- DNS Server (recursive DNS server)
+- **Manual settings**
+  - IP address
+  - Subnet mask
+  - Default Gateway
+  - DNS Server (recursive DNS server)
 
-**Dynamic settings**
-- IP settings got from DHCP-server
-- _DHCP-server configuration example_
+- **Dynamic settings**
+  - IP settings got from DHCP-server
+  - _DHCP-server configuration example_
 
-**Domain Name System**
+## Domain Name System
 - Administrative aspects
 - Technical Infrastructure
 

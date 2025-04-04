@@ -32,3 +32,6 @@
 - UDP
   - application processes identification by port numbers
   - no session concept
+ 
+## Application layer
+- In simplified terms, application protocols define the commands and respective answers that client and server application developers use to implement applications

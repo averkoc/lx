@@ -20,4 +20,6 @@
 - Administrative aspects
 - Technical Infrastructure
 
+## Network Address Translation (NAT)
+- public IP address sharing for computers in private IP-network
   

@@ -22,4 +22,11 @@
 
 ## Network Address Translation (NAT)
 - public IP address sharing for computers in private IP-network
-  
+
+## Transport Layer
+- TCP
+  - application processes identification by port numbers
+  - automatic error recovery: checksums, sequence numbers, acknowledgements
+  - flow control: window sizes, acknowledgements
+- UDP
+  - application processes identification by port numbers

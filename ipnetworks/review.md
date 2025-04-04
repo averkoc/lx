@@ -31,4 +31,4 @@
   - session concept: both parties need to accept the session initiation before data transfer can start
 - UDP
   - application processes identification by port numbers
-  - 
+  - no session concept

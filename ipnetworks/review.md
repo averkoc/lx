@@ -35,3 +35,10 @@
  
 ## Application layer
 - In simplified terms, application protocols define the command and answer messages structures that client and server application developers use to implement applications functionalities
+
+## Information Security  
+- Basic concepts
+  - Confidentiality
+  - Integrity
+  - Availability
+ 

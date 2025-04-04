@@ -34,4 +34,4 @@
   - no session concept
  
 ## Application layer
-- In simplified terms, application protocols define the commands and respective answers that client and server application developers use to implement applications
+- In simplified terms, application protocols define the command and answer messages structures that client and server application developers use to implement applications functionalities

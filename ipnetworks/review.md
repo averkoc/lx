@@ -28,5 +28,7 @@
   - application processes identification by port numbers
   - automatic error recovery: checksums, sequence numbers, acknowledgements
   - flow control: window sizes, acknowledgements
+  - session concept: both parties need to accept the session initiation before data transfer can start
 - UDP
   - application processes identification by port numbers
+  - 

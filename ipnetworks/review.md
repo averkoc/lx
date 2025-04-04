@@ -42,3 +42,6 @@
   - **Confidentiality**: Ensuring that information is accessible only to authorized individuals, entities, or processes. Think of it as preventing unauthorized disclosure.
   - **Integrity**: Maintaining the accuracy and completeness of information and ensuring that it hasn't been altered or tampered with in an unauthorized manner. This includes protecting against both intentional and accidental modifications.
   - **Availability**: Ensuring that authorized users have reliable and timely access to information and related assets when they need them. This involves maintaining operational systems and networks, and having recovery plans in place.
+ 
+-----
+

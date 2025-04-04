@@ -46,4 +46,6 @@
 -----
 
 ## Other topics
-
+- Internet of Things - IoT: demonstrated in the context of application layers (temperature monitoring system based on mqtt-application protocol)
+- Virtual Lans (VLANs) - A PT-demo that showed how the same physical LAN could be separated to isolated logical LANs using VLAN-technology
+- Address Resolution protocol - Computers in a LAN send IP-packets to other computers in the LAN via Ethernet/WiFi frames. To find the destination MAC address computers use ARP-protocol. If the destination's IP is not in the same IP-network then computer sends the IP packet via Ethernet/WiFi frame to default gateway.

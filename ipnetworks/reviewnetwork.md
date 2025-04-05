@@ -4,8 +4,8 @@ You can  use the following network to practice and deepen your understanding of 
 <br><br>
  
 
-![image](https://github.com/user-attachments/assets/b5f049ef-57d3-4d7c-844b-a30e200e7611)  
-[Terms](https://lxcentria.westeurope.cloudapp.azure.com/courses/ipnetworks/#_Toc77593365))
+![Review network](https://github.com/user-attachments/assets/b5f049ef-57d3-4d7c-844b-a30e200e7611)    
+[Terms](https://lxcentria.westeurope.cloudapp.azure.com/courses/ipnetworks/#_Toc77593365))  
 
 ## Overview description
 

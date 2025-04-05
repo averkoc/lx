@@ -17,3 +17,5 @@ The picture also shows the authoratative  name server for domains compa.fi and c
 
 ## Configuration - CompanyA
 Company A's network is based on wired Ethernet (IEEE 802.3) and wireless WiFi (IEEE 802.11) LAN technologies. The Ethernet LAN consists of switch(es), cabling, and end devices that support the Ethernet standard. The Wireless LAN consists of Access Points and end devices that support WiFi standards.
+
+We configure the CompanyA network to be an IP-network by assigning IP-settings to all end devices connected to LAN. IP-settings consists of: IP-address, subnet-mask, default gateway IP-address and DNS-server's IP-address.

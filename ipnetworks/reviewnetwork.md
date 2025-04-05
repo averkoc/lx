@@ -18,4 +18,6 @@ The picture also shows the authoratative  name server for domains compa.fi and c
 ## Configuration - CompanyA
 Company A's network is based on wired Ethernet (IEEE 802.3) and wireless WiFi (IEEE 802.11) LAN technologies. The Ethernet LAN consists of switch(es), cabling, and end devices that support the Ethernet standard. The wireless LAN includes Access Point that contain bridging functionality, making the WiFi and Ethernet LANs appear as a single logical network for connected devices.
 
-We configure the Company A network to be an IP network by assigning IP settings to all end devices connected to the LAN. These IP settings consist of an IP address, subnet mask, default gateway IP address, and DNS server IP address(es). The default gateway is the IP address of the ISP router's interface that connects to Company A's LAN. The default gateway handles routing IP packets into and out of Company A's IP network
+We configure the Company A network to be an IP network by assigning IP settings to all end devices connected to the LAN. These IP settings consist of an IP address, subnet mask, default gateway IP address, and DNS server IP address(es). The default gateway is the IP address of the ISP router's interface that connects to Company A's LAN. The default gateway handles routing IP packets into and out of Company A's IP network  
+Here is a term with a tooltip: <abbr title="HyperText Markup Language">HTML</abbr>.
+

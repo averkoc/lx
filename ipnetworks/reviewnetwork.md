@@ -27,8 +27,7 @@ This is a typical home user network. Operator's router provides DHCP-service tha
 The home router is an integrated box that contains switch, access point and NAT-router. With it's default settings it provides DHCP-service for the local LAN and provides IP-addresses from private 192.168.0.0/24 network. The one public IP-address (assigned to the homebox outside interface) is shared vi NAT-function.
 
 ## Configuration - Home2  
-Here the customer has got a static IP-address from the ISP and the home router's outside connection is configured manually according to information got from ISP.  
-
+Here the customer has ordered a static public IP-address from the ISP and the user must configure the router's outside connection according to the information got from the ISP.  
 
 
 The internal network is just like in home1 configuration.   

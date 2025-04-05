@@ -7,9 +7,12 @@ You can  use the following network to practice and deepen your understanding of 
 
 ## Overview description
 
-CompanyA, CompanyB and CompanyC have got their IP-network addresses when they have subscibed the Internet connection from ISP.  
-The home or small office networks marked with yellow are using internally private IP-network addresses and share one public IP-address via NAT. 
+Company A, Company B, and Company C received their IP network addresses when they subscribed to internet connection service from the ISP.  
 
-The ISP offers a recursive DNS resolver that customers can configure in their computer's IP settings if they choose
+The home or small office networks marked with yellow are using internally private IP-network addresses and share one public IP-address via NAT. The left hand customer has static public IP-address and the right hand customer a dynamic public IP-address.
+
+The ISP offers a recursive DNS resolver that customers can configure in their computer's IP settings if they choose.  
+The picture also shows the authoratative  name server for domains compa.fi and compb.fi.  
+
 
 

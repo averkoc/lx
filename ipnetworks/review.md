@@ -52,5 +52,6 @@
 - Address Resolution protocol - Computers in a LAN send IP-packets to other computers in the LAN via Ethernet/WiFi frames. To find the destination MAC address computers use ARP-protocol. If the destination's IP is not in the same IP-network then computer sends the IP packet via Ethernet/WiFi frame to default gateway.
 <br><br>
 [Review network](reviewnetwork.md)
+
 [Terms](https://lxcentria.westeurope.cloudapp.azure.com/courses/ipnetworks/#_Toc77593365))  
 

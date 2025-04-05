@@ -26,3 +26,6 @@ This is a typical home user network. Operator's router provides DHCP-service tha
 
 ## Configuration - Home2  
 Here the customer has got a static IP-address from the ISP and the home router's outside connection is configured manually according to information got from ISP. The internal network is just like in home1 configuration.
+
+**Home server access from Internet - Port forwarding **  
+The home2 router is configured to forward TCP connection trials from Internet to computer with IP-address 192.168.0.254. This makes it possible to connect from Internet to the homeserver.

@@ -15,4 +15,5 @@ The ISP offers a recursive DNS resolver that customers can configure in their co
 The picture also shows the authoratative  name server for domains compa.fi and compb.fi.  
 
 
-
+## Configuration - CompanyA
+Company A's network is based on wired Ethernet (IEEE 802.3) and wireless WiFi (IEEE 802.11) LAN technologies. The Ethernet LAN consists of switch(es), cabling, and end devices that support the Ethernet standard. The Wireless LAN consists of Access Points and end devices that support WiFi standards.

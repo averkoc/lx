@@ -23,6 +23,13 @@ Company A's network is based on wired Ethernet (IEEE 802.3) and wireless WiFi (I
 
 We configure the Company A network to be an IP network by assigning IP settings to all end devices connected to the LAN. These IP settings consist of an IP address, subnet mask, default gateway IP address, and <abbr title="This should be a recursive resolving server">DNS server</abbr> IP address(es). The default gateway is the IP address of the ISP router's interface that connects to Company A's LAN. The default gateway handles routing IP packets into and out of Company A's IP network.  
 
+We assign the IP-settings manually (static settings) to wired computers and dynammically to wireless computers.  
+
+To support dynamic IP-settings we need to configure the DHCP-service, see the example below:  
+![image](https://github.com/user-attachments/assets/31f4afd2-322f-4256-829d-c1f0b7580b61)
+
+
+
 ## Configuration - Home1 (default for most home subscribers)
 This is a typical home user network. Operator's router provides DHCP-service that configures the home-router's ISP-connection dynamically. Users don't need to configure the home router.
 

@@ -1,6 +1,6 @@
 # Practical Skills Review with Cisco Packet Tracer
 
-You can  use the following network to practice and deepen your understanding of IP Networks.   
+You can  use the following network to practice and deepen your understanding of IP Networks.  In practical exam you are given a network like this either partially or completely presented but without configuration. You will get personal IP-network settings that you will use to configure the network according to given requirements.
 <br><br>
  
 

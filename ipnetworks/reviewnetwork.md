@@ -26,10 +26,10 @@ We configure the Company A network to be an IP network by assigning IP settings 
 ## Configuration - Home1 (default for most home subscribers)
 This is a typical home user network. Operator's router provides DHCP-service that configures the home-router's ISP-connection dynamically. Users don't need to configure the home router.
 
-The home router is an integrated box that contains switch, access point and NAT-router. With it's default settings it provides DHCP-service for the local LAN and provides IP-addresses from private 192.168.0.0/24 network. The one public IP-address (assigned to the homebox outside interface) is shared vi NAT-function.
+The home router is an integrated box that contains switch, access point and NAT-router. With it's default settings it provides DHCP-service for the local LAN and provides IP-addresses from private 192.168.0.0/24 network. The one public IP-address (assigned to the homebox outgoing interface) is shared via NAT-function.
 
 ## Configuration - Home2  
-Here the customer has ordered a static public IP-address from the ISP and the user must configure the router's outside connection according to the information got from the ISP.  
+Here the customer has ordered a static public IP-address from the ISP and the user must configure the router's outgoing interface according to the information got from the ISP.  
 
 
 The internal network is just like in home1 configuration.   

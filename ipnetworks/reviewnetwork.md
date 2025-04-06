@@ -4,7 +4,8 @@ You can  use the following network to practice and deepen your understanding of 
 <br><br>
  
 
-![Review network](https://github.com/user-attachments/assets/b5f049ef-57d3-4d7c-844b-a30e200e7611)    
+![image](https://github.com/user-attachments/assets/5fb927c0-c1be-4009-8e0e-f3d9e1803607)
+    
 
 
 ## Overview description

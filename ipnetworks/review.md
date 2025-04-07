@@ -1,3 +1,5 @@
+[Review network](reviewnetwork.md)   
+[Terms](https://lxcentria.westeurope.cloudapp.azure.com/courses/ipnetworks/#_Toc77593365)  <br><br>
 ## Network Technologies underlying IP Networks
 - Local Area Networks
   - Ethernet 802.3 (Wired)

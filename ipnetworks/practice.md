@@ -34,7 +34,7 @@
 - ping from PC1 to `www.compb.fi`
 - ping from PC1 to `www.compc.fi`
 - try to connect with PC1 browser to homeserver
-- connect with PC7 browser to www.compb.fi
+- connect with PC7 browser to `www.compb.fi`
 **When pinging remote targets you may need to do ping a few times before it succeeds.**
 
   

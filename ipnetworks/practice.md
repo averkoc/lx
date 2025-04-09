@@ -27,7 +27,7 @@
 
 - ping from PC1 to `www.compa.fi`
 - ping from tablet1 to `www.compa.fi`
-- ping from PC1 to `www.compb.fi`
+- ping from PC1 to `www.compb.fi`  
 **When pinging remote targets you may need to do ping a few times before it succeeds.**
 
   

@@ -4,7 +4,7 @@
 ### CompanyA
 - IP-settings for CompanyA network (IP-network address: 196.5.5.0/24)
   - wired computers should use static IP-settings
-  - wireless computers should use DHCP and get their settings from DHCP-server
+  - wireless computers should use DHCP and get their settings from DHCP-server starting from host address 196.5.5.100
   - remember to configure the router's interface to LAN (it will be the default gateway)
  
 ### CompanyC  

@@ -20,8 +20,15 @@
 
 ### Other 
 - configure wireless security: each access-point should have unique ssid and wpa2 password
+  
 
 ### Tests  
+- **Use only ip-addresses when doing tests**. You can use the ping icon to do pings in an easier way. Note: when pinging remote targets you may need to do ping a few times before it succeeds.
+- ping from PC1 to www.compa.fi
+- ping from tablet1 to www.compa.fi
+- ping from PC1 to www.compb.fi
+
+  
 
 
  

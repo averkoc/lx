@@ -1,5 +1,5 @@
 
-## Practice configuration
+## Practice configuration - practice.pkt
 
 ### CompanyA
 - IP-settings for CompanyA network (IP-network address: 196.5.5.0/24)

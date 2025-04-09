@@ -18,16 +18,23 @@
 - configure port-forwarding so that homeserver is accessible from Interet.
 - the computers behind the home2-router use private ip-settings PC5 should use DHCP and homeserver should have static IP-settings
 
+### Home1
+- all computers use DHCP
+- home1-router gets outgoing interface's IP-settings automatically from ISP-router
+
 ### Other 
 - configure wireless security: each access-point should have unique ssid and wpa2 password
   
 
 ### Tests  
-- **Use only ip-addresses when doing tests**. You can use the ping icon to do pings in an easier way.  
+- **Use only ip-addresses when doing tests - names are not working**. You can use the ping icon to do pings in an easier way.  
 
 - ping from PC1 to `www.compa.fi`
 - ping from tablet1 to `www.compa.fi`
-- ping from PC1 to `www.compb.fi`  
+- ping from PC1 to `www.compb.fi`
+- ping from PC1 to `www.compc.fi`
+- try to connect with PC1 browser to homeserver
+- connect with PC7 browser to www.compb.fi
 **When pinging remote targets you may need to do ping a few times before it succeeds.**
 
   

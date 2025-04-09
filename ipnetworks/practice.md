@@ -6,6 +6,7 @@
   - wired computers should use static IP-settings
   - wireless computers should use DHCP and get their settings from DHCP-server starting from host address 196.5.5.100
   - remember to configure the router's interface to LAN (it will be the default gateway)
+    
  
 ### CompanyC  
 - IP-settings for CompanyC network (IP-network address: 200.10.10.0/24)
@@ -24,6 +25,8 @@
 
 ### Other 
 - configure wireless security: each access-point should have unique ssid and wpa2 password
+- use 200.50.50.254 as DNS-server setting (resolving server) even though DNS actually doesn't work in this configuration.
+
   
 
 ### Tests  

@@ -22,8 +22,9 @@
       cursor: pointer;
       padding: 10px;
       background-color: #f1f1f1;
-      border: none;
-      text-align: left;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
       outline: none;
       font-size: 15px;
       transition: 0.4s;
@@ -33,7 +34,7 @@
     .accordion.active {
       background-color: #ccc;
     }
-    /* Panel (content) initially open */
+    /* Panel (content) initially hidden */
     .panel {
       display: block;
       text-align: center;
@@ -50,12 +51,12 @@
     }
     /* Default state “off” */
     .button.off {
-      background-color: red;
+      background-color: green;
       color: white;
     }
     /* When pressed, state “on” */
     .button.on {
-      background-color: green;
+      background-color: red;
       color: white;
     }
     .status-line {
@@ -76,8 +77,8 @@
   <h2>Relay Control</h2>
   <div class="accordion-container">
 
-    <!-- Relay Module 1 -->
-    <div class="accordion active">Relay Module1</div>
+    <!-- Relay Module Group 1 -->
+    <div class="accordion">Group 1</div>
     <div class="panel">
       <div class="button-group" id="1">
         <button class="button off" data-relay="1">Relay 1</button>
@@ -91,8 +92,8 @@
       </div>
     </div>
 
-    <!-- Relay Module 2 -->
-    <div class="accordion active">Relay Module2</div>
+    <!-- Relay Module Group 2 -->
+    <div class="accordion">Group 2</div>
     <div class="panel">
       <div class="button-group" id="2">
         <button class="button off" data-relay="1">Relay 1</button>
@@ -142,17 +143,17 @@
       };
     }
 
-    // Helper: log messages to the console
+    // Helper to log messages
     function logMessage(message) {
       console.log(message);
     }
 
-    // Helper: update the connection status on the page
+    // Helper to update connection status on the page
     function updateStatus(status) {
       document.getElementById('connection-status').innerText = status;
     }
 
-    // Send a command through the WebSocket (state: true for ON, false for OFF)
+    // Send a command using the module id, relay number, and state (true for on, false for off)
     function sendCommand(module, relay, state) {
       if (ws && ws.readyState === WebSocket.OPEN) {
         var command = module + ':' + relay + ':' + (state ? '1' : '0');
@@ -181,7 +182,7 @@
 
     // Button release event handler
     function handleButtonRelease(event) {
-      if (activeButton !== this) return; // Only process if this is the active button
+      if (activeButton !== this) return; // Only process if this button is currently active
 
       event.preventDefault();
       this.classList.remove('on');
@@ -194,7 +195,7 @@
       activeButton = null;
     }
 
-    // Attach press & release events to each button
+    // Attach press & release events to a button element
     function addEventListeners(button) {
       button.addEventListener('mousedown', handleButtonPress);
       button.addEventListener('touchstart', handleButtonPress);
@@ -207,10 +208,12 @@
     // Initialize event listeners for all buttons
     document.querySelectorAll('.button').forEach(addEventListeners);
 
-    // Accordion functionality using only click events for deterministic behavior
+    // Accordion functionality for toggling relay module panels.
+    // We use a single event based on pointer support to avoid duplicate events on mobile.
+    var accordionEvent = window.PointerEvent ? "pointerdown" : "click";
     var acc = document.getElementsByClassName("accordion");
     for (var i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function(e) {
+      acc[i].addEventListener(accordionEvent, function(e) {
         e.preventDefault();
         this.classList.toggle("active");
         var panel = this.nextElementSibling;

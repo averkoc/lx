@@ -5,81 +5,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Relay Control</title>
   <style>
-    body {
-      text-align: center;
-    }
-    h2 {
-      text-align: center;
-    }
+  body {
+    background: #ede7e3; /* Soft warm gray-beige */
+    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+  .accordion-container {
+    width: 340px;
+    max-width: 95vw;
+    margin: 24px auto 0 auto;
+    background: #f5e9da; /* Light beige */
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 18px 0 18px 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  /* Accordion Header Styles */
+  .accordion {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f5e9da;   /* Light beige, matches button.off */
+    border: 1px solid #bcaaa4;   /* Muted brown border */
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: background 0.4s;
+    width: 100%;
+    box-sizing: border-box;
+    color: #8a7169;              /* Dark brown text */
+    font-weight: bold;
+  }
+  .accordion.active {
+    background-color: #c8b5ae;   /* Medium brown, matches button.on */
+    color: #fff;
+    border-color: #80635b;       /* Dark brown border */
+  }
+  /* Panel (content) initially shown */
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    display: block;
+  }
+  .accordion.active + .panel {
+    max-height: 500px; /* Adjust as needed for your content */
+  }
+  .button-group {
+    width: 300px;
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 12px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    width: 45%;
+    display: inline-block;
+    border-radius: 8px;
+    background-color: #f9f6f2; /* Slightly lighter than panel */
+    color: #6d4c41;
+    border: 2px solid #bcaaa4;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(109,76,65,0.18), 0 1.5px 0 #fff inset;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+  .button.off {
+    background-color: #f9f6f2;   /* Lighter than panel */
+    color: #6d4c41;
+    border: 2px solid #bcaaa4;
+    box-shadow: 0 4px 12px rgba(109,76,65,0.18), 0 1.5px 0 #fff inset;
+  }
+  .button.on {
+    background-color: #8d6e63;   /* Medium brown */
+    color: #fff;
+    border: 2px solid #5d4037;
+    box-shadow: 0 2px 6px rgba(93,64,55,0.18), 0 1.5px 0 #fff2 inset;
+  }
+  .button:active {
+    background-color: #bcaaa4;
+    box-shadow: 0 1px 2px rgba(109,76,65,0.18) inset;
+  }
+  .status-line {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #6d4c41;
+  }
+  @media (max-width: 600px) {
     .accordion-container {
-      width: 50%;
-      margin: 0 auto;
-      box-sizing: border-box;
-      text-align: left;
+      width: 90%;
     }
-    /* Accordion Header Styles */
-    .accordion {
-      cursor: pointer;
-      padding: 10px;
-      background-color: #f1f1f1;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      text-align: center;
-      outline: none;
-      font-size: 15px;
-      transition: 0.4s;
-      width: 100%;
-      box-sizing: border-box;
+    .button {
+      width: 45%;
     }
-    .accordion.active {
-      background-color: #ccc;
-    }
-    /* Panel (content) initially shown */
-    .panel {
-      display: block;
-      text-align: center;
-    }
-    .button-group {
-      padding: 10px;
-    }
-.button {
-  padding: 10px;
-  margin: 5px;
-  cursor: pointer;
-  width: 45%;
-  display: inline-block;
-  border-radius: 8px; /* Adjust the value as desired */
-}
-    /* Default state “off” */
-    .button.off {
-      background-color: green;
-      color: white;
-    }
-    /* When pressed, state “on” */
-    .button.on {
-      background-color: red;
-      color: white;
-    }
-    .status-line {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-    @media (max-width: 600px) {
-      .accordion-container {
-        width: 90%;
-      }
-      .button {
-        width: 45%;
-      }
-    }
+  }
   </style>
 </head>
 <body>
-  <h2>Relay Control</h2>
+  <h2>IHC Remote Control</h2>
   <div class="accordion-container">
 
     <!-- Relay Module Group 1 -->
-    <div class="accordion">Group 1</div>
+    <div class="accordion">Group A</div>
     <div class="panel">
       <div class="button-group" id="1">
         <button class="button off" data-relay="1">Relay 1</button>
@@ -94,7 +139,7 @@
     </div>
 
     <!-- Relay Module Group 2 -->
-    <div class="accordion">Group 2</div>
+    <div class="accordion">Group B</div>
     <div class="panel">
       <div class="button-group" id="2">
         <button class="button off" data-relay="1">Relay 1</button>
@@ -217,10 +262,7 @@
       acc[i].addEventListener(accordionEvent, function(e) {
         e.preventDefault();
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        // Use computed style to check the actual current display state
-        var currentDisplay = window.getComputedStyle(panel, null).getPropertyValue("display");
-        panel.style.display = (currentDisplay === "block" ? "none" : "block");
+        // No need to set panel.style.display; CSS handles max-height transition.
       });
     }
 

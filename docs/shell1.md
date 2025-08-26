@@ -1,7 +1,7 @@
 
 ## 🧪 Linux Shell - introductory walkthrough
 
-Welcome to the Linux Shell workshop! These mini tasks are designed to help engineering students get hands-on experience with basic and intermediate shell commands in a Debian-based environment.
+Welcome to the Linux Shell introductory walkthrough! These mini tasks are designed to give you hands-on experience with basic and intermediate shell commands.
 
 ---
 

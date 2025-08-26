@@ -58,9 +58,11 @@ chmod +x hello.sh
 ./hello.sh
 ````
 #### Challenge
+
 ```bash
 # Write a one-liner that creates a backup of alpha.txt only if it exists
 [ -f alpha.txt ] && cp alpha.txt alpha.bak
 
 # Chain multiple commands to create a file, write to it, and display its content
 touch notes.txt && echo "Linux is powerful!" > notes.txt && cat notes.txt
+````

@@ -31,8 +31,6 @@ cat alpha.txt
 
 #### 🔹 3. Conditional Command Chaining
 ```bash
-# Create a directory and only move into it if creation succeeds
-mkdir project && cd project
 
 # Search for the word "error" in beta.txt, and if not found, print a message
 grep "error" beta.txt || echo "No errors found"

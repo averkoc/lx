@@ -1,7 +1,7 @@
 
 ## 🧪 Linux Shell - introductory walkthrough
 
-Welcome to the Linux Shell introductory walkthrough! These mini tasks are designed to give you hands-on experience with basic and intermediate shell commands.
+Welcome to the Linux Shell introductory walkthrough! These mini tasks are designed to give you hands-on experience with basic and intermediate shell commands besides the introduction we have on session.
 
 ---
 

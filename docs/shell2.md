@@ -13,7 +13,7 @@ We demonstrate shell capabilities by analyzing a server log containing session a
 
 ## Walkthrough steps – some intermediary steps are not listed
 
-1. Create a new user account with your first name on the server (command: `adduser <username>`)
+1. If you not yet have, create a new user account with your first name on the server (command: `adduser <username>`)
 2. Log in the server using the new account (use `ssh` in Windows, macOS, or desktop Linux)
 3. Linux users: use `wget` to download a sample log-file (averkoc.github.io/files/auth.log) to your home directory.  
    Mac users: use `curl`. Some other files are downloaded too, check from video.

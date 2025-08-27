@@ -2,14 +2,14 @@
 
 ## Overview
 
-The Linux shell is a common interface across distributions, providing a consistent way for users and administrators to operate. It is essential for managing remote servers via `ssh` and automating tasks with scripts. Chapters 5, 10, and 11 cover shell basics, pipes and redirection, and scripting.  
-The shell’s ability to chain commands with pipes (`|`) and redirect input/output (`>`, `<`, `>>`) allows efficient execution of complex tasks.  
+The Linux shell provides a consistent interface across distributions, essential for managing remote servers via `ssh` and automating tasks with scripts. Chapters 5, 10, and 11 cover shell basics, pipes and redirection, and scripting.  
+Its ability to chain commands with pipes (`|`) and redirect input/output (`>`, `<`, `>>`) enables efficient execution of complex tasks.
+
 
 ## Task
 
-We demonstrate the shell capabilities by analyzing a sample server log-file that contains session setup attempts from five hours interval. First, we retrieve the sample file from Internet and then find answers to questions like how many failed session attempts there have been and how many different wrong usernames have been tried, how many successful sessions have been and how many different users they are related, etc.
+We demonstrate shell capabilities by analyzing a server log containing session attempts over a five-hour interval. After retrieving the file from the Internet, we determine the number of failed and successful logins, the usernames and IPs involved, and related patterns. Along the way, we review basic commands and complete additional tasks.
 
-While working we discuss the basics of using commands and do some additional tasks.
 
 ## Walkthrough steps – some intermediary steps are not listed
 

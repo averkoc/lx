@@ -29,7 +29,7 @@ Sometimes after starting a progam you may find that it takes a long time to comp
 | `jobs`  | Lists the current jobs running in the background and their statuses. | Simply typing `jobs` will show you a list of all background processes with their job IDs and states, like `[1]+ Running` or `[2]- Stopped`. |
 
 
-## systemctl commands (related to systemd)
+## systemctl commands to manage services (related to systemd)
     
 | Command | Description | Example |
 |---------|-------------|---------|

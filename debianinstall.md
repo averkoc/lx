@@ -1,4 +1,7 @@
 # Debian server installation 
+### Installation media 
+You can find here [installation media](https://cdimage.debian.org/debian-cd/current/) for different architectures 
+
 ### Download the correct installation media (ISO-file)
 * Windows and Intel based Mac users  
 Click the Download button on [Debian site](https://www.debian.org/) 

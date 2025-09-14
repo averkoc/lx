@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Enable community repository
-echo "https://dl-cdn.alpinelinux.org/alpine/v3.19/community" >> /etc/apk/repositories
+# Enable community repository (uncomment the row below if line 10 doesn't succeed
+# echo "https://dl-cdn.alpinelinux.org/alpine/v3.19/community" >> /etc/apk/repositories
 
 # Update package index
 apk update
@@ -22,4 +22,4 @@ rc-service virtualbox-drm-client start
 # VBoxClient --clipboard &
 
 # Reboot to apply changes
-reboot
+# reboot

@@ -1,66 +1,80 @@
 
-## 🧪 Linux Shell - introductory walkthrough
+# 🐧 Linux Shell Assignment: "Getting Comfortable with Bash"
 
-Welcome to the Linux Shell introductory walkthrough! These mini tasks are designed to give you hands-on experience with basic and intermediate shell commands besides the introduction we have on session.
+## 🎯 Learning Goals
+Students will:
+- Practice essential shell commands (`cd`, `ls`, `touch`, `echo`, `cat`, `mv`, `cp`, `rm`, `chmod`)
+- Use control structures (`&&`, `||`)
+- Understand quoting (`'single'`, `"double"`, and escaping)
+- Briefly explore redirection (`>`, `>>`) and piping (`|`)
 
 ---
 
-#### 🔹 1. Basic Navigation & File Management
-```bash
-# List all files (including hidden ones) in your home directory
-ls -la ~
+## 👨‍💻 Part 1: Interactive Tasks
 
-# Create a new directory called lab1 and move into it
-mkdir lab1 && cd lab1
+Perform the following tasks manually in your own VM terminal. Do **not** use `sudo` or root privileges.
 
-# Create three empty files named alpha.txt, beta.txt, and gamma.txt
-touch alpha.txt beta.txt gamma.txt
-```
+### 🔧 Tasks
 
-#### 🔹 2. Redirection and viewing file content
-```bash
-# Write the phrase "Hello Linux" into alpha.txt
-echo "Hello Linux" > alpha.txt
+1. **Setup**
+   - Create a directory called `bash_intro`
+   - Move into it using `cd`
 
-# Append the current date to alpha.txt
-date >> alpha.txt
+2. **File Operations**
+   - Create three files: `one.txt`, `two.txt`, `three.txt`
+   - Add the line `"Bash is cool"` to `one.txt` using double quotes
+   - Add the line `'Learning shell scripting'` to `two.txt` using single quotes
+   - Use `cat` and `echo` to append the contents of `one.txt` and `two.txt` into `three.txt`
 
-# View the contents of alpha.txt
-cat alpha.txt
-````
+3. **Control Structures**
+   - Use `&&` to create a file `success.txt` only if `three.txt` exists
+   - Use `||` to create a file `fail.txt` only if `nonexistent.txt` does not exist
 
-#### 🔹 3. Conditional Command Chaining
-```bash
+4. **Permissions and Execution**
+   - Create a script `hello.sh` that prints `Hello, $USER!`
+   - Make it executable and run it, redirecting output to `hello_output.txt`
 
-# Search for the word "error" in beta.txt, and if not found, print a message
-grep "error" beta.txt || echo "No errors found"
+5. **Piping and Redirection**
+   - Use `ls | wc -l` to count files and save the result to `file_count.txt`
 
-# Check if a file exists and print a message accordingly
-[ -f report.txt ] && echo "Report found." || echo "Report missing."
-````
+---
 
-#### 🔹 4. Pipes & Sorting
-```bash
-# List all files in /etc, filter those containing "conf", and sort them
-ls /etc | grep "conf" | sort
+## 🧪 Part 2: Verification Script
 
-# Count how many .txt files exist in your current directory
-ls *.txt | wc -l
-````
+You are provided with a base script `verify.sh`. Complete it to check your own work. It:
+- Verifies task completion
+- Ensures the script is run by the correct user
+- Outputs a verdict file `verdict.txt` with PASS/FAIL status per task
 
-#### 🔹 5. Permissions & Execution
-```bash
-# Create a script file called hello.sh that prints "Welcome to Linux"
-echo 'echo "Welcome to Linux"' > hello.sh
-chmod +x hello.sh
-./hello.sh
-````
-#### Challenge
+### 🧩 Provided `verify.sh`
 
 ```bash
-# Write a one-liner that creates a backup of alpha.txt only if it exists
-[ -f alpha.txt ] && cp alpha.txt alpha.bak
+#!/bin/bash
 
-# Chain multiple commands to create a file, write to it, and display its content
-touch notes.txt && echo "Linux is powerful!" > notes.txt && cat notes.txt
-````
+VERDICT="verdict.txt"
+echo "Verification Results:" > "$VERDICT"
+
+# Check user identity
+EXPECTED_USER=$(whoami)
+echo "Running as user: $EXPECTED_USER" >> "$VERDICT"
+
+# Check working directory
+cd ~/bash_intro || { echo "❌ Directory bash_intro missing" >> "$VERDICT"; exit 1; }
+
+# Task checks
+[[ -f one.txt ]] && echo "✅ one.txt exists" >> "$VERDICT" || echo "❌ one.txt missing" >> "$VERDICT"
+grep -q "Bash is cool" one.txt && echo "✅ Content in one.txt correct" >> "$VERDICT" || echo "❌ Content in one.txt incorrect" >> "$VERDICT"
+
+[[ -f two.txt ]] && echo "✅ two.txt exists" >> "$VERDICT" || echo "❌ two.txt missing" >> "$VERDICT"
+grep -q "Learning shell scripting" two.txt && echo "✅ Content in two.txt correct" >> "$VERDICT" || echo "❌ Content in two.txt incorrect" >> "$VERDICT"
+
+[[ -f three.txt ]] && echo "✅ three.txt exists" >> "$VERDICT" || echo "❌ three.txt missing" >> "$VERDICT"
+
+[[ -f success.txt ]] && echo "✅ success.txt created with &&" >> "$VERDICT" || echo "❌ success.txt missing" >> "$VERDICT"
+[[ -f fail.txt ]] && echo "✅ fail.txt created with ||" >> "$VERDICT" || echo "❌ fail.txt missing" >> "$VERDICT"
+
+[[ -f hello_output.txt ]] && grep -q "Hello, $EXPECTED_USER" hello_output.txt && echo "✅ hello.sh output correct" >> "$VERDICT" || echo "❌ hello.sh output incorrect" >> "$VERDICT"
+
+[[ -f file_count.txt ]] && echo "✅ file_count.txt exists" >> "$VERDICT" || echo "❌ file_count.txt missing" >> "$VERDICT"
+
+echo "Verification complete." >> "$VERDICT"

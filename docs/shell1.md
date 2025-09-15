@@ -39,42 +39,50 @@ Perform the following tasks manually in your own VM terminal. Do **not** use `su
 
 ---
 
-## 🧪 Part 2: Verification Script
+## 🔹 Most Needed Linux Shell Commands
 
-You are provided with a base script `verify.sh`. Complete it to check your own work. It:
-- Verifies task completion
-- Ensures the script is run by the correct user
-- Outputs a verdict file `verdict.txt` with PASS/FAIL status per task
+| Command     | Purpose                                | Example                      |
+|-------------|----------------------------------------|------------------------------|
+| `pwd`       | Show current directory                 | `pwd`                        |
+| `ls`        | List files                             | `ls -l`                      |
+| `cd`        | Change directory                       | `cd bash_intro`             |
+| `touch`     | Create empty file                      | `touch file.txt`            |
+| `echo`      | Print text or write to file            | `echo "Hello" > hello.txt`  |
+| `cat`       | Display file contents                  | `cat hello.txt`             |
+| `mv`        | Move or rename files                   | `mv old.txt new.txt`        |
+| `cp`        | Copy files                             | `cp file.txt copy.txt`      |
+| `rm`        | Delete files                           | `rm file.txt`               |
+| `chmod`     | Change file permissions                | `chmod +x script.sh`        |
+| `man`       | Show manual page for a command         | `man ls`                    |
+| `grep`      | Search text in files                   | `grep "text" file.txt`      |
+| `wc`        | Count lines, words, or characters      | `wc -l file.txt`            |
+| `head`      | Show first lines of a file             | `head file.txt`             |
+| `tail`      | Show last lines of a file              | `tail file.txt`             |
+| `whoami`    | Show current user                      | `whoami`                    |
 
-### 🧩 Provided `verify.sh`
+## 🔹 Quoting Summary
 
-```bash
-#!/bin/bash
+| Type         | Behavior                             | Example                          | Output Example              |
+|--------------|--------------------------------------|----------------------------------|-----------------------------|
+| `'single'`   | Literal text, no variable expansion  | `echo 'Hello $USER'`             | `Hello $USER`               |
+| `"double"`   | Expands variables and commands       | `echo "Hello $USER"`             | `Hello <your_username>`     |
+| `\escape`    | Escapes special characters           | `echo \"quoted\"`                | `"quoted"`                  |
 
-VERDICT="verdict.txt"
-echo "Verification Results:" > "$VERDICT"
+## 🔹 Control Structures
 
-# Check user identity
-EXPECTED_USER=$(whoami)
-echo "Running as user: $EXPECTED_USER" >> "$VERDICT"
+| Operator | Meaning                                 | Example                                | Behavior                                      |
+|----------|-----------------------------------------|----------------------------------------|----------------------------------------------|
+| `&&`     | Run second command only if first succeeds | `mkdir test && cd test`               | `cd test` runs only if `mkdir test` succeeds |
+| `||`     | Run second command only if first fails    | `cd missing || echo "fail"`           | `echo` runs only if `cd missing` fails       |
+| `;`      | Run commands sequentially regardless      | `echo "one"; echo "two"`              | Both commands run, regardless of success     |
 
-# Check working directory
-cd ~/bash_intro || { echo "❌ Directory bash_intro missing" >> "$VERDICT"; exit 1; }
 
-# Task checks
-[[ -f one.txt ]] && echo "✅ one.txt exists" >> "$VERDICT" || echo "❌ one.txt missing" >> "$VERDICT"
-grep -q "Bash is cool" one.txt && echo "✅ Content in one.txt correct" >> "$VERDICT" || echo "❌ Content in one.txt incorrect" >> "$VERDICT"
+## 🔹 Redirection and Piping
 
-[[ -f two.txt ]] && echo "✅ two.txt exists" >> "$VERDICT" || echo "❌ two.txt missing" >> "$VERDICT"
-grep -q "Learning shell scripting" two.txt && echo "✅ Content in two.txt correct" >> "$VERDICT" || echo "❌ Content in two.txt incorrect" >> "$VERDICT"
-
-[[ -f three.txt ]] && echo "✅ three.txt exists" >> "$VERDICT" || echo "❌ three.txt missing" >> "$VERDICT"
-
-[[ -f success.txt ]] && echo "✅ success.txt created with &&" >> "$VERDICT" || echo "❌ success.txt missing" >> "$VERDICT"
-[[ -f fail.txt ]] && echo "✅ fail.txt created with ||" >> "$VERDICT" || echo "❌ fail.txt missing" >> "$VERDICT"
-
-[[ -f hello_output.txt ]] && grep -q "Hello, $EXPECTED_USER" hello_output.txt && echo "✅ hello.sh output correct" >> "$VERDICT" || echo "❌ hello.sh output incorrect" >> "$VERDICT"
-
-[[ -f file_count.txt ]] && echo "✅ file_count.txt exists" >> "$VERDICT" || echo "❌ file_count.txt missing" >> "$VERDICT"
-
-echo "Verification complete." >> "$VERDICT"
+| Symbol | Purpose                                 | Example                              | Result                                      |
+|--------|------------------------------------------|--------------------------------------|---------------------------------------------|
+| `>`    | Redirect output (overwrite)              | `echo "Hi" > file.txt`               | Overwrites `file.txt` with "Hi"             |
+| `>>`   | Redirect output (append)                 | `echo "Bye" >> file.txt`             | Appends "Bye" to `file.txt`                 |
+| `2>`   | Redirect standard error                  | `ls nofile 2> error.txt`             | Saves error message to `error.txt`          |
+| `&>`   | Redirect both stdout and stderr          | `command &> all.txt`                 | Saves all output to `all.txt`               |
+| `|`    | Pipe output to another command           | `ls | wc -l`                         | Counts number of lines from `ls` output     |

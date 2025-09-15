@@ -79,10 +79,10 @@ Perform the following tasks manually in your own VM terminal. Do **not** use `su
 
 ## 🔹 Redirection and Piping
 
-| Symbol | Purpose                                 | Example                              | Result                                      |
-|--------|------------------------------------------|--------------------------------------|---------------------------------------------|
-| `>`    | Redirect output (overwrite)              | `echo "Hi" > file.txt`               | Overwrites `file.txt` with "Hi"             |
-| `>>`   | Redirect output (append)                 | `echo "Bye" >> file.txt`             | Appends "Bye" to `file.txt`                 |
-| `2>`   | Redirect standard error                  | `ls nofile 2> error.txt`             | Saves error message to `error.txt`          |
-| `&>`   | Redirect both stdout and stderr          | `command &> all.txt`                 | Saves all output to `all.txt`               |
-| `|`    | Pipe output to another command           | `ls | wc -l`                         | Counts number of lines from `ls` output     |
+| Symbol     | Purpose                                 | Example                              | Result                                      |
+|------------|------------------------------------------|--------------------------------------|---------------------------------------------|
+| `>`        | Redirect output (overwrite)              | `echo "Hi" > file.txt`               | Overwrites `file.txt` with "Hi"             |
+| `>>`       | Redirect output (append)                 | `echo "Bye" >> file.txt`             | Appends "Bye" to `file.txt`                 |
+| `2>`       | Redirect standard error                  | `ls nofile 2> error.txt`             | Saves error message to `error.txt`          |
+| `&>`       | Redirect both stdout and stderr          | `command &> all.txt`                 | Saves all output to `all.txt`               |
+| &#124;     | Pipe output to another command           | `ls &#124; wc -l`                    | Counts number of lines from `ls` output     |

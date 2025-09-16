@@ -63,3 +63,14 @@ chmod +x hello.sh
 | 2  | `?`        | Matches exactly one character         | `ls file?.log`   | `file1.log`, `fileA.log`           |
 | 3  | `[abc]`    | Matches any one character in brackets | `ls report[12].*`| `report1.txt`, `report2.pdf`       |
 | 4  | `{a,b,c}`  | Expands to each comma-separated value | `cp {jan,feb}.csv backup/` | Copies `jan.csv` and `feb.csv`    |
+
+
+### Nice to Know: History & Completion Tips
+
+| #  | Feature              | Key/Command          | What It Does / Example Use                          |
+|----|---------------------|----------------------|-----------------------------------------------------|
+| 1  | Browse history      | ↑ / ↓ (arrow keys)   | Cycle through previously entered commands           |
+| 2  | Search history      | Ctrl+R + text        | Reverse search: find and reuse a previous command   |
+| 3  | Repeat last command | !!                   | Executes the last command again                     |
+| 4  | Tab completion      | Tab / Tab+Tab        | Auto-complete file or command names; double Tab lists options |
+

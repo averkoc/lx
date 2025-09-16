@@ -65,7 +65,7 @@ chmod +x hello.sh
 | 4  | `{a,b,c}`  | Expands to each comma-separated value | `cp {jan,feb}.csv backup/` | Copies `jan.csv` and `feb.csv`    |
 
 
-### Nice to Know: History & Completion Tips
+### Nice to Know: History, Bash Completion, Brace expansion
 
 | #  | Feature              | Key/Command          | What It Does / Example Use                          |
 |----|---------------------|----------------------|-----------------------------------------------------|

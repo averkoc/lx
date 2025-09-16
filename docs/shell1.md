@@ -50,10 +50,11 @@ ls *.txt | wc -l
 
 #### 🔹 5. Permissions & Execution
 ```bash
-# Create a script file called hello.sh that prints "Welcome to Linux"
-echo 'echo "Welcome to Linux"' > hello.sh
+# Create a script file called hello.sh that prints "Welcome to Linux <username>"
+echo 'echo "Welcome to Linux $USER"' > hello.sh
 chmod +x hello.sh
 ./hello.sh
+
 ````
 #### Linux shell globbing (wildcards) examples
 

@@ -72,5 +72,5 @@ chmod +x hello.sh
 | 1  | Browse history      | ↑ / ↓ (arrow keys)   | Cycle through previously entered commands           |
 | 2  | Search history      | Ctrl+R + text        | Reverse search: find and reuse a previous command   |
 | 3  | Repeat last command | !!                   | Executes the last command again                     |
-| 4  | Tab completion      | Tab / Tab+Tab        | Auto-complete file or command names; double Tab lists options |
+| 4  | Tab completion      | Tab         | Auto-complete file or command names|
 

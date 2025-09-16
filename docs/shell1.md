@@ -62,7 +62,7 @@ chmod +x hello.sh
 | 1  | `*`        | Matches any number of characters      | `ls *.txt`       | All files ending in `.txt`         |
 | 2  | `?`        | Matches exactly one character         | `ls file?.log`   | `file1.log`, `fileA.log`           |
 | 3  | `[abc]`    | Matches any one character in brackets | `ls report[12].*`| `report1.txt`, `report2.pdf`       |
-| 4  | `{a,b,c}`  | Expands to each comma-separated value | `cp {jan,feb}.csv backup/` | Copies `jan.csv` and `feb.csv`    |
+
 
 
 ### Nice to Know: History, Bash Completion, Brace expansion

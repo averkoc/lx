@@ -14,5 +14,5 @@ iface enp0s3 inet dhcp
 
 # The secondary network interface
 allow-hotplug enp0s8
-iface enp0s8 inet dh
+iface enp0s8 inet dhcp
 ````

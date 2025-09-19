@@ -15,8 +15,7 @@ We demonstrate shell capabilities by analyzing a server log containing session a
 
 1. If you not yet have, create a new user account with your first name on the server (command: `adduser <username>`)
 2. Log in the server using the new account (use `ssh` in Windows, macOS, or desktop Linux)
-3. Linux users: use `wget` to download a sample log-file (averkoc.github.io/lx/auth.log) to your home directory.  
-   Mac users: use `curl`. Some other files are downloaded too, check from video.
+3. Use `wget` to download a sample log-file (averkoc.github.io/lx/auth.log) to your home directory.     
 4. Create a directory `analysis` under your home directory and a directory `results` under the analysis directory (`mkdir`).
 5. Move `auth.log` file to analysis directory. (`mv` command)
 6. Check the size of the downloaded file (`ls -l`)

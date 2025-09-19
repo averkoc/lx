@@ -11,7 +11,7 @@ Its ability to chain commands with pipes (`|`) and redirect input/output (`>`, `
 We demonstrate shell capabilities by analyzing a server log containing session attempts over a five-hour interval. After retrieving the file from the Internet, we determine the number of failed and successful logins, the usernames and IPs involved, and related patterns. Along the way, we review basic commands and complete additional tasks.
 
 
-## Walkthrough steps – some intermediary steps are not listed
+## Walkthrough steps – some intermediary steps are not listed, see the related video.
 
 1. If you not yet have, create a new user account with your first name on the server (command: `adduser <username>`)
 2. Log in the server using the new account (use `ssh` in Windows, macOS, or desktop Linux)

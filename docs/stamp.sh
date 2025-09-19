@@ -6,7 +6,7 @@ u=$(whoami)
 upt=$(cut -d. -f1 /proc/uptime)     # Kernel uptime in seconds (adds entropy)
 
 # Use sha256 if available, fallback to md5sum/md5
-hashcmd=$(command -v sha256sum || command -v md5sum || command -v md5)
+hashcmd=$(command -v sha256sum )
 h=$(echo -n "${u}_${t}_${upt}" | $hashcmd | awk '{print $1}')
 
 # Output contains both timestamp and a short hash segment

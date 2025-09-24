@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -e "\033[1m🔍 lsvis.sh – permissions visualizer\033[0m"
+echo -e "\033[1m🔍 lsvis.sh – permissions visualizer (not perfect:)\033[0m"
 
 # Role-based color codes
 OWNER_COLOR='\033[0;36m'   # Cyan for owner

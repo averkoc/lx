@@ -46,7 +46,7 @@ Your setup should pass the following checks:
 ---
 
 ## 📤 Report
-Submit the output of the following command as **user student**:
+Submit a screen clip of the output `sudo ls -lR /var/projects`when logged in as user **student**:
 
 ```bash
 sudo ls -lR /var/projects

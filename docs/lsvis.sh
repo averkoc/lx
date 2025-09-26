@@ -5,7 +5,7 @@ OWNER_COLOR='\033[0;36m'   # Cyan for owner
 GROUP_COLOR='\033[0;33m'   # Yellow for group
 OTHER_COLOR='\033[0;35m'   # Magenta for others
 NC='\033[0m'               # Reset
-echo -e "\033[1m🔍 lsvis.sh – permissions visualizer for ${OWNER_COLOR}Owner ${GROUP_COLOR}Group ${OTHER_COLOR}Others\033[0m"
+echo -e "\033[1m🔍 lsvis.sh – permissions visualizer for ${OWNER_COLOR}Owner (u) ${GROUP_COLOR}Group (g) ${OTHER_COLOR}Others (o)\033[0m"
 
 # Help message
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then

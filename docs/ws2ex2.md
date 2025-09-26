@@ -50,7 +50,7 @@ Submit a screen clip of the output of command `sudo ls -lR /var/projects` direct
 
 ```bash
 sudo ls -lR /var/projects
-
+````
 ## Linux User & File Management Commands
 
 | Command                                | Description                                                                 | Example                                   |

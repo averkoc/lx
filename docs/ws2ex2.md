@@ -50,3 +50,41 @@ Submit a screen clip of the output of command `sudo ls -lR /var/projects` direct
 
 ```bash
 sudo ls -lR /var/projects
+
+## Linux User & File Management Commands
+
+| Command                                | Description                                                                 | Example                                   |
+|----------------------------------------|-----------------------------------------------------------------------------|-------------------------------------------|
+| `addgroup groupname`                   | Creates a new group.                                                        | `addgroup developers`                     |
+| `adduser username`                     | Creates a new user account.                                                 | `adduser alice`                           |
+| `chown :groupname filename`            | Changes the group ownership of a file or directory.                         | `chown :developers project1/`             |
+| `chmod u=???,g=???,o=??? filename`     | Sets specific file permissions for user (u), group (g), and others (o).     | `chmod u=rwx,g=rx,o= project1/`           |
+| `id [username]`                        | Displays user ID (UID), group ID (GID), and groups for a user.              | `id alice`                                |
+| `mkdir dirname`                        | Creates a new directory.                                                    | `mkdir projects`                          |
+| `usermod -aG groupname username`       | Adds an existing user to a group (without removing them from other groups). | `usermod -aG sudo alice`                  |
+
+---
+
+## Linux User & File Management Commands
+
+| Command                                | Description                                                                 | Example                                   |
+|----------------------------------------|-----------------------------------------------------------------------------|-------------------------------------------|
+| `addgroup groupname`                   | Creates a new group.                                                        | `addgroup developers`                     |
+| `adduser username`                     | Creates a new user account.                                                 | `adduser alice`                           |
+| `chown :groupname filename`            | Changes the group ownership of a file or directory.                         | `chown :developers project1/`             |
+| `chmod u=???,g=???,o=??? filename`     | Sets specific file permissions for user (u), group (g), and others (o).     | `chmod u=rwx,g=rx,o= project1/`           |
+| `id [username]`                        | Displays user ID (UID), group ID (GID), and groups for a user.              | `id alice`                                |
+| `mkdir dirname`                        | Creates a new directory.                                                    | `mkdir projects`                          |
+| `usermod -aG groupname username`       | Adds an existing user to a group (without removing them from other groups). | `usermod -aG sudo alice`                  |
+
+
+## Common `chmod` Numeric Modes
+
+| Numeric Mode | Symbolic Equivalent | Meaning                                                |
+|--------------|----------------------|--------------------------------------------------------|
+| `777`        | `u=rwx,g=rwx,o=rwx` | Full permissions (read, write, execute) for everyone.  |
+| `755`        | `u=rwx,g=rx,o=rx`   | Owner full access; group & others can read/execute.    |
+| `700`        | `u=rwx,g=,o=`       | Only owner has full access.                            |
+| `644`        | `u=rw,g=r,o=r`      | Owner can read/write; group & others read-only.        |
+| `600`        | `u=rw,g=,o=`        | Only owner can read/write.                             |
+

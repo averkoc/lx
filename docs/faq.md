@@ -23,7 +23,7 @@ C:\Users\sakke>ssh student@debian.local
 # Many rows omitted here - just information sent from server
 student@debian.local's password:
 student@debian:~$
-# Now you are able to use sudo when you need to do administrative tasks.
+# Now you are able to use sudo when you need to do administrative tasks.  
 ```
 
 ### Q2. How to add a new regular user account

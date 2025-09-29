@@ -1,6 +1,6 @@
 # Linux Essentials — Frequently Asked Questions
 
-A concise, step-by-step FAQ for common issues encountered in the Linux Essentials course. Use the Table of Contents to jump to a question. Each entry provides a short answer, steps, and verification where relevant.
+A concise, step-by-step FAQ for common issues encountered in the Linux Essentials course. Use the Table of Contents to jump to a question. Each entry provides a short answer, steps, and verification where possible.
 
 Conventions:
 - Commands are shown in code blocks. Lines starting with `#` are intended to be run as root; lines starting with `$` are run as a regular user.
@@ -9,6 +9,7 @@ Conventions:
 ## Table of Contents
 - [Accounts & Permissions](#accounts--permissions)
   - [Q1. After installing Debian Server from ISO, I can’t use sudo](#q1-after-installing-debian-server-from-iso-i-cant-use-sudo)
+  - [Q2. How to add a new regular user account](#q2-how-to-add-a-new-regular-user-account)
 
 ---
 
@@ -47,6 +48,47 @@ sudo -l      # list your sudo privileges
 Notes:
 - On Debian/Ubuntu, the group is `sudo` (some other distributions use `wheel`).
 - If the root account is disabled on your install, use recovery/rescue mode or a root-enabled live environment to install `sudo` and adjust group membership.
+
+### Q2. How to add a new regular user account
+
+Short answer: As root, create the user (with a home directory) and set a password; do not add them to sudo for a regular (non-admin) account.
+
+Steps:
+1. Create the user and home directory (Debian/Ubuntu preferred):
+   ```bash
+   # as root
+   adduser student
+   ```
+   - Follow the prompts to set the password and optional details.
+
+   Alternative (works on most distros):
+   ```bash
+   # as root
+   useradd -m -s /bin/bash student
+   passwd student
+   ```
+2. (Optional) Add to non-admin groups needed for device access or services (example: serial devices):
+   ```bash
+   # as root
+   usermod -aG dialout student
+   ```
+   Skip any admin groups like `sudo` for a regular account.
+
+Verify:
+```bash
+# as root or another session
+id student           # shows uid, gid, and groups
+getent passwd student  # confirms account entry exists
+ls -ld /home/student # home directory exists and is owned by the user
+
+# test login/switch
+su - student         # should start a login shell in /home/student
+```
+
+Notes:
+- On Debian/Ubuntu, `adduser` is a friendly wrapper around `useradd` and is recommended.
+- For an admin user, add to the `sudo` group (see: Q1).
+- Choose the shell you prefer with `-s` (e.g., `/bin/bash`, `/bin/zsh`) when using `useradd`.
 
 ---
 

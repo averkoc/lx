@@ -6,11 +6,33 @@
 </head>
 <body>
   <div class="mermaid">
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+  sequenceDiagram
+    participant Client as Client (john)
+    participant Server as SSH Server
+
+    Note over Client,Server: 🔐 Symmetric encryption already established via key exchange
+
+    Client->>Server: Sends key ID for authentication
+    Server->>Server: Looks up key ID in authorized_keys
+    alt Public key found
+        Server->>Server: Generate random number
+        Server->>Server: Encrypt number with john's public key
+        Server-->>Client: Send encrypted challenge
+        Client->>Client: Decrypt challenge with private key
+        Client->>Client: Combine decrypted number + session key
+        Client->>Client: Compute MD5 hash
+        Client-->>Server: Send MD5 hash as proof
+        Server->>Server: Compute MD5 using original number + session key
+        Server->>Server: Compare hashes
+        alt Hashes match
+            Server-->>Client: ✅ Authentication successful
+        else Hashes mismatch
+            Server-->>Client: ❌ Authentication failed
+        end
+    else Public key not found
+        Server-->>Client: ❌ Authentication failed
+    end
+
    </div>
 </body>
 </html>

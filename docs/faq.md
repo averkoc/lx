@@ -8,17 +8,23 @@ Steps:
 1. Log in as root using the debian console window.
 2. Install sudo:
    ```bash
-   apt update
-   apt install sudo
+   root@debian:~#apt update
+   root@debian:~#apt install sudo
    ```
 3. Add your account student to the sudo group:
    ```bash
    # still logged in as root
-   usermod -aG sudo student
+   root@debian:~#usermod -aG sudo student
       ```
-4. Log out and log in with account student using ssh (or debian console window)
-
-
+4. Log out and log in from your mac-terminal or windows command window using ssh-program (or directly from debian console window)
+```bash
+# In place of debian.local you can alternatively use the debian server's IP-address
+C:\Users\sakke>ssh student@debian.local
+student@debian.local's password:
+# Many rows omitted here - just information sent from server
+student@debian:~$
+# Now you are able to use sudo when you need to do administrative tasks.
+```
 
 ### Q2. How to add a new regular user account
 

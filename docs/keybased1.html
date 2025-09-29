@@ -16,7 +16,7 @@
     Client->>Client: Decrypts challenge with private key
     Client->>Client: Combines decrypted number + session id
     Client->>Client: Computes MD5 hash
-    Client-->>Server: Sends MD5 hash as proof
+    Client-->>Server: Signs the MD5 hash with its private key as proof
     Server->>Server: Computes MD5 using original number + session id
     Server->>Server: Compares hashes
     Server-->>Client: ✅ Authentication successful

@@ -20,8 +20,8 @@ Steps:
 ```bash
 # In place of debian.local you can alternatively use the debian server's IP-address
 C:\Users\sakke>ssh student@debian.local
-student@debian.local's password:
 # Many rows omitted here - just information sent from server
+student@debian.local's password:
 student@debian:~$
 # Now you are able to use sudo when you need to do administrative tasks.
 ```

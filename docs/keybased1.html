@@ -6,14 +6,13 @@
 </head>
 <body>
   <div class="mermaid">
-    sequenceDiagram
-    participant U as SSH Client
-    participant S as SSH Server
-
-    U->>S: 1. ssh john@server  
-    S-->>U: 2. Prove that you have corresponding private key
-    U->>S: 3. Here is my proof calculated using my private key
-    S-->>U: 4. I opened it by your public key and believe you have the private key
+    ```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
    </div>
 </body>
 </html>

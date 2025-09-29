@@ -10,28 +10,19 @@
     participant Client as Client (john)
     participant Server as SSH Server
 
-    Note over Client,Server: 🔐 Symmetric encryption already established via key exchange
+    Note over Client,Server: 🔐 Secure channel already established via key exchange
 
     Client->>Server: Sends key ID for authentication
     Server->>Server: Looks up key ID in authorized_keys
-    alt Public key found
-        Server->>Server: Generate random number
-        Server->>Server: Encrypt number with john's public key
-        Server-->>Client: Send encrypted challenge
-        Client->>Client: Decrypt challenge with private key
-        Client->>Client: Combine decrypted number + session key
-        Client->>Client: Compute MD5 hash
-        Client-->>Server: Send MD5 hash as proof
-        Server->>Server: Compute MD5 using original number + session key
-        Server->>Server: Compare hashes
-        alt Hashes match
-            Server-->>Client: ✅ Authentication successful
-        else Hashes mismatch
-            Server-->>Client: ❌ Authentication failed
-        end
-    else Public key not found
-        Server-->>Client: ❌ Authentication failed
-    end
+    Server->>Server: Encrypts random number with john's public key
+    Server-->>Client: Sends encrypted challenge
+    Client->>Client: Decrypts challenge with private key
+    Client->>Client: Combines decrypted number + session key
+    Client->>Client: Computes MD5 hash
+    Client-->>Server: Sends MD5 hash as proof
+    Server->>Server: Computes MD5 using original number + session key
+    Server->>Server: Compares hashes
+    Server-->>Client: ✅ Authentication successful
 
    </div>
 </body>

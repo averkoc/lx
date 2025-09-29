@@ -1,8 +1,8 @@
 # Linux Essentials — Frequently Asked Questions
 
-### Q1. After installing Debian Server from ISO, I can’t use sudo
+### Q1. After installing Debian Server from ISO-file, I can’t use sudo
 
-Short answer: Log in as root, install sudo, add your student to the sudo group, then re-login with sudo account.
+Short answer: Log in as root, install sudo, add account student to the sudo group, then re-login with sudo account.
 
 Steps:
 1. Log in as root using the debian console window.

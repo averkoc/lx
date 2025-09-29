@@ -14,13 +14,15 @@
     Server->>Server: Encrypts random number with john's public key
     Server-->>Client: Sends encrypted challenge
     Client->>Client: Decrypts challenge with private key
-    Client->>Client: Combines decrypted number + session key
+    Client->>Client: Combines decrypted number + session id
     Client->>Client: Computes MD5 hash
     Client-->>Server: Sends MD5 hash as proof
-    Server->>Server: Computes MD5 using original number + session key
+    Server->>Server: Computes MD5 using original number + session id
     Server->>Server: Compares hashes
     Server-->>Client: ✅ Authentication successful
-
    </div>
+  <div>
+    Note: before the authentication starts the session is already automatically secured using symmetric encryption.
+  </div>
 </body>
 </html>

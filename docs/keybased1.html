@@ -7,8 +7,8 @@
 <body>
   <div class="mermaid">
     sequenceDiagram
-    participant U as SSH Client (private key)
-    participant S as Server (public key)
+    participant U as SSH Client
+    participant S as SSH Server
 
     U->>S: 1. ssh john@server
     S->>S: 2. Check /home/john/.ssh/authorized_keys for john's public key

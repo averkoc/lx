@@ -11,7 +11,7 @@ Steps:
    apt update
    apt install sudo
    ```
-3. Add your user account student to the sudo group:
+3. Add your account student to the sudo group:
    ```bash
    # still logged in as root
    usermod -aG sudo student

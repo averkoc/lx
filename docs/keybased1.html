@@ -13,9 +13,8 @@
     U->>S: 1. ssh john@server
     S->>S: 2. Check /home/john/.ssh/authorized_keys for john's public key
     S-->>U: 3. Prove that you have corresponding private key
-    U->>U: 4. Here is my proof calculated using my private key
-    S->>S: 5. I opened it by your public key and believe you have the private key
-    S->>U: 6. If valid → login success
-  </div>
+    U->>S: 4. Here is my proof calculated using my private key
+    S->>U: 5. I opened it by your public key and believe you have the private key
+   </div>
 </body>
 </html>

@@ -1,123 +1,25 @@
 # Linux Essentials — Frequently Asked Questions
 
-A concise, step-by-step FAQ for common issues encountered in the Linux Essentials course. Use the Table of Contents to jump to a question. Each entry provides a short answer, steps, and verification where possible.
-
-Conventions:
-- Commands are shown in code blocks. Lines starting with `#` are intended to be run as root; lines starting with `$` are run as a regular user.
-- Replace placeholders like `student` with your actual username.
-
-## Table of Contents
-- [Accounts & Permissions](#accounts--permissions)
-  - [Q1. After installing Debian Server from ISO, I can’t use sudo](#q1-after-installing-debian-server-from-iso-i-cant-use-sudo)
-  - [Q2. How to add a new regular user account](#q2-how-to-add-a-new-regular-user-account)
-
----
-
-## Accounts & Permissions
-
 ### Q1. After installing Debian Server from ISO, I can’t use sudo
 
-Short answer: Log in as root, install sudo, add your user to the sudo group, then re-login.
+Short answer: Log in as root, install sudo, add your student to the sudo group, then re-login with sudo account.
 
 Steps:
-1. Log in as root (either directly or via console).
+1. Log in as root using the debian console window.
 2. Install sudo:
    ```bash
-   # as root
    apt update
    apt install sudo
    ```
-3. Add your user to the sudo group (replace `student` with your username):
+3. Add your user account student to the sudo group:
    ```bash
-   # as root
+   # still logged in as root
    usermod -aG sudo student
-   ```
-4. Log out and log back in (or reboot) so the new group membership takes effect.
+      ```
+4. Log out and log in with account student using ssh (or debian console window)
 
-Verify:
-```bash
-# as root or another session
-groups student
-# should include: sudo
 
-# as your regular user
-sudo -v      # should prompt for your password (once)
-sudo -l      # list your sudo privileges
-```
-
-Notes:
-- On Debian/Ubuntu, the group is `sudo` (some other distributions use `wheel`).
-- If the root account is disabled on your install, use recovery/rescue mode or a root-enabled live environment to install `sudo` and adjust group membership.
 
 ### Q2. How to add a new regular user account
 
-Short answer: As root, create the user (with a home directory) and set a password; do not add them to sudo for a regular (non-admin) account.
-
-Steps:
-1. Create the user and home directory (Debian/Ubuntu preferred):
-   ```bash
-   # as root
-   adduser student
-   ```
-   - Follow the prompts to set the password and optional details.
-
-   Alternative (works on most distros):
-   ```bash
-   # as root
-   useradd -m -s /bin/bash student
-   passwd student
-   ```
-2. (Optional) Add to non-admin groups needed for device access or services (example: serial devices):
-   ```bash
-   # as root
-   usermod -aG dialout student
-   ```
-   Skip any admin groups like `sudo` for a regular account.
-
-Verify:
-```bash
-# as root or another session
-id student           # shows uid, gid, and groups
-getent passwd student  # confirms account entry exists
-ls -ld /home/student # home directory exists and is owned by the user
-
-# test login/switch
-su - student         # should start a login shell in /home/student
-```
-
-Notes:
-- On Debian/Ubuntu, `adduser` is a friendly wrapper around `useradd` and is recommended.
-- For an admin user, add to the `sudo` group (see: Q1).
-- Choose the shell you prefer with `-s` (e.g., `/bin/bash`, `/bin/zsh`) when using `useradd`.
-
----
-
-## How to add new questions (maintainers)
-
-Copy the template below and append it to the appropriate section. Keep questions as H3 headings (###) so anchors work reliably.
-
-```markdown
-### Q<n>. <Clear, searchable question>
-
-Short answer: <One sentence summary or resolution.>
-
-Steps:
-1. <Step one>
-2. <Step two>
-3. <Step three>
-
-Verify:
-```bash
-# commands to confirm it worked
-```
-
-Notes:
-- <Optional tips, caveats, distro differences>
-- <Links to docs if helpful>
-```
-
-Editorial guidelines:
-- Prefer actionable steps over long explanations.
-- Include a “Verify” block whenever possible so learners can confirm success.
-- Keep commands minimal and correct for Debian/Ubuntu unless explicitly noted.
-- When adding multiple related questions, group them under an existing section or create a new one with a clear name.
+Short answer: Log in as student, issue command `sudo adduser` and follow the prompts to set password and optional details.

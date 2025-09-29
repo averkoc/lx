@@ -9,8 +9,8 @@
   sequenceDiagram
     participant Client as Client (john)
     participant Server as SSH Server
-    Client->>Server: Sends key ID for authentication
-    Server->>Server: Looks up key ID in authorized_keys
+    Client->>Server: Sends name john and key ID for authentication
+    Server->>Server: Looks up public key ID in john's authorized_keys
     Server->>Server: Encrypts random number with john's public key
     Server-->>Client: Sends encrypted challenge
     Client->>Client: Decrypts challenge with private key

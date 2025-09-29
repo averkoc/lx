@@ -18,10 +18,10 @@ Steps:
    # still logged in as root
    root@debian:~#usermod -aG sudo student
       ```
-4. Log out and log in from your mac-terminal or windows command window using ssh-program (or directly from debian console window)
+4. Log out from the root-session. When you now log in as user student, your new group membership in group sudo is in effect and you can issue administrative commands using sudo when needed.
 ```bash
 # In place of debian.local you can alternatively use the debian server's IP-address
-C:\Users\sakke>ssh student@debian.local
+C:\Users\sakke>ssh student@debian.local  # people with mac issue the same command using mac-terminal
 # Many rows omitted here - just information sent from server
 student@debian.local's password:
 student@debian:~$

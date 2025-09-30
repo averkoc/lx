@@ -59,3 +59,19 @@ Example:
 Use this table as part of your report to clearly demonstrate the outcome of your configuration.
 
 ---
+## Commands Reference Table
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `sudo adduser username` | Create a new user account | `sudo adduser matti1` |
+| `sudo groupadd groupname` | Create a new group | `sudo groupadd labgroup1` |
+| `sudo usermod -aG groupname username` | Add a user to a group | `sudo usermod -aG labgroup1 matti1` |
+| `groups username` | List groups a user belongs to | `groups matti1` |
+| `mkdir /path/to/directory` | Create a new directory | `mkdir -p /var/labs/group1files` |
+| `chgrp groupname /path/to/directory` | Change group ownership of a directory | `chgrp labgroup1 /var/labs/group1files` |
+| `chmod 770 /path/to/directory` | Set permissions (rwx for owner and group, none for others) | `chmod 770 /var/labs/group1files` |
+| `touch filename` | Create a new empty file | `touch /var/labs/group1files/file1.txt` |
+| `chmod 640 filename` | Set file permissions (read/write for owner, read for group, none for others) | `chmod 640 /var/labs/group1files/file1.txt` |
+| `ls -l /path/to/directory` | List files with permissions | `ls -l /var/labs/group1files` |
+| `su - username` | Switch to another user | `su - matti2` |
+| `cat filename` | View file contents | `cat /var/labs/group1files/file1.txt` |

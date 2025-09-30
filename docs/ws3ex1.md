@@ -54,7 +54,7 @@ Example:
 | matti1filea  | rw     | r      | r      | r      | r      |
 | matti1fileb  | rw     | rw     | rw     | r      | r      |
 | matti1filec  | rw     | r      | r      | -      | -      |
-| User can create files in shared dir | y | y | y | n | n |
+| can a user create files in group1files | y | y | y | n | n |
 
 Use this table as part of your report to clearly demonstrate the outcome of your configuration.
 

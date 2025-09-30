@@ -3,7 +3,7 @@
 ## Overview
 In this workshop, you will set up a shared directory that can be accessed by members of a specific group. Only group members will be able to create files in this directory, and access to each file will depend on the permissions set by its owner—allowing other group members to either read or modify the file.
 
-The workshop begins with creating new user accounts on the server, followed by setting up a group named **labgroup1** and assigning selected users to it. Next, you will create a shared folder on the server and configure it so that it is accessible only to members of **labgroup1**.
+The workshop begins with creating new user accounts on the server, followed by setting up a group named **labgroup1** and assigning selected users to it. Next, you will create a shared folder on the server and configure it so that it is write accessible only to members of **labgroup1**.
 
 Finally, you will create and test files in the shared directory to observe how different permission settings affect collaboration within the group. 
 

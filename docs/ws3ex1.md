@@ -37,14 +37,13 @@ By the end of this workshop, you will be able to:
 - Configure directory permissions so that only members of **labgroup1** can create files inside it.  
 
 ### 4. Test File Permissions
-- As `matti1`, create files inside the shared directory.  
-- Change permissions on these files so that different group members (`matti2`, `matti3`) have different levels of access.  
+- As `matti1`, create files inside the shared directory and set permissions for labgroup1 members and others.  
 - Test the access rights by switching users and trying to read, write, or create files.  
 
 ---
 
 ## Verification & Summary
-Log in as matti1 and create three files: matti1filea,matti1fileb,matti1filec. Set the files ownerships and permissions in such a way that they are along the permission presented in the table below. Verify your settings by logging in as matti2/matti3 and matti4/matti5 and observing the effect of permissions. Report your results by submitting the output of command: `ls -lR /var/labs`.
+Log in as matti1 and create three files: matti1filea,matti1fileb,matti1filec. Set the files ownerships and permissions in such a way that they are along the permissions presented in the table below. Verify your settings by logging in as matti2/matti3 and matti4/matti5 and observing the effect of permissions. Report your results by submitting the output of command: `ls -lR /var/labs`.
 
 | filename     | matti1 | matti2 | matti3 | matti4 | matti5 |
 |--------------|--------|--------|--------|--------|--------|

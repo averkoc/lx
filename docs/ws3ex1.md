@@ -33,14 +33,14 @@ By the end of this workshop, you will be able to:
 - Verify the group membership with the `groups` command.  
 
 ### 3. Create a Shared Directory
-- Create a directory called **coursefile** (or another suitable name).  
-- Set the group ownership of this directory to **labgroup1**.  
+- Create a directory **/var/labs** and and directory **group1files** under it.  
+- Set the group ownership of group1files to **labgroup1**.  
 - Configure directory permissions so that only members of **labgroup1** can create files inside it.  
 
 ### 4. Test File Permissions
 - As `matti1`, create files inside the shared directory.  
 - Change permissions on these files so that different group members (`matti2`, `matti3`) have different levels of access.  
-- Test the access rights by switching users (`su - username`) and trying to read, write, or create files.  
+- Test the access rights by switching users and trying to read, write, or create files.  
 
 ---
 

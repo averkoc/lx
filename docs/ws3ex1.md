@@ -15,7 +15,6 @@ By the end of this workshop, you will be able to:
 - Create and manage user accounts on a Linux server.  
 - Form groups and configure shared directories with appropriate permissions.  
 - Experiment with file-level permissions to understand their impact on collaboration.  
-- Document administrative tasks effectively using concise verification methods.  
 - Recognize how manual user and group management becomes inefficient at scale, and why automation is essential in larger environments such as educational institutes or organizations.  
 
 ---

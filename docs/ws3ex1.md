@@ -64,7 +64,7 @@ Use this table as part of your report to clearly demonstrate the outcome of your
 | Command | Description | Example |
 |---------|-------------|---------|
 | `sudo adduser username` | Create a new user account | `sudo adduser matti1` |
-| `sudo groupadd groupname` | Create a new group | `sudo groupadd labgroup1` |
+| `sudo addgroup groupname` | Create a new group | `sudo addgroup labgroup1` |
 | `sudo usermod -aG groupname username` | Add a user to a group | `sudo usermod -aG labgroup1 matti1` |
 | `groups username` | List groups a user belongs to | `groups matti1` |
 | `mkdir /path/to/directory` | Create a new directory | `mkdir -p /var/labs/group1files` |

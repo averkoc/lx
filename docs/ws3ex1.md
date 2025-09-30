@@ -21,7 +21,7 @@ By the end of this workshop, you will be able to:
 
 ## Tasks 
 
-> **Note: instead of matti1,matti2,... use your own firstname1,firstnaem2,... accounts.**
+> **Note: instead of matti1,matti2,... use your own firstname1,firstname2,... accounts.**
 
 ### 1. Create User Accounts
 - Log in to the server via SSH.  

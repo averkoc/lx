@@ -38,7 +38,7 @@ By the end of this workshop, you will be able to:
 
 ### 4. Test File Permissions
 - Log in as matti1 and create three files: matti1filea,matti1fileb,matti1filec.
--  Set the files ownerships and permissions in such a way that they are along the permissions presented in the table below.
+-  Still logged in as matti1, set the files ownerships and permissions in such a way that they are along the permissions presented in the table below.
 -  Verify your settings by logging in as matti2/matti3 and matti4/matti5 and observing the effect of permissions.
 -  **Report your results by submitting the output of command:** `ls -lR /var/labs`.
 

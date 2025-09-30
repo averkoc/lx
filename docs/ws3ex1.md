@@ -72,5 +72,4 @@ Use this table as part of your report to clearly demonstrate the outcome of your
 | `touch filename` | Create a new empty file | `touch /var/labs/group1files/file1.txt` |
 | `chmod u=???,g=???,o=???` | Set file permissions for owner,group, other) | `chmod u=rw,g=r,o=  /var/labs/group1files/file1.txt` |
 | `ls -l /path/to/directory` | List files with permissions | `ls -l /var/labs/group1files` |
-| `su - username` | Switch to another user | `su - matti2` |
 | `cat filename` | View file contents | `cat /var/labs/group1files/file1.txt` |

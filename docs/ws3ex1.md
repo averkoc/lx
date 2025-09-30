@@ -1,0 +1,61 @@
+# Linux Workshop: Users, Groups, and File Permissions
+
+## Overview
+In this workshop, you will set up a shared directory that can be accessed by members of a specific group. Only group members will be able to create files in this directory, and access to each file will depend on the permissions set by its owner—allowing other group members to either read or modify the file.
+
+The workshop begins with creating new user accounts on the server, followed by setting up a group named **labgroup1** and assigning selected users to it. Next, you will create a shared folder on the server and configure it so that it is accessible only to members of **labgroup1**.
+
+Finally, you will create and test files in the shared directory to observe how different permission settings affect collaboration within the group. Throughout the process, you will document your steps concisely (using command outputs and selective evidence tables rather than excessive screenshots). All tasks will be performed via an SSH connection from a Linux or macOS desktop to the server.
+
+---
+
+## Learning Outcomes
+By the end of this workshop, you will be able to:
+
+- Create and manage user accounts on a Linux server.  
+- Form groups and configure shared directories with appropriate permissions.  
+- Experiment with file-level permissions to understand their impact on collaboration.  
+- Document administrative tasks effectively using concise verification methods.  
+- Recognize how manual user and group management becomes inefficient at scale, and why automation is essential in larger environments such as educational institutes or organizations.  
+
+---
+
+## Tasks
+
+### 1. Create User Accounts
+- Log in to the server via SSH.  
+- Create at least **five new users** (e.g., `matti1`, `matti2`, `matti3`, `matti4`, `matti5`).  
+- Verify that the users have been added correctly.  
+
+### 2. Create and Manage a Group
+- Create a new group called **labgroup1**.  
+- Add a subset of the new users (e.g., `matti1`, `matti2`, `matti3`) to this group.  
+- Verify the group membership with the `groups` command.  
+
+### 3. Create a Shared Directory
+- Create a directory called **coursefile** (or another suitable name).  
+- Set the group ownership of this directory to **labgroup1**.  
+- Configure directory permissions so that only members of **labgroup1** can create files inside it.  
+
+### 4. Test File Permissions
+- As `matti1`, create files inside the shared directory.  
+- Change permissions on these files so that different group members (`matti2`, `matti3`) have different levels of access.  
+- Test the access rights by switching users (`su - username`) and trying to read, write, or create files.  
+
+---
+
+## Verification & Summary
+As a final step, simulate the actions of different group members by setting permissions on your files and verifying access for others. Summarize the results in a **table** instead of multiple screenshots.  
+
+Example:
+
+| filename     | matti1 | matti2 | matti3 | matti4 | matti5 |
+|--------------|--------|--------|--------|--------|--------|
+| matti1filea  | rw     | r      | r      | r      | r      |
+| matti1fileb  | rw     | rw     | rw     | r      | r      |
+| matti1filec  | rw     | r      | r      | -      | -      |
+| User can create files in shared dir | y | y | y | n | n |
+
+Use this table as part of your report to clearly demonstrate the outcome of your configuration.
+
+---

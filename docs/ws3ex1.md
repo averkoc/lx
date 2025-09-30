@@ -45,9 +45,7 @@ By the end of this workshop, you will be able to:
 ---
 
 ## Verification & Summary
-As a final step, simulate the actions of different group members by setting permissions on your files and verifying access for others. Summarize the results in a **table** instead of multiple screenshots.  
-
-Example:
+Log in as matti1 and create three files: matti1filea,matti1fileb,matti1filec. Set the files ownerships and permissions in such a way that they are along the permission presented in the table below.
 
 | filename     | matti1 | matti2 | matti3 | matti4 | matti5 |
 |--------------|--------|--------|--------|--------|--------|

@@ -5,7 +5,7 @@ In this workshop, you will set up a shared directory that can be accessed by mem
 
 The workshop begins with creating new user accounts on the server, followed by setting up a group named **labgroup1** and assigning selected users to it. Next, you will create a shared folder on the server and configure it so that it is accessible only to members of **labgroup1**.
 
-Finally, you will create and test files in the shared directory to observe how different permission settings affect collaboration within the group. Throughout the process, you will document your steps concisely (using command outputs and selective evidence tables rather than excessive screenshots). All tasks will be performed via an SSH connection from a Linux or macOS desktop to the server.
+Finally, you will create and test files in the shared directory to observe how different permission settings affect collaboration within the group. 
 
 ---
 

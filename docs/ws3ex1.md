@@ -38,11 +38,12 @@ By the end of this workshop, you will be able to:
 - Set the group ownership of group1files to **labgroup1**.  
 - Configure directory permissions so that only members of **labgroup1** can create files inside it.  
 
-### 4. Test File Permissions
-- Log in as matti1 and create three files: matti1filea,matti1fileb,matti1filec.
--  Still logged in as matti1, set the files ownerships and permissions in such a way that they are along the permissions presented in the table below.
--  Verify your settings by logging in as matti2/matti3 and matti4/matti5 and observing the effect of permissions.
--  **Report your results by submitting the output of command:** `ls -lR /var/labs`.
+### 4. Test File Permissions  
+You do all the steps below as user matti1 (your firstname1) - you don't need sudo command.
+- Log in as matti1 and create three files: matti1filea,matti1fileb,matti1filec. 
+- Set the files ownerships and permissions in such a way that they are along the permissions presented in the table below.
+- Verify your settings by logging in as matti2/matti3 and matti4/matti5 and observing the effect of permissions.
+- **Report your results by submitting the output of command:** `ls -lR /var/labs`.
 
 | filename     | matti1 | matti2 | matti3 | matti4 | matti5 |
 |--------------|--------|--------|--------|--------|--------|

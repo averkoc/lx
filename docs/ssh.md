@@ -7,7 +7,7 @@ We use here Johnny as an example user. His account on local Windows and Linux is
 1. Generate public/private keypair using `ssh-keygen` program  
    - `C:\Users\johnny>ssh-keygen ` in Windows  
    - `johnny@lxdesktop:~$ssh-keygen` in Linux/Mac  
-3. Copy the public-key into remote server using `ssh-copy-id` script 
+3. Copy the public-key into remote server using `ssh-copy-id` script (available in Linux and Mac)
     - **in Linux and Mac**  
     `johnny@lxdesktop:~$ssh-copy-id john@serverdnsname`  
    - **in Windows**  

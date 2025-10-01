@@ -3,9 +3,9 @@
 ## Setup 
 1. Generate public/private keypair  
    `ssh-keygen`
-2. copy the public-key into server  
+2. copy the public-key into remote server  
   a. **in Linux and Mac**  
-   `ssh-copy-id youraccount@serverdnsname`  
+   `ssh-copy-id john@debian.local`  
   b. **in Windows**
    'C:\Users\johnny>type .ssh\id_rsa.pub|ssh john@192.168.56.134 "umask 077;[ -d  .ssh ] || mkdir .ssh;cat >> ~/.ssh/authorized_keys"
 

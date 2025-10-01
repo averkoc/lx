@@ -15,8 +15,8 @@
 
 
 ## Usage
-```markdown
-**C:\Users\johnny>ssh john@192.168.56.134**
+```text
+C:\Users\johnny>ssh john@192.168.56.134
 Linux debian 6.1.0-39-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.148-1 (2025-08-26) x86_64
 
 *The programs included with the Debian GNU/Linux system are free software;*

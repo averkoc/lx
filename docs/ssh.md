@@ -4,14 +4,24 @@ We use here Johnny as an example user. His account on local Windows and Linux is
 
 ## Setup 
 
-1. Generate public/private keypair using `ssh-keygen` program  
-   - `C:\Users\johnny>ssh-keygen ` in Windows  
-   - `johnny@lxlocal:~$ssh-keygen` in Linux/Mac  
+1. Generate public/private keypair using `ssh-keygen` program
+   - Example in Windows  
+   ```bat
+   C:\Users\johnny>ssh-keygen 
+   ```
+   - Example in Linux
+   ```bash
+   johnny@lxlocal:~$ssh-keygen
+   ```
 3. Copy the public-key into remote server using `ssh-copy-id` script (available in Linux and Mac)
-    - **in Linux and Mac**  
-    `johnny@lxlocal:~$ssh-copy-id john@serverdnsname`  
-   - **in Windows**  
-   `C:\Users\johnny>type .ssh\id_ed25519.pub|ssh john@serverdnsname "umask 077;test -d .ssh  || mkdir .ssh;cat >> ~/.ssh/authorized_keys"`    
+    - Example in Linux and Mac
+   ```bash 
+   johnny@lxlocal:~$ssh-copy-id john@serverdnsname
+   ```
+   - Example in Windows 
+   ```bat
+   C:\Users\johnny>type .ssh\id_ed25519.pub|ssh john@serverdnsname "umask 077;test -d .ssh  || mkdir .ssh;cat >> ~/.ssh/authorized_keys"  
+   ```   
    
      This doesn't succeed if you have never connected to the server with your user account.
    

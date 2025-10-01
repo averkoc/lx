@@ -1,6 +1,9 @@
-# Keybased authentication - setup and use
+# Keybased authentication - setup and use  
+
+We use here Johnny as an example user. His account in local Windows and Linux is johnny and his account on remote server is john.
 
 ## Setup 
+
 1. Generate public/private keypair using `ssh-keygen` program  
    - `C:\Users\johnny>ssh-keygen ` in Windows  
    - `johnny@lxdesktop:~$ssh-keygen` in Linux/Mac  

@@ -6,9 +6,9 @@
    (in Linux: `johnny@lxdesktop:~$ ssh-keygen`)
 3. copy the public-key into remote server  
   a. **in Linux and Mac**  
-   `ssh-copy-id john@debian.local`  
+   `johnny@lxdesktop:~$ssh-copy-id john@serverdnsname`  
   b. **in Windows**  
-   'C:\Users\johnny>type .ssh\id_rsa.pub|ssh john@192.168.56.134 "umask 077;[ -d  .ssh ] || mkdir .ssh;cat >> ~/.ssh/authorized_keys"
+   'C:\Users\johnny>type .ssh\id_rsa.pub|ssh john@serverdnsname "umask 077;[ -d  .ssh ] || mkdir .ssh;cat >> ~/.ssh/authorized_keys"
 
 
 
@@ -17,7 +17,7 @@
 
 ## Usage
 ```text
-C:\Users\johnny>ssh john@192.168.56.134
+C:\Users\johnny>ssh john@serverdnsname
 Linux debian 6.1.0-39-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.148-1 (2025-08-26) x86_64
 Last login: Wed Oct  1 12:47:08 2025 from 192.168.56.1
 john@debian:~$

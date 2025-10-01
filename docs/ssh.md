@@ -1,6 +1,6 @@
 # Keybased authentication - setup and use  
 
-We use here Johnny as an example user. His account in local Windows and Linux is johnny and his account on remote server is john.
+We use here Johnny as an example user. His account on local Windows and Linux is johnny and his account on remote server is john.
 
 ## Setup 
 

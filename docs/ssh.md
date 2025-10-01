@@ -26,7 +26,8 @@ john@debian:~$
 ---  
 
 ## What happens behind the scenes - logical view
-<img width="844" height="551" alt="image" src="https://github.com/user-attachments/assets/6d692d87-766e-4874-948a-5c8092600bf7" />
+<img width="1209" height="519" alt="image" src="https://github.com/user-attachments/assets/342a00f7-2431-47a5-a2a2-2bcf78f6b568" />
+
 
 
 

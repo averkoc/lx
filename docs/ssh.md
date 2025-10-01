@@ -2,7 +2,7 @@
 
 ## Setup 
 1. Generate public/private keypair  
-   `ssh-keygen`
+   `C:\Users\johnny>ssh-keygen `
 2. copy the public-key into remote server  
   a. **in Linux and Mac**  
    `ssh-copy-id john@debian.local`  

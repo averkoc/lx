@@ -31,7 +31,7 @@ john@debian:~$
 ```
 ### Or connect to remote server from local Linux/Mac/WSL
 ```text
-john@lxlocal:~$ssh john@serverdnsname
+johnny@lxlocal:~$ssh john@serverdnsname
 Linux debian 6.1.0-39-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.148-1 (2025-08-26) x86_64
 Last login: Wed Oct  1 12:47:08 2025 from 192.168.56.1
 john@debian:~$

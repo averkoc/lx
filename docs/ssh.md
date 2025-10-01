@@ -1,7 +1,5 @@
 
 
-* I'm user john and want to login using keybased authentication with keypair whose id is this
 
-* prove that you have private key that matches with the public key in the server - without revealing your private key
+<img width="793" height="483" alt="image" src="https://github.com/user-attachments/assets/bb03132e-8b85-437c-948c-3f1cd9200961" />
 
-* client sends cryptographic proof

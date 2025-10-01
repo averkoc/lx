@@ -2,8 +2,8 @@
 
 ## Setup 
 1. Generate public/private keypair using `ssh-keygen` program  
-   `C:\Users\johnny>ssh-keygen ` in Windows  
-   (`johnny@lxdesktop:~$ ssh-keygen`) in Linux/Mac  
+   - `C:\Users\johnny>ssh-keygen ` in Windows  
+   - `johnny@lxdesktop:~$ssh-keygen` in Linux/Mac  
 3. copy the public-key into remote server using `ssh-copy-id` script 
   a. **in Linux and Mac**  
    `johnny@lxdesktop:~$ssh-copy-id john@serverdnsname`  

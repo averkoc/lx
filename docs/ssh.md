@@ -2,7 +2,7 @@
 
 ## Setup 
 1. Generate public/private keypair  
-   `C:\Users\johnny>ssh-keygen `
+   `C:\Users\johnny>ssh-keygen `  
    (in Linux: `johnny@lxdesktop:~$ ssh-keygen`)
 3. copy the public-key into remote server  
   a. **in Linux and Mac**  

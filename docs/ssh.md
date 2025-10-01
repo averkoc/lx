@@ -3,7 +3,8 @@
 ## Setup 
 1. Generate public/private keypair  
    `C:\Users\johnny>ssh-keygen `
-2. copy the public-key into remote server  
+   (in Linux: `johnny@lxdesktop:~$ ssh-keygen`)
+3. copy the public-key into remote server  
   a. **in Linux and Mac**  
    `ssh-copy-id john@debian.local`  
   b. **in Windows**  

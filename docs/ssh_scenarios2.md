@@ -74,4 +74,119 @@ This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ````
 
+## Other common scenarios and quick fixes
+
+### You don't have an SSH key yet
+Generate a modern key on your own machine.
+
+- Linux/macOS (Terminal):
+```bash
+ssh-keygen -t ed25519 -C "student@yourmachine"
+```
+- Windows (PowerShell):
+```powershell
+ssh-keygen -t ed25519 -C "student@yourmachine"
+```
+Files are created under ~/.ssh (Linux/macOS) or %USERPROFILE%\.ssh (Windows).
+
+---
+
+### Copy your public key to the server
+- Linux/macOS:
+```bash
+ssh-copy-id student@debian
+```
+- Windows (PowerShell), if ssh-copy-id is not available:
+```powershell
+$type = Get-Content "$env:USERPROFILE\.ssh\id_ed25519.pub"; \
+ssh student@debian "mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo '$type' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+```
+
+---
+
+### Permission denied (publickey)
+Likely causes and fixes:
+- No key on your machine yet → generate with ssh-keygen (above).
+- Public key not on the server → copy it (above).
+- Wrong username/host → double-check: `ssh student@debian`.
+- Server uses non-default port → specify it: `ssh -p 22 student@debian`.
+- Multiple keys; the wrong one is tried → pick a key explicitly:
+```bash
+ssh -i ~/.ssh/id_ed25519 student@debian
+```
+
+Optional config to always use a key:
+```bash
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
+cat >> ~/.ssh/config <<'EOF'
+Host debian
+    HostName debian
+    User student
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+EOF
+chmod 600 ~/.ssh/config
+```
+
+---
+
+### "Load key ...: bad permissions" or "unprotected private key" (Linux/macOS)
+Fix local file permissions:
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub ~/.ssh/known_hosts 2>/dev/null || true
+chmod 600 ~/.ssh/authorized_keys 2>/dev/null || true
+```
+
+Windows tip: Ensure only your user can read the private key. If issues persist on native Windows, try running the same steps inside WSL (Ubuntu on Windows).
+
+---
+
+### Use the SSH agent (avoid re-typing passphrases)
+- Linux/macOS:
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+- Windows (PowerShell):
+```powershell
+# Start and enable the built-in ssh-agent
+Get-Service ssh-agent | Set-Service -StartupType Automatic
+Start-Service ssh-agent
+ssh-add $env:USERPROFILE\.ssh\id_ed25519
+```
+
+---
+
+### Select a specific key when you have several
+```bash
+ssh -i ~/.ssh/id_work_ed25519 student@debian
+```
+Or add a Host block to ~/.ssh/config (see above) and simply run `ssh debian`.
+
+---
+
+### Connection timed out / refused
+- Check that the host is reachable (IP/hostname correct? VPN on?).
+- Ensure the SSH service is running on the server: `sudo systemctl status ssh` or `sudo systemctl status sshd`.
+- If the server uses a custom port, include it: `ssh -p 2222 student@debian`.
+- Firewalls may block SSH; try from another network if unsure.
+
+---
+
+### Fingerprint types and algorithms
+- Modern default is ED25519. If you see messages about mismatched algorithms, your client or server may be outdated.
+- Prefer ED25519 keys: `ssh-keygen -t ed25519`.
+
+---
+
+### Increase verbosity when troubleshooting
+See exactly what SSH is trying:
+```bash
+ssh -v student@debian        # verbose
+ssh -vv student@debian       # more
+ssh -vvv student@debian      # most
+```
+
 

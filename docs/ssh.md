@@ -11,7 +11,7 @@ We use here Johnny as an example user. His account on local Windows and Linux is
     - **in Linux and Mac**  
     `johnny@lxlocal:~$ssh-copy-id john@serverdnsname`  
    - **in Windows**  
-   `C:\Users\johnny>type .ssh\id_ed25519.pub|ssh john@serverdnsname "umask 077;[ -d  .ssh ] || mkdir .ssh;cat >> ~/.ssh/authorized_keys"`    
+   `C:\Users\johnny>type .ssh\id_ed25519.pub|ssh john@serverdnsname "umask 077;test -d .ssh  || mkdir .ssh;cat >> ~/.ssh/authorized_keys"`    
    
      This doesn't succeed if you have never connected to the server with your user account.
    

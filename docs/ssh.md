@@ -1,7 +1,7 @@
 # Keybased authentication - setup and use
 
 ## Setup 
-1. Generate public/private keypair using `ssh-keygen` program
+1. Generate public/private keypair using `ssh-keygen` program  
    `C:\Users\johnny>ssh-keygen `  
    (`johnny@lxdesktop:~$ ssh-keygen`) 
 3. copy the public-key into remote server using `ssh-copy-id` script 

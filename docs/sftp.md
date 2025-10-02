@@ -43,9 +43,10 @@ Make sure hidden files are visible (e.g., `.ssh`, `.bashrc`, etc.).
 
 ---
 
-*Last updated: 10.10.2023 by Sakari Männistö*
-**Centria University of Applied Sciences**
-Linux Essentials – WS4A Secure Server Management
+## SFTP Client in Windows  
+FileZilla client application supports cleartext FTP and encrypted SFTP file transfer application protocols. You will configure the client to use SFTP-protocol and the previously generated public/private -keys to authenticate so that we can safely transfer files between windows-computer and Linux server. Download: https://filezilla-project.org/download.php?show_all=1 
+
 
 <img width="1312" height="964" alt="image" src="https://github.com/user-attachments/assets/ae0a4563-15c1-4797-9483-53ab2831e663" />
 
+After that you can click connect and transfer files between your computer and server. You get a graphical interface that shows directory trees in server and client. You can also set file permissions in the Linux server without memorizing file permissions setting commands and their options. 

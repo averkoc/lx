@@ -16,7 +16,8 @@ In this demonstration, we show how to use an SFTP client with already configured
 
 Using **Lubuntu file manager**’s integrated SFTP feature:
 
-![Connecting to remote server](eb4ac485-2d6c-4302-a95d-d30ccd3d642f.png)
+<img width="932" height="466" alt="image" src="https://github.com/user-attachments/assets/739908d3-3e5a-4303-ad7f-abff420a5d29" />
+
 
 *Figure 1: Connecting to remote server using Lubuntu file manager integrated SFTP.*
 

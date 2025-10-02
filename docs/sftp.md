@@ -3,7 +3,7 @@
 SFTP (Secure File Transfer Protocol) is built upon SSH.
 It makes it possible to transfer files between client and server securely.
 
-* Linux desktops have built-in graphic SFTP clients integrated into their file-manager programs.
+* Linux desktops have built-in graphic SFTP clients integrated into their file-manager programs. 
 * On Windows, a graphical SFTP client like **FileZilla** can be used (open-source with SFTP support).
 
 In this demonstration, we show how to use an SFTP client with already configured **SSH-key based authentication**.
@@ -19,7 +19,7 @@ Using **Desktop Linux file manager**’s integrated SFTP feature:
 <img width="932" height="466" alt="image" src="https://github.com/user-attachments/assets/739908d3-3e5a-4303-ad7f-abff420a5d29" />
 
 
-*Figure 1: Connecting to remote server using integrated file manager integrated SFTP.*
+*Figure 1: Connecting to remote server using integrated file manager and SFTP protocol*
 
 ---
 

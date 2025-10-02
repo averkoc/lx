@@ -46,3 +46,6 @@ Make sure hidden files are visible (e.g., `.ssh`, `.bashrc`, etc.).
 *Last updated: 10.10.2023 by Sakari Männistö*
 **Centria University of Applied Sciences**
 Linux Essentials – WS4A Secure Server Management
+
+<img width="1312" height="964" alt="image" src="https://github.com/user-attachments/assets/ae0a4563-15c1-4797-9483-53ab2831e663" />
+

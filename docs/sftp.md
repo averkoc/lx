@@ -28,7 +28,8 @@ Using **Lubuntu file manager**’s integrated SFTP feature:
 After connecting, you can browse the home folder on the server.
 Make sure hidden files are visible (e.g., `.ssh`, `.bashrc`, etc.).
 
-![Viewing home folder in server](eb4ac485-2d6c-4302-a95d-d30ccd3d642f.png)
+<img width="799" height="398" alt="image" src="https://github.com/user-attachments/assets/41d9c962-263d-4761-9fc1-6d9abf9ed0ea" />
+
 
 *Figure 2: Viewing home folder in server after connection (note: show hidden files enabled).*
 

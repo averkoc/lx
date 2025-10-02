@@ -46,7 +46,7 @@ Make sure hidden files are visible (e.g., `.ssh`, `.bashrc`, etc.).
 ## SFTP Client in Windows  
 FileZilla client application supports cleartext FTP and encrypted SFTP file transfer application protocols. You will configure the client to use SFTP-protocol and the previously generated public/private -keys to authenticate so that we can safely transfer files between windows-computer and Linux server. Download [Filezilla](https://filezilla-project.org/download.php?show_all=1) and install it.
 
-### Step 1: Define connection to remote server using keybased authentication  
+### Step 1: Define connection to remote server using SFTP and keybased authentication  
 
 <img width="1312" height="964" alt="image" src="https://github.com/user-attachments/assets/ae0a4563-15c1-4797-9483-53ab2831e663" />
 

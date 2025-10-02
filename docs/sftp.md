@@ -50,4 +50,4 @@ FileZilla client application supports cleartext FTP and encrypted SFTP file tran
 
 <img width="1312" height="964" alt="image" src="https://github.com/user-attachments/assets/ae0a4563-15c1-4797-9483-53ab2831e663" />
 
-After that you can click connect and transfer files between your computer and server. You get a graphical interface that shows directory trees in server and client. You can also set file permissions in the Linux server without memorizing file permissions setting commands and their options. 
+After you have connected to remote server transfer files between your computer and server. You get a graphical interface that shows directory trees in server and client. You can also set file permissions in the Linux server without memorizing file permissions setting commands and their options. 

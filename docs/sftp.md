@@ -12,7 +12,7 @@ In this demonstration, we show how to use an SFTP client with already configured
 
 ## SFTP Client in Linux
 
-### Step 1: Connect to the Remote Server using your useraccount and sftp protocol 
+### Step 1: Connect to the Remote Server using sftp protocol and your user account 
 
 Using **Lubuntu file manager**’s integrated SFTP feature:
 

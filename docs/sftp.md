@@ -19,7 +19,7 @@ Using **Desktop Linux file manager**’s integrated SFTP feature:
 <img width="932" height="466" alt="image" src="https://github.com/user-attachments/assets/739908d3-3e5a-4303-ad7f-abff420a5d29" />
 
 
-*Figure 1: Connecting to remote server using integrated file manager and SFTP protocol - no password requred if SSH keybased authentication is confifured for user*
+*Figure 1: Connecting to remote server using integrated file manager and SFTP protocol - no password required if SSH keybased authentication is configured for user*
 
 ---
 

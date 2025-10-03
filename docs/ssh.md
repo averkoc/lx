@@ -2,9 +2,10 @@
 
 We use here Johnny as an example user. His account on local Windows and Linux is johnny and his account on remote server is john. 
 
-## Setup 
 
-1. Generate public/private keypair using `ssh-keygen` program
+## Setup - these commands you issue in your local computer
+
+1. Generate public/private keypair using `ssh-keygen` program 
    - Example in Windows  
    ```bat
    C:\Users\johnny>ssh-keygen 
@@ -13,6 +14,7 @@ We use here Johnny as an example user. His account on local Windows and Linux is
    ```bash
    johnny@lxlocal:~$ssh-keygen
    ```
+   > The most common error that student do in practical exam is that they generate the keypair in remote server - they are not looking the prompt!
 3. Copy the public-key into remote server using `ssh-copy-id` script (available in Linux, Windows WSL and Mac)
     - Example in Linux and Mac
    ```bash 

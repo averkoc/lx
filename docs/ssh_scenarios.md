@@ -21,7 +21,6 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 Note: This is normal and expected for a first-time connection, and it also appears when using ssh-copy-id without a prior successful connection 
 
-## You have not copied your public key to a server and password based authentication is not allowed.  
 
 ## Permission denied (publickey)  
 This error occurs when the remote server is configured for high security and only allows key-based authentication. The server checked for your authorized public key but couldn't find it, typically because you haven't copied it yet
@@ -37,12 +36,16 @@ alpine:~$
 ```bash
 ssh-copy-id student@debian.local
 ```
+- if you have not even generated the key-pair then you must do it first
 
-
-## Remote host identification has changed  
+## Warning: Remote Host Identification Has Changed! 🚨 
+This is the most critical warning. It means the server's unique identifier (its host key) has changed from the one you previously saved in your ~/.ssh/known_hosts file. Your SSH client automatically blocks the connection, fearing a potential security risk.  
+**Common causes:** 
+- The server was reinstalled, updated, or its IP/hostname changed (common in training environments).
+- A Man-in-the-Middle (MITM) attack is taking place (a major concern in production environments)
 
 ````bash
-alpine:~$ ssh student@debian
+alpine:~$ ssh student@debian.local
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -58,31 +61,15 @@ Host key for debian has changed and you have requested strict checking.
 Host key verification failed.
 alpine:~$
 ````
+### Resolution  
 
+- If you have verified the change is legitimate (e.g., confirmed with your instructor or administrator), you must remove the old, mismatched key entry by hostname (or ip)
+**On Linux/Mac/WSL**
+```bash
+  ssh-keygen -R debian.local
+```
+**On Windows (Manually)**
+Open the \.ssh\known_hosts file in a text editor and delete the entire line that contains the entry for the server (debian). The error message often provides the line number
 
-
-When encountering the “Host key verification failed” message while trying to SSH into a remote server, follow these steps to resolve the issue:
-
-**Understand the Warning:**
-This message indicates that the host key for the server you’re trying to connect to has changed. This could be due to a legitimate change (like a server update) or a potential security threat (like a man-in-the-middle attack). In our course environment the reason for warning is typically server's IP change or hostname change.
-
-**Verify the Host Key:**
-In production environments contact your system administrator to verify if the host key change is expected. They can confirm if the server’s host key was updated for legitimate reasons.
-
-**Remove the Old Host Key:**
-If the change is legitimate, you need to remove the old host key from your known_hosts file. You can do this manually or using a command.
-**In windows** you need to do this manually: Open the \.ssh\known_hosts file in a text editor and delete the line containing the old host key for the server. 
-**In Linux** run the following command to remove the old host key:
-`ssh-keygen -R debian`
-
-After removing the old key, try connecting to the server again and the situation is like your first connection to server:  
-
-````bash
-alpine:~$ ssh student@debian
-The authenticity of host 'debian (192.168.1.7)' can't be established.
-ED25519 key fingerprint is SHA256:WLMyeSME9J6w0eeYBrvFzKCTVxX5DQWnQdquu13JnSY.
-This key is not known by any other names.
-Are you sure you want to continue connecting (yes/no/[fingerprint])?
-````
-
+After removing the old key, try connecting again. You will receive the "First Connection" prompt (Scenario 1) and can safely type yes to store the new, correct key.
 

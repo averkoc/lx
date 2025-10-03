@@ -63,13 +63,13 @@ alpine:~$
 ````
 #### Resolution  
 
-- If you have verified the change is legitimate (e.g., confirmed with your instructor or administrator), you must remove the old, mismatched key entry by hostname (or ip)
-**On Linux/Mac/WSL**
-```bash
-  ssh-keygen -R debian.local
-```
-**On Windows (Manually)**
-Open the \.ssh\known_hosts file in a text editor and delete the entire line that contains the entry for the server (debian). The error message often provides the line number
+- If you have verified the change is legitimate (e.g., confirmed with your instructor or administrator), you must remove the old, mismatched key entry by hostname (or ip)  
+  - **On Linux/Mac/WSL**
+  ```bash
+    ssh-keygen -R debian.local
+  ```
+  - **On Windows (Manually)**  
+  Open the \.ssh\known_hosts file in a text editor and delete the entire line that contains the entry for the server (debian). The error message often provides the line number
 
 After removing the old key, try connecting again. You will receive the "First Connection" prompt (Scenario 1) and can safely type yes to store the new, correct key.
 

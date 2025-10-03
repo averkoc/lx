@@ -13,7 +13,7 @@ We use here Johnny as an example user. His account on local Windows and Linux is
    ```bash
    johnny@lxlocal:~$ssh-keygen
    ```
-3. Copy the public-key into remote server using `ssh-copy-id` script (available in Linux and Mac)
+3. Copy the public-key into remote server using `ssh-copy-id` script (available in Linux, Windows WSL and Mac)
     - Example in Linux and Mac
    ```bash 
    johnny@lxlocal:~$ssh-copy-id john@serverdnsname

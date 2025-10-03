@@ -1,32 +1,42 @@
 
-# SSH -sessions related scenarios
+# SSH-Session Scenarios: A Novice Guide 🚀
 
-This guide covers various scenarios you may encounter when working with SSH authentication.
+This guide covers the most common events and error messages you may encounter during SSH connection attempts and how to resolve them.
 
 ## Your first connection to a server  
 
-When you connect to a server using SSH for the first time, you might see a prompt like this:
+When connecting to a server for the first time, your SSH client doesn't recognize the server's unique identifier (its host key fingerprint). This prompt is a standard security measure to confirm the identity of the remote host and to store its unique key locally.
+
 ````bash
-alpine:~$ ssh student@debian
+alpine:~$ ssh student@debian.local
 The authenticity of host 'debian (192.168.1.7)' can't be established.
 ED25519 key fingerprint is SHA256:WLMyeSME9J6w0eeYBrvFzKCTVxX5DQWnQdquu13JnSY.
 This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ````
-This prompt indicates that the server’s fingerprint is not yet in your ~/.ssh/known_hosts file. This is normal when connecting to a server for the first time. If you type yes, the fingerprint will be stored in your ~/.ssh/known_hosts file, and you won’t be asked this question again for future logins.  
-Note: The same prompt will appear also when using ssh-copy-id in situation where you have not had any prior ssh logins to the server. 
+### Resolution  
+- Type yes and press Enter.
+- The server's host key will be saved to your ~/.ssh/known_hosts file.
+- Future connections to this server will proceed immediately without this prompt.
+
+Note: This is normal and expected for a first-time connection, and it also appears when using ssh-copy-id without a prior successful connection 
 
 ## You have not copied your public key to a server and password based authentication is not allowed.  
-**Permission denied (publickey)**  
+
+## Permission denied (publickey)  
+This error occurs when the remote server is configured for high security and only allows key-based authentication. The server checked for your authorized public key but couldn't find it, typically because you haven't copied it yet
 
 ````bash
-alpine:~$ ssh student@debian
+alpine:~$ ssh student@debian.local
 student@debian: Permission denied (publickey).
 alpine:~$
 ````
-Typically, production servers do not permit password-based authentication for security reasons. However, during practice exam, I temporarily enable password-based authentication for a short duration on my Linux server on Azure. This allows students to copy their public key to the server using ssh-copy-id from their own computers.
+### Resolution
 
-It’s important to note that if you have generated an SSH key pair on your computer but have not copied the public key to the server, you will encounter the above kind of message when trying to connect to server that allows only key-based authentication: 
+- Use ssh-copy-id: This is the easiest way to transfer your key. Run the command, which will prompt you for your server password (if temporarily enabled) to complete the key transfer:
+```bash
+ssh-copy-id student@debian.local
+```
 
 
 ## Remote host identification has changed  

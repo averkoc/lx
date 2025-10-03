@@ -3,7 +3,7 @@
 We use here Johnny as an example user. His account on local Windows and Linux is johnny and his account on remote server is john. 
 
 
-## Setup - these commands you issue in your local computer
+## Setup - these commands you issue in your <ins>local computer</ins>
 
 1. Generate public/private keypair using `ssh-keygen` program 
    - Example in Windows  

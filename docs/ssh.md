@@ -14,7 +14,7 @@ We use here Johnny as an example user. His account on local Windows and Linux is
    ```bash
    johnny@lxlocal:~$ssh-keygen
    ```
-   > The most common error that student do in practical exam is that they generate the keypair in remote server - they are not looking the prompt!
+   
 3. Copy the public-key into remote server using `ssh-copy-id` script (available in Linux, Windows WSL and Mac)
     - Example in Linux and Mac
    ```bash 
@@ -25,8 +25,8 @@ We use here Johnny as an example user. His account on local Windows and Linux is
    C:\Users\johnny>type .ssh\id_ed25519.pub|ssh john@serverdnsname "umask 077;test -d .ssh  || mkdir .ssh;cat >> ~/.ssh/authorized_keys"  
    ```   
    
-     This doesn't succeed if you have never connected to the server with your user account.
-   
+     
+> The most common error that student do in practical exam is that they issue these setup commands in remote server instead of their local computer.   
 
 
 

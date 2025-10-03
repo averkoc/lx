@@ -14,7 +14,7 @@ ED25519 key fingerprint is SHA256:WLMyeSME9J6w0eeYBrvFzKCTVxX5DQWnQdquu13JnSY.
 This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ````
-### Resolution  
+#### Resolution  
 - Type yes and press Enter.
 - The server's host key will be saved to your ~/.ssh/known_hosts file.
 - Future connections to this server will proceed immediately without this prompt.
@@ -30,7 +30,7 @@ alpine:~$ ssh student@debian.local
 student@debian: Permission denied (publickey).
 alpine:~$
 ````
-### Resolution
+#### Resolution
 
 - Use ssh-copy-id: This is the easiest way to transfer your key. Run the command, which will prompt you for your server password (if temporarily enabled) to complete the key transfer:
 ```bash
@@ -61,7 +61,7 @@ Host key for debian has changed and you have requested strict checking.
 Host key verification failed.
 alpine:~$
 ````
-### Resolution  
+#### Resolution  
 
 - If you have verified the change is legitimate (e.g., confirmed with your instructor or administrator), you must remove the old, mismatched key entry by hostname (or ip)
 **On Linux/Mac/WSL**

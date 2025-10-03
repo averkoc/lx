@@ -1,7 +1,7 @@
 
 # SSH-Session Scenarios: A Novice Guide 🚀
 
-This guide covers the most common events and error messages you may encounter during SSH connection attempts and how to resolve them.
+This guide covers the most common events and error messages you may encounter during SSH connection attempts and how to resolve them. I use in this guide our local Debian VM server as an example "remote server". 
 
 ## Your first connection to a server  
 

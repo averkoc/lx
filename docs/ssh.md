@@ -23,10 +23,12 @@ We use here Johnny as an example user. His account on local Windows and Linux is
    - Example in Windows [*](ssh-copy-id.md)
    ```bat
    C:\Users\johnny>type .ssh\id_ed25519.pub|ssh john@serverdnsname "umask 077;test -d .ssh  || mkdir .ssh;cat >> ~/.ssh/authorized_keys"  
-   ```   
+   ```
    
+--- 
      
 > The most common error that student do in practical exam is that they issue these setup commands in remote server instead of their local computer.   
+--- 
 
 
 
@@ -35,14 +37,8 @@ We use here Johnny as an example user. His account on local Windows and Linux is
 
 
 ## Usage  
-### Connect to remote server from local Windows
-```text
-C:\Users\johnny>ssh john@serverdnsname
-Linux debian 6.1.0-39-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.148-1 (2025-08-26) x86_64
-Last login: Wed Oct  1 12:47:08 2025 from 192.168.56.1
-john@debian:~$
-```
-### Or connect to remote server from local Linux/Mac/WSL
+
+### Connect to remote server from local Linux/Mac/WSL
 ```text
 johnny@lxlocal:~$ssh john@serverdnsname
 Linux debian 6.1.0-39-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.148-1 (2025-08-26) x86_64
@@ -50,6 +46,14 @@ Last login: Wed Oct  1 12:47:08 2025 from 192.168.56.1
 john@debian:~$
 ```
 
+### or connect to remote server from local Windows
+
+```text
+C:\Users\johnny>ssh john@serverdnsname
+Linux debian 6.1.0-39-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.148-1 (2025-08-26) x86_64
+Last login: Wed Oct  1 12:47:08 2025 from 192.168.56.1
+john@debian:~$
+```
 ---  
 
 ## What happens behind the scenes during login

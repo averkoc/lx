@@ -20,7 +20,7 @@ We use here Johnny as an example user. His account on local Windows and Linux is
    ```bash 
    johnny@lxlocal:~$ssh-copy-id john@serverdnsname
    ```
-   - Example in Windows 
+   - Example in Windows [*](ssh-copy-id.md)
    ```bat
    C:\Users\johnny>type .ssh\id_ed25519.pub|ssh john@serverdnsname "umask 077;test -d .ssh  || mkdir .ssh;cat >> ~/.ssh/authorized_keys"  
    ```   

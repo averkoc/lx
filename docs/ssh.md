@@ -1,6 +1,6 @@
 # Keybased authentication - setup and use  
 
-We use Johnny here as an example user. His account name on local Windows and Linux machines is `johnny`, while on the remote server it is `john`. After compling this page, take some time to get familiar with common scenarios you may encounter when working with SSH. SSH also supports file transfer through the [SFTP protocol](sftp.md).
+We use Johnny here as an example user. His account name on local Windows and Linux machines is `johnny`, while on the remote server it is `john`. After compling this page, take some time to get familiar with common [scenarios](ssh_scenarios.md) you may encounter when working with SSH. SSH also supports file transfer through the [SFTP protocol](sftp.md).
 
 
 ## Setup - these commands you issue in your <ins>local computer</ins>

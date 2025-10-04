@@ -8,7 +8,7 @@ Each student has been given an account on the Linux server:
 lxcentria.westeurope.cloudapp.azure.com
 ```
 
-Your first task is to log in with your account and password to verify access.
+Your first task is to log in with your account and password and then log out just to verify your account/password is working. 
 After this, you will set up SSH key-based authentication and use it for all remaining tasks.
 
 ⚠️ **Important:** Password-based authentication will only be available for the **first exam hour**. After that, only key-based login will work. Plan your time carefully.

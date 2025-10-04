@@ -4,7 +4,7 @@ SFTP (Secure File Transfer Protocol) is built upon SSH.
 It makes it possible to transfer files between client and server securely.
 
 * Linux desktops have built-in graphic SFTP clients integrated into their file-manager programs. 
-* On Windows, a graphical SFTP client like **FileZilla** can be used (open-source with SFTP support).
+* On Windows and macOS a graphical SFTP client like **FileZilla** can be used (open-source with SFTP support).
 
 In this demonstration, we show how to use an SFTP client with already configured **SSH-key based authentication**.
 

@@ -30,7 +30,7 @@ After this, you will set up SSH key-based authentication and use it for all rema
 2. **Generate a public/private SSH keypair** on your local computer.
 
 3. **Copy your public key to the server.**
-   Use the skills from Workshop 3 (e.g., `ssh-copy-id` or manual copy). Place your public key in your server account’s `~/.ssh/authorized_keys`.
+   Use the skills from SSH Workshop (e.g., `ssh-copy-id` or manual copy). 
 
 4. **Test key-based login.**
    Verify you can log in without a password:
@@ -46,7 +46,7 @@ After this, you will set up SSH key-based authentication and use it for all rema
 5. **Check your group memberships.**
    Use appropriate commands (e.g., `groups`, `id`) to list the groups your account belongs to.
 
-6. **Work with the team project directory.**
+6. **Work with the your team project directory.**
 
    * Copy the file:
 

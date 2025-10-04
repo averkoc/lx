@@ -93,10 +93,10 @@ Good luck!
 
 ## Student Checklist
 
-* [ ] Logged in with account and password (server access verified)
+* [ ] Logged in with account and password (server access verified) then logged out.
 * [ ] Created SSH keypair locally
 * [ ] Copied public key to server (`~/.ssh/authorized_keys`)
-* [ ] Verified key-based login (no password required)
+* [ ] Verified key-based login by logging into server (no password required) 
 * [ ] Checked group memberships (`groups` or `id`)
 * [ ] Copied `template.html` into three properly named files
 * [ ] Updated heading, author, and filename inside each file

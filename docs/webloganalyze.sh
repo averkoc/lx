@@ -1,8 +1,8 @@
 #!/bin/bash
 # Simple Apache access.log analyzer
-# Usage: ./analyze-access.sh /var/log/apache2/access.log
+# Usage: ./analyze-access.sh
 
-LOGFILE="access.log"
+LOGFILE="~/access.log"
 
 echo "=== Apache Access Log Summary ==="
 echo "Logfile: $LOGFILE"

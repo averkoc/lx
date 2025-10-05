@@ -2,7 +2,7 @@
 # Simple Apache access.log analyzer
 # Usage: ./analyze-access.sh
 
-LOGFILE="$(HOME)/access.log"
+LOGFILE="${HOME}/access.log"
 
 echo "=== Apache Access Log Summary ==="
 echo "Logfile: $LOGFILE"

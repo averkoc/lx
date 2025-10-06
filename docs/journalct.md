@@ -67,12 +67,12 @@ Instead of writing logs to plain text files (like `/var/log/messages` or `/var/l
 
 ## Useful One-Liners
 
-| Purpose | Command | Explanation |
-|---------|---------|-------------|
-| Count number of sudo uses | `journalctl _COMM=sudo | grep -c "COMMAND="` | Shows how many sudo commands were run. |
-| Find top 10 most recent sudo commands | `journalctl _COMM=sudo | grep "COMMAND=" | tail -n 10` | Displays the last 10 sudo commands executed. |
-| Show logs with a specific keyword | `journalctl | grep "error"` | Searches logs for the word "error". |
-| View logs for a specific unit with paging | `journalctl -u apache2 | less` | Easier navigation with `less`. |
+| Purpose | Full Command | Explanation |
+| :--- | :--- | :--- |
+| **Count number of `sudo` uses** | `journalctl _COMM=sudo \| grep -c "COMMAND="` | Filters the journal for logs from the `sudo` command and uses `grep -c` to count the lines that contain `"COMMAND="`, which indicates a successful `sudo` execution. |
+| **Find top 10 most recent `sudo` commands** | `journalctl _COMM=sudo \| grep "COMMAND=" \| tail -n 10` | Filters the journal for `sudo` logs, filters again for lines showing the executed command, and displays the last **10** of those entries. |
+| **Show logs with a specific keyword** | `journalctl \| grep "error"` | Displays the entire system journal and filters it to show only lines containing the case-sensitive string **"error"**. |
+| **View logs for a specific unit with paging** | `journalctl -u apache2 \| less` | Displays logs specifically for the **`apache2` systemd unit** (service). The output is piped to **`less`** to allow you to scroll, search, and page through the logs. || View logs for a specific unit with paging | `journalctl -u apache2 | less` | Easier navigation with `less`. |
 | Show logs with priority levels (warning or higher) | `journalctl -p warning` | Filters logs by severity (warning, error, critical, alert, emergency). |
 | Follow logs but only show errors | `journalctl -f -p err` | Real-time error stream. |
 | Show boot times (list all boots) | `journalctl --list-boots` | Helpful to pick which boot ID to investigate. |

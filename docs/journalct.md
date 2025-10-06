@@ -1,3 +1,45 @@
+# Overview: systemd-journald & journalctl
+
+## What is journald?
+`systemd-journald` is the logging service used by `systemd`-based systems.  
+Instead of writing logs to plain text files (like `/var/log/messages` or `/var/log/syslog`), `journald` collects and stores them in a **centralized binary log** format.
+
+### Why binary logs?
+- **Centralized logging**: All logs from the kernel, initrd, system services, user processes, and standard input/output streams are collected in one place.
+- **Structured metadata**: Each log entry has fields such as `_PID`, `_UID`, `_SYSTEMD_UNIT`, `_COMM`, `_EXE`, etc. This makes filtering and searching powerful and precise.
+- **Reliable storage**: Logs can be stored in memory (`/run/log/journal`) or persistently on disk (`/var/log/journal`).
+- **Indexed and efficient**: Unlike plain text logs, the binary format allows fast queries with filters.
+- **Integration with systemd**: Service logs are tied to their `systemd` units, making troubleshooting services much easier.
+
+---
+
+## journalctl: The Interface
+`journalctl` is the command-line tool to query and display logs collected by `systemd-journald`.
+
+### Key features:
+- **Time filtering**: View logs by boot session, date ranges, or relative times.
+- **Service filtering**: View logs by `systemd` unit (e.g. `apache2.service`, `ssh.service`).
+- **User/process filtering**: Filter by `_UID`, `_PID`, or command name.
+- **Priority levels**: Show only logs of a certain severity (info, warning, error).
+- **Follow mode**: Stream logs in real time (`-f`, similar to `tail -f`).
+- **Boot IDs**: Quickly switch between different system boots (`--list-boots`).
+- **Exportability**: Output logs to text or JSON for further analysis.
+
+---
+
+## Comparison to Traditional Logs
+| Traditional syslog (`/var/log/...`) | journald |
+|-------------------------------------|----------|
+| Plain text files | Binary, indexed storage |
+| Limited metadata (mostly timestamps and messages) | Rich metadata: PID, UID, unit, cgroup, executable, etc. |
+| Managed by `rsyslog`, `syslog-ng`, etc. | Managed by `systemd-journald` |
+| Text tools like `grep`, `less`, `awk` | `journalctl` provides structured filtering, export options |
+| Needs log rotation (logrotate) | Journald manages size, rotation, and persistence |
+
+---
+
+👉 On most systems, `journald` coexists with traditional syslog daemons like `rsyslog` or `syslog-ng`, which can forward logs to remote servers or keep text-based logs for compatibility.
+
 # journalctl Command Reference
 
 ## Common journalctl Commands

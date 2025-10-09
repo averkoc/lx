@@ -76,3 +76,12 @@ After removing the old key, try connecting again. You will receive the "First Co
 > Heavy-handed way to resolve the problem:  If you cannot find the correct line or the `ssh-keygen -R` command fails, you can delete the entire known_hosts file.  
 > **WARNING: This will clear the saved keys for every server you have ever connected to**, and you will receive the "First Connection" prompt the next time you connect to any of them.  
 
+## ssh-copy-id fails due to regexp error
+If the Linux server .ssh/authorized_keys contains e.g. \r\n (windows CR, LF) that causes ssh-copy-id fail. The root cause is typical an erroneous key copying from windows to server that inserts CR,LD at the end of public key.
+
+#### Resolution
+# On the remote server
+* Remove the illegal CR character from the authorized_keys file  
+`sed -i 's/\r$//' ~/.ssh/authorized_keys`
+* Remove the root cause by instructing users to fix their public-key copying solution
+

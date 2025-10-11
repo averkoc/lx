@@ -91,3 +91,8 @@ Fail2ban monitors logs for attack patterns (like password guessing) and dynamica
 **Configuration Reference:**
 
 * The main configuration file is typically `/etc/fail2ban/jail.conf`, but you should use **`/etc/fail2ban/jail.local`** for any custom overrides (like changing the `bantime` or `maxretry`) to avoid issues during software updates.
+
+--- 
+### Defence-in-Depth Example 
+<img width="892" height="921" alt="image" src="https://github.com/user-attachments/assets/c6b65609-3491-49e7-ab11-d5184f228536" />
+

@@ -69,7 +69,7 @@ UFW controls network access to the server, implementing the **Network Perimeter*
 | **Set Default Policy** | `sudo ufw default deny incoming` | **Crucial:** Denies all incoming traffic unless explicitly allowed. |
 | **Allow SSH** | `sudo ufw allow ssh` OR `sudo ufw allow 22/tcp` | Allows necessary SSH access on port 22. |
 | **Allow Web** | `sudo ufw allow http` / `sudo ufw allow https` | Allows web traffic on ports 80 and 443. |
-| **Allow from Specific IP** | `sudo ufw allow from 192.168.1.100 to any port 22` | Restricts SSH access to a specific administration IP. |
+| **Allow from Specific IP** | `sudo ufw allow from 192.168.1.100 to any port 22 proto tcp` | Restricts SSH access from a specific administration IP source address. |
 | **Enable Firewall** | `sudo ufw enable` | **WARNING:** Do this *last* after allowing SSH! |
 | **View Status** | `sudo ufw status verbose` | Shows active rules, default policies, and current status. |
 

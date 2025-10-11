@@ -24,7 +24,7 @@ The setup effectively separates the roles of **prevention**, **detection/reactio
 | **IDS/IPS/Blocker** | `Fail2ban`, `PortSentry`, Suricata | **Detection & Reaction.** Monitors *allowed* traffic for malicious **attack patterns** and dynamically blocks source IPs. | **Attack Mitigation** |
 | **Action** | Observes anomalous behavior, such as a high rate of failed login attempts (**password guessing**), and blocks the attacker's IP. |
 
-* **Key Concept:** This layer is critical because it monitors the traffic passing through the firewall and stops the actual **"SSH Password Guessing" attack**.
+* **Key Concept:** This layer is critical because it monitors the traffic passing through the firewall and stops e.g. the actual **"SSH Password Guessing" attack**.
 
 ---
 

@@ -1,7 +1,6 @@
-# 🛡️ Defense-in-Depth for Linux Server Hardening
+# 🛡️ Layered protection
 
-Your Linux workshop demonstrates an **excellent and practical application** of the **Defense-in-Depth** security model, making three crucial layers of protection insightfully observable to students.
-
+The workshop helps you understand why layered protection is essential. For example, a **firewall** can be configured to block all incoming Internet traffic except for approved applications. However, even the allowed traffic may contain hacking attempts, such as password guessing by unauthorized users. To detect and stop such unwanted activity, we need an additional layer of protection—this is where **Intrusion Detection and Prevention Systems (IDPS)** come in. A third layer involves ensuring the **proper configuration of the actual services and the operating system** itself. 
 The setup effectively separates the roles of **prevention**, **detection/reaction**, and **vulnerability reduction**.
 
 ---

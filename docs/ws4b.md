@@ -14,7 +14,7 @@ _The actual workshop is described in the session recording. The following sectio
 
 ---
 
-## Layer 1: Network Perimeter Control (The Firewall)
+## Layer 1: Network Perimeter (Boundary) Control  - The Firewall
 
 | Component | Example Tools | Role | Security Focus |
 | :--- | :--- | :--- | :--- |
@@ -25,7 +25,7 @@ _The actual workshop is described in the session recording. The following sectio
 
 ---
 
-## Layer 2: Intrusion Detection & Prevention (IDS/IPS)
+## Layer 2: Intrusion Detection & Prevention - IDS/IPS
 
 | Component | Example Tools | Role | Security Focus |
 | :--- | :--- | :--- | :--- |
@@ -36,7 +36,7 @@ _The actual workshop is described in the session recording. The following sectio
 
 ---
 
-## Layer 3: Host/Service Hardening (Authentication Policy)
+## Layer 3: Host/Service Hardening - e.g Authentication Policy
 
 | Component | Example Policy | Role | Security Focus |
 | :--- | :--- | :--- | :--- |

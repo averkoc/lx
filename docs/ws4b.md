@@ -1,6 +1,6 @@
 # 🛡️ Layered protection
 
-This workshop helps you understand why we use **layered protection** in system security. Another commonly used term for this approach to security is **Defense in Depth**.
+This workshop helps you understand why **layered protection** is used to provide system security. Another commonly used term for this approach to security is **Defense in Depth**.
 
 For example, a **firewall** can be configured to block all incoming Internet traffic except for specific, approved applications. However, even this allowed traffic can still include hacking attempts, such as password guessing by unauthorized users.
 

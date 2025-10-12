@@ -1,7 +1,12 @@
 # 🛡️ Layered protection
 
-The workshop helps you understand why layered protection is essential. For example, a **firewall** can be configured to block all incoming Internet traffic except for approved applications. However, even the allowed traffic may contain hacking attempts, such as password guessing by unauthorized users. To detect and stop such unwanted activity, we need an additional layer of protection—this is where **Intrusion Detection and Prevention Systems (IDPS)** come in. A third layer involves ensuring the **proper configuration of the actual services and the operating system** itself. 
-The setup effectively separates the roles of **prevention**, **detection/reaction**, and **vulnerability reduction**.
+The workshop helps you understand why we use layered protection in system security. For example, a firewall can be configured to block all incoming Internet traffic except for specific, approved applications. However, even this allowed traffic can include hacking attempts, such as password guessing by unauthorized users.
+
+To detect and stop these unwanted activities, we need another layer of defense — an Intrusion Detection and Prevention System (IDPS).
+
+A third important layer involves secure configuration of the actual services and the operating system, ensuring that they are properly hardened and up to date.  
+
+The security measures used in those layers are in order: **prevention**, **detection/reaction**, and **vulnerability reduction**.
 
 ---
 

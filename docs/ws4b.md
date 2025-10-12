@@ -102,6 +102,7 @@ Fail2ban monitors logs for attack patterns (like password guessing) and dynamica
 
 --- 
 ### Defence-in-Depth Example 
-<img width="867" height="937" alt="image" src="https://github.com/user-attachments/assets/cb416ad3-f97d-48cb-bfc7-85156ab52861" />
+<img width="902" height="950" alt="image" src="https://github.com/user-attachments/assets/b39df6ca-dee4-445f-bada-b0690508f0de" />
+
 
 

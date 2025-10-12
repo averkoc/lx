@@ -10,7 +10,7 @@ A third important layer involves **secure configuration of the actual services a
 
 The security measures used across these layers can be categorized as **prevention**, **detection/reaction**, and **vulnerability reduction**.  
 
-The actual workshop is described in the session recording. The following sections are for your reference.
+_The actual workshop is described in the session recording. The following sections are provided for your reference._
 
 ---
 

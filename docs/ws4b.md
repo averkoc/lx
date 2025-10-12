@@ -6,7 +6,8 @@ For example, a **firewall** can be configured to block all incoming Internet tra
 
 To detect and stop these unwanted activities, we need another layer of defense — an **Intrusion Detection and Prevention System (IDPS).**   
 
-A third important layer involves **secure configuration of the actual services and the operating system**, ensuring they are properly **hardened and kept up to date**. E.g the system is configured to enforce strict password rules, in case of SSH the password based authentication is not allowed, etc...
+A third important layer involves **secure configuration of the actual services and the operating system**, ensuring they are properly hardened and kept up to date.  
+For example, the system can be configured to **enforce strong password policies**, and **in the case of SSH, to disable password-based authentication and require key-based login instead**
 
 The security measures used across these layers can be categorized as **prevention**, **detection/reaction**, and **vulnerability reduction**.
 

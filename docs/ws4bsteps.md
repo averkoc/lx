@@ -16,7 +16,7 @@
 ### Fail2Ban demonstration  
 1. john2 logs in via SSH, first entering an incorrect password and then the correct one. john2 then logs out.
 
-2. Log in as student via SSH and **take a screenshot showing john4’s logins** in /var/log/auth.log. Then log out.
+2. Log in as student via SSH and **take a screenshot showing john2’s logins** in /var/log/auth.log. Then log out.
 
 3. john2 attempts to log in via SSH but repeatedly enters the wrong password. The IP address becomes blocked, and the server no longer responds to requests from this IP.
 

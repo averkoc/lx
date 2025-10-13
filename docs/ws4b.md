@@ -66,7 +66,7 @@ The combined effect of these three independent layers provides **resilience** an
 This cheat sheet covers the most essential commands for configuring the **UFW** (Uncomplicated Firewall) and **Fail2ban** (Intrusion Prevention) layers of protection.
 
 ---
-
+<a id="ufw"></a>
 ### 🛡️ UFW (Uncomplicated Firewall)
 
 UFW controls network access to the server, implementing the **Network Perimeter** layer.

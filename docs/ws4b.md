@@ -82,7 +82,7 @@ UFW controls network access to the server, implementing the **Network Perimeter*
 | **View Status** | `sudo ufw status verbose` | Shows active rules, default policies, and current status. |
 
 ---
-
+<a id="fail2ban"></a>
 ### 🚨 Fail2ban (Intrusion Prevention)
 
 Fail2ban monitors logs for attack patterns (like password guessing) and dynamically blocks malicious IPs using the firewall (UFW), implementing the **Detection & Reaction** layer.

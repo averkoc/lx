@@ -10,7 +10,7 @@
 `sudo apt install ufw`  
 `sudo apt install fail2ban`  
 
-**Configure UFW  - see reference**  
+**Configure UFW  - see [reference](ws4b.md)**  
 **Configure Fail2Ban - see reference**  
 
 ### Fail2Ban demonstration  

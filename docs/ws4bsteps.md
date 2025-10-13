@@ -28,4 +28,6 @@
 
 5. Use the proper fail2ban-client command to unblock the blocked IP address. Then log out from the Debian console.
 
-6. Log in again as student via SSH and **take a screenshot of fail2ban.log showing the IP ban and its release**.
+6. Log in again as student via SSH and **take a screenshot of fail2ban.log showing the IP ban and its release**.  
+<img width="1574" height="202" alt="image" src="https://github.com/user-attachments/assets/bfc683c6-f7d1-4080-a00e-f28019f1e4ed" />
+

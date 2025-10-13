@@ -11,7 +11,7 @@
 `sudo apt install fail2ban`  
 
 **Configure UFW  - see [reference](ws4b.md#ufw)**  
-**Configure Fail2Ban - see reference**  
+**Configure Fail2Ban - see [reference](ws4b#fail2ban)**  
 
 ### Fail2Ban demonstration  
 - john1 logs in using ssh giving first a wrong password and then a correct password, john1 logs out.

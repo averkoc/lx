@@ -16,11 +16,15 @@
 ### Fail2Ban demonstration  
 1. john2 logs in via SSH, first entering an incorrect password and then the correct one. john2 then logs out.
 
-2. Log in as student via SSH and **take a screenshot showing john2’s logins** in /var/log/auth.log. Then log out.
+2. Log in as student via SSH and **take a screenshot showing john2’s logins** in /var/log/auth.log. Then log out. 
+<img width="1596" height="73" alt="image" src="https://github.com/user-attachments/assets/d0a9e903-1a3f-4cbe-83b6-b7f29ee66814" />
+
 
 3. john2 attempts to log in via SSH but repeatedly enters the wrong password. The IP address becomes blocked, and the server no longer responds to requests from this IP.
 
-4. Log in as student from the Debian console. Use an appropriate fail2ban-client command to view the currently blocked IP address(es). **Take a screenshot**.
+4. Log in as student from the Debian console. Use an appropriate fail2ban-client command to view the currently blocked IP address(es). **Take a screenshot**.  
+<img width="626" height="272" alt="image" src="https://github.com/user-attachments/assets/3fe98735-38eb-45c6-8519-81387848ee0a" />
+
 
 5. Use the proper fail2ban-client command to unblock the blocked IP address. Then log out from the Debian console.
 

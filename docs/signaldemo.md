@@ -33,7 +33,7 @@ Run:
 `./unhandled`  
 Press Ctrl+C after a few seconds.  
 
-Compare:  
+**Compare:**  
 Last line printed in terminal   
 Last line saved in output.txt  
 
@@ -85,7 +85,7 @@ Run:
 `./handled`  
 Press Ctrl+C after a few seconds.  
 
-Compare:  
+**Compare:**  
 Last line printed in terminal   
 Last line saved in output.txt  
 

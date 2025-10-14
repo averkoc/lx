@@ -38,4 +38,10 @@ This indirect approach is just for example - who has recently modified something
 
 `sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'from <TRUSTED_IP>'`
 
+### Demo3 - access.log statistics  
+* Download a script from averkoc.github.io/lx/ws5analyze.sh to your home directory /var/home/firstname
+* Download a sample access.log from averkoc.github.io/lx/access.log  to your home directory
+* Add x permission to the w5analyze.sh script
+* Run the script
+
 

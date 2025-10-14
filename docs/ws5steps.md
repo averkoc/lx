@@ -34,7 +34,7 @@ This indirect approach is just for example - who has recently modified something
 * Use journalctl to see if someone has edited apache2 configuration - contact webadmin if some file is **recently** modified.  
 `sudo journalctl _COMM=sudo |grep "\.conf"`
   
-### Demo2 - Is my administrative used from other IPs than my own.  
+### Demo2 - Is my administrative account used from other IPs than my own.  
 
 `sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'from <TRUSTED_IP>'`
 

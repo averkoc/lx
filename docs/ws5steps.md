@@ -2,25 +2,31 @@
 ### Preparations
 
 Add user account firstname to sudo group  
-`usermod -aG sudo firstname`
+`sudo usermod -aG sudo firstname`
 
 ### Demo1 - Webadmin has done error in Apache configuration  
 
 #### Problem's birth
-* Use web browser to see that web server works correctly
-* Log in via SSH to server using your firstname account
-* edit /etc/apache2/sites-available/000-default.conf
-> take a copy before editing e.g. by name /etc/apache2/sites-available/000-default.bak
-* do the following change in the 000-default.conf file:  
-DocumentRoot /var/www/htm
-* reload apache configuration to make them effective: `sudo systemctl reload apache2.service`
-* Use web browser to see the problem that users experience
+* Use a web browser to confirm that the web server works correctly
+* Log in via SSH to the server using your firstname account
+* edit the file /etc/apache2/sites-available/000-default.conf
+> take a copy before editing:  
+`sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.bak`
+
+* Modify the `DocumentRoot` line in the 000-default.conf file as follows::  
+DocumentRoot /var/www/htm  
+* reload apache to apply the changes:  
+`sudo systemctl reload apache2.service`
+* Use a web browser again to observe the problem users experience
 
 #### Problem resolution  
 Users report the problem  
-* verify the problem e.g. by "live looking" browser requests  
+* Verify the problem, for example by “live-looking” at browser requests:  
 `sudo tail -f /var/log/apache2/access.log` 
-* view apache2 related errors via `journalctl` using proper options
-* fix the problem and verify success
-* 
+* View Apache-related errors via `journalctl` using appropriate options:
+* Fix the configuration error in /etc/apache2/sites-available/000-default.conf
+* Reload Apache again and verify that the website works: 
+`sudo systemctl reload apache2.service`
+* Check in a browser to confirm success
+
 

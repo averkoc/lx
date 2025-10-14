@@ -29,3 +29,6 @@ Besides the system level log there are server application logs that help to reso
 ## Submission
 Don't submit files. Paste your screenclips directly to ItsLearning answer box according to video instructions.
   
+## Links
+[ws5steps](ws5steps.md) 
+[journalctl](journalctl.md)

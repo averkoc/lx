@@ -29,7 +29,8 @@ Users report the problem and **webadmin** starts to resolve it.
 `sudo systemctl reload apache2.service`
 * Check in a browser to confirm success
 
-Or if some other than webadmin is the first one to look the problem after verifying the problem's existence (auditing - just for example)
+Or if some other than webadmin is the first one to look the problem.  
+This indirect approach is just for example - more about finding a responsible person for corrections.
 * Use journalctl to see if someone has edited apache2 configuration - contact webadmin if some file is **recently** modified.  
 `sudo journalctl _COMM=sudo |grep "\.conf"`
   

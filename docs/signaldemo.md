@@ -29,8 +29,7 @@ int main() {
 ##### 🧪 Instructions  
 **Compile:**  
 `gcc -o unhandled unhandled.c`  
-Run:
-
+Run:  
 `./unhandled`  
 Press Ctrl+C after a few seconds.  
 

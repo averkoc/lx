@@ -30,7 +30,7 @@ Users report the problem and **webadmin** starts to resolve it.
 * Check in a browser to confirm success
 
 Or if some other than webadmin is the first one to look the problem.  
-This indirect approach is just for example - more about finding a responsible person for corrections.
+This indirect approach is just for example - who has recently modified something.
 * Use journalctl to see if someone has edited apache2 configuration - contact webadmin if some file is **recently** modified.  
 `sudo journalctl _COMM=sudo |grep "\.conf"`
   

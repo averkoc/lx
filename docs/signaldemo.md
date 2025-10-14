@@ -33,9 +33,10 @@ Run:
 
 `./unhandled`  
 Press Ctrl+C after a few seconds.  
+
 Compare:  
-Last line printed in terminal  
-Last line saved in output.txt
+Last line printed in terminal   
+Last line saved in output.txt  
 
 **🔍 Observation**  
 You’ll likely see that output.txt is missing the last few lines—because the buffer wasn’t flushed before the program was interrupted.
@@ -84,6 +85,7 @@ Compile:
 Run:  
 `./handled`  
 Press Ctrl+C after a few seconds.  
+
 Compare:  
 Last line printed in terminal   
 Last line saved in output.txt  

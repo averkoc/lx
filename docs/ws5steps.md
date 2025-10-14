@@ -20,7 +20,7 @@ DocumentRoot /var/www/htm
 * Use a web browser again to observe the problem users experience
 
 #### Problem resolution  
-Users report the problem  
+Users report the problem and **webadmin** starts to resolve it. 
 * Verify the problem, for example by “live-looking” at browser requests:  
 `sudo tail -f /var/log/apache2/access.log` 
 * View Apache-related errors via `journalctl` using appropriate options:
@@ -28,5 +28,10 @@ Users report the problem
 * Reload Apache again and verify that the website works: 
 `sudo systemctl reload apache2.service`
 * Check in a browser to confirm success
+
+Or if some other than webadmin is the first one to look the problem after verifying the problem's existence (auditing - just for example)
+* Use journalctl to see if someone has edited apache2 configuration - contact webadmin if some file is **recently** modified.  
+`sudo journalctl _COMM=sudo |grep "\.conf"`
+  
 
 

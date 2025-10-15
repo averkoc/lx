@@ -35,8 +35,8 @@
         <!-- If emqx broker then:'wss://broker.emqx.io:8084/mqtt' --> 
         const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
         const topics = [
-            '/centrialinux/studentfirstname/indoors/',
-            '/centrialinux/studentfirstname/outdoors/'
+            '/centrialinux/studentfirstname/indoors',
+            '/centrialinux/studentfirstname/outdoors'
         ];
 
         client.on('connect', () => {

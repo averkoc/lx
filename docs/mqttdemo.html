@@ -46,9 +46,9 @@
 
         client.on('message', (topic, message) => {
             const temp = message.toString();
-            if (topic.endsWith('/indoors/')) {
+            if (topic.endsWith('/indoors')) {
                 document.getElementById('indoorTemp').textContent = `Indoor Temperature: ${temp}°C`;
-            } else if (topic.endsWith('/outdoors/')) {
+            } else if (topic.endsWith('/outdoors')) {
                 document.getElementById('outdoorTemp').textContent = `Outdoor Temperature: ${temp}°C`;
             }
         });

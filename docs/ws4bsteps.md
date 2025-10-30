@@ -17,6 +17,7 @@
 1. john2 logs in via SSH, first entering an incorrect password and then the correct one. john2 then logs out.
 
 2. Log in as student via SSH and **take a screenshot showing john2’s logins** in /var/log/auth.log. Then log out. 
+sudo grep -a --color "john2" /var/log/auth.log  
 <img width="1596" height="73" alt="image" src="https://github.com/user-attachments/assets/d0a9e903-1a3f-4cbe-83b6-b7f29ee66814" />
 
 

@@ -77,8 +77,15 @@ sudo apt install goaccess
 goaccess /var/log/apache2/access.log -o report.html --log-format=COMBINED
 
 
-# For live view
-goaccess /var/log/apache2/access.log -o report.html --log-format=COMBINED
+# For live view in terminal
+sudo goaccess /var/log/apache2/access.log --log-format=COMBINED
+
+
+
+
+
+
+
 
 
 

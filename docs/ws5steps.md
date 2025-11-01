@@ -44,7 +44,7 @@ Check who modified .conf files:
 Check if your account was used from unknown IPs  
 `sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'from <TRUSTED_IP>'`  
 or   
-`sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'Accepted password for sakari from <trusted IP>'`  
+`sudo journalctl -u ssh | grep 'Accepted password for <USERNAME> ' | grep -v 'from <TRUSTED_IP>'`  
 
 ## 📊 Demo 3: Web Access Log Analysis with GoAccess  
 ### 📁 What is access.log?  

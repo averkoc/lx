@@ -13,8 +13,8 @@ Instead of writing logs to plain text files (like `/var/log/messages` or `/var/l
 
 ---
 
-## journalctl: The Interface
-`journalctl` is the command-line tool to query and display logs collected by `systemd-journald`.
+## journalctl: The Interface  
+`journalctl` is the command-line tool to query and display logs collected by `systemd-journald`.  
 
 ### Key features:
 - **Time filtering**: View logs by boot session, date ranges, or relative times.
@@ -27,7 +27,8 @@ Instead of writing logs to plain text files (like `/var/log/messages` or `/var/l
 
 ---
 
-## Comparison to Traditional Logs
+## Comparison to Traditional Logs  
+
 | Traditional syslog (/var/log/...) | journald |
 |-----------------------------------|-----------|
 | Plain text files | Binary, indexed storage |

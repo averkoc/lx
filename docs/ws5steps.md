@@ -1,7 +1,7 @@
 
 # 🛠️ Logging Workshop Demo
 
-This guide walks through some log-file usage examples: Apache configuration errors, SSH access auditing, and web access log analysis using GoAccess.
+This guide walks through some log-files usage examples: Apache configuration errors, SSH access auditing, and web access log analysis using GoAccess.
 
 ---
 

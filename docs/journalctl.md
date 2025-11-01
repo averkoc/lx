@@ -28,13 +28,14 @@ Instead of writing logs to plain text files (like `/var/log/messages` or `/var/l
 ---
 
 ## Comparison to Traditional Logs
-| Traditional syslog (`/var/log/...`) | journald |
-|-------------------------------------|----------|
+| Traditional syslog (/var/log/...) | journald |
+|-----------------------------------|-----------|
 | Plain text files | Binary, indexed storage |
 | Limited metadata (mostly timestamps and messages) | Rich metadata: PID, UID, unit, cgroup, executable, etc. |
-| Managed by `rsyslog`, `syslog-ng`, etc. | Managed by `systemd-journald` |
-| Text tools like `grep`, `less`, `awk` | `journalctl` provides structured filtering, export options |
-| Needs log rotation (logrotate) | Journald manages size, rotation, and persistence |
+| Managed by rsyslog, syslog-ng, etc. | Managed by systemd-journald |
+| Text tools like grep, less, awk | `journalctl` provides structured filtering, export options |
+| Needs log rotation (`logrotate`) | Journald manages size, rotation, and persistence |
+
 
 ---
 

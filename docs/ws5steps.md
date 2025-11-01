@@ -44,5 +44,5 @@ Check who modified .conf files:
 Check if your account was used from unknown IPs  
 `sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'from <TRUSTED_IP>'`  
 or   
-`sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'Accepted password for sakari from 192.168.61.1'`  
+`sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'Accepted password for sakari from <trusted IP>'`  
 

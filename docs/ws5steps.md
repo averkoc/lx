@@ -67,8 +67,8 @@ Live terminal view:
 `sudo goaccess /var/log/apache2/access.log --log-format=COMBINED`
 
 ## ✅ Summary  
-This workshop covered:
-* Diagnosing Apache config errors
+This workshop demonstrated Linux logging using the following examples:
+* Diagnosing Apache config errors (`sudo apache2ctl configtest` should be run after config modifications`)
 * Auditing SSH access logs
 * Analyzing traffic with GoAccess
   

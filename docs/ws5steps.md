@@ -46,3 +46,15 @@ Check if your account was used from unknown IPs
 or   
 `sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'Accepted password for sakari from <trusted IP>'`  
 
+## 📊 Demo 3: Web Access Log Analysis with GoAccess  
+### 📁 What is access.log?  
+Each line includes:  
+* IP address
+* Timestamp
+* HTTP method and resource
+* Status code (e.g., 200, 404)
+* Bytes sent
+* Referrer
+* User agent  
+
+Useful for analyzing traffic, behavior, and issues.

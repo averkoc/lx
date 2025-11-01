@@ -36,3 +36,7 @@ DocumentRoot /var/www/htm
 5. Confirm correct operation by browser
 
 
+## 🕵️‍♂️ Audit Config Changes  
+Check who modified .conf files:   
+`sudo journalctl _COMM=sudo | grep "\.conf"`  
+

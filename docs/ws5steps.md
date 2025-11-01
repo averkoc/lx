@@ -66,4 +66,9 @@ Generate HTML report:
 Live terminal view:  
 `sudo goaccess /var/log/apache2/access.log --log-format=COMBINED`
 
-
+## ✅ Summary  
+This workshop covered:
+* Diagnosing Apache config errors
+* Auditing SSH access logs
+* Analyzing traffic with GoAccess
+  

@@ -30,7 +30,7 @@ DocumentRoot /var/www/htm
 ### 🛠️ Problem Resolution  
 1. Monitor live requests
 `sudo tail -f /var/log/apache2/access.log`
-2. View error logs: sudo journalctl -u apache2`
+2. View error logs: `sudo journalctl -u apache2`
 3. Fix the DocumentRoot path in config.
 4. Relaoad Apache: `sudo systemctl reload apache2.service`
 5. Confirm correct operation by browser

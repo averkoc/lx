@@ -55,7 +55,8 @@ Each line includes:
 * Status code (e.g., 200, 404)
 * Bytes sent
 * Referrer
-* User agent  
+* User agent (may reveal OS, browser, and hardware architecture — though this info is self-reported and not always reliable)  
+ 
 
 Useful for analyzing traffic, behavior, and issues.  
 

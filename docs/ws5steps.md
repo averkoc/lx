@@ -1,3 +1,8 @@
+> ****************************************************************************
+>  **View the video for more detailed information and answering instructions.**
+> ****************************************************************************
+
+
 
 # 🛠️ Logging Workshop Demo
 
@@ -44,12 +49,14 @@ take a screen clip that shows the unsuccessful page request:
 ## 🕵️‍♂️ Audit Config Changes  
 Check who modified .conf files:   
 `sudo journalctl _COMM=sudo | grep "\.conf"`  
+**Paste the output that shows who have edited apache configuration files to answer box**
 
 ## 🔐 Demo 2: SSH Access Audit  
 Check if your account was used from unknown IPs  
 `sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'from <TRUSTED_IP>'`  
 or   
 `sudo journalctl -u ssh | grep 'Accepted password for <USERNAME> ' | grep -v 'from <TRUSTED_IP>'`  
+**Paste the output including the command row that shows whether your account is used successfully from some other ip-addres than your windows or mac**
 
 ## 📊 Demo 3: Web Access Log Analysis with GoAccess  
 ### 📁 What is access.log?  

@@ -28,8 +28,11 @@ DocumentRoot /var/www/htm
 6. Check with browser again — **error should appear**
 
 ### 🛠️ Problem Resolution  
-1. Monitor live requests
-`sudo tail -f /var/log/apache2/access.log`
+1. Monitor live requests while you are accessing the web site with browser. The code 404 tells that page is not found.
+`sudo tail -f /var/log/apache2/access.log`  # exit this with ctrl-c  
+take a screen clip that shows the unsuccessful page request:  
+`firstname@debian:~$ sudo tail -n5 /var/log/apache2/access.log` # **paste output inluding the command row to answer box**
+
 2. View error logs: `sudo journalctl -u apache2`
 3. Fix the DocumentRoot path in config.
 4. Relaoad Apache: `sudo systemctl reload apache2.service`

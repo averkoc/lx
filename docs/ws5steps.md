@@ -57,4 +57,13 @@ Each line includes:
 * Referrer
 * User agent  
 
-Useful for analyzing traffic, behavior, and issues.
+Useful for analyzing traffic, behavior, and issues.  
+
+### ⚙️ Using GoAccess  
+Install GoAccess: `sudo apt install goaccess` 
+Generate HTML report: 
+`goaccess /var/log/apache2/access.log -o report.html --log-format=COMBINED`  
+Live terminal view:  
+`sudo goaccess /var/log/apache2/access.log --log-format=COMBINED`
+
+

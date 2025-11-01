@@ -56,7 +56,7 @@ Check if your account was used from unknown IPs
 `sudo journalctl -u ssh | grep 'Accepted publickey for <USERNAME>' | grep -v 'from <TRUSTED_IP>'`  
 or   
 `sudo journalctl -u ssh | grep 'Accepted password for <USERNAME> ' | grep -v 'from <TRUSTED_IP>'`  
-**Paste the output including the command row that shows whether your account is used successfully from some other ip-addres than your windows or mac**
+**Paste the output including the command row that shows whether your account is used successfully from some other ip-address than your windows or mac**
 
 ## 📊 Demo 3: Web Access Log Analysis with GoAccess  
 ### 📁 What is access.log?  

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centria Linux - MQTT Dashboard</title>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      max-width: 400px;
+    }
+    .value {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .timestamp {
+      font-size: 0.9em;
+      color: #666;
+    }
+    #log {
+      background: #111;
+      color: #0f0;
+      font-family: monospace;
+      padding: 10px;
+      border-radius: 5px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Centria Linux - MQTT Live Dashboard</h1>
+
+  <div class="card" id="indoor">
+    <h3>🏠 Indoor Temperature</h3>
+    <div class="value" id="indoorTemp">-- °C</div>
+    <div class="timestamp" id="indoorTime">Last update: --</div>
+  </div>
+
+  <div class="card" id="outdoor">
+    <h3>🌤️ Outdoor Temperature</h3>
+    <div class="value" id="outdoorTemp">-- °C</div>
+    <div class="timestamp" id="outdoorTime">Last update: --</div>
+  </div>
+
+  <h3>📜 Live MQTT Log</h3>
+  <div id="log"></div>
+
+  <script>
+    // Change broker URL if you use your own MQTT server
+    const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
+    const topics = [
+      '/centrialinux/studentfirstname/indoors',
+      '/centrialinux/studentfirstname/outdoors'
+    ];
+
+    const log = msg => {
+      const logDiv = document.getElementById('log');
+      logDiv.textContent += msg + '\n';
+      logDiv.scrollTop = logDiv.scrollHeight;
+      console.log(msg);
+    };
+
+    const updateCard = (id, value) => {
+      const tempElem = document.getElementById(id + 'Temp');
+      const timeElem = document.getElementById(id + 'Time');
+      const card = document.getElementById(id);
+      tempElem.textContent = `${value} °C`;
+      timeElem.textContent = `Last update: ${new Date().toLocaleTimeString()}`;
+
+      const temp = parseFloat(value);
+      // Color indicator (blue < 22°C, green < 27°C, red >= 27°C)
+      let color = '#2ecc71';
+      if (temp < 22) color = '#3498db';
+      if (temp >= 27) color = '#e74c3c';
+      card.querySelector('.value').style.color = color;
+    };
+
+    client.on('connect', () => {
+      log('✅ Connected to broker');
+      topics.forEach(t => {
+        client.subscribe(t);
+        log(`Subscribed to ${t}`);
+      });
+    });
+
+    client.on('message', (topic, message) => {
+      const value = message.toString();
+      log(`📩 ${topic}: ${value}`);
+
+      if (topic.endsWith('/indoors')) updateCard('indoor', value);
+      else if (topic.endsWith('/outdoors')) updateCard('outdoor', value);
+    });
+
+    client.on('error', err => log(`❌ Connection error: ${err}`));
+  </script>
+</body>
+</html>

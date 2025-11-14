@@ -1,6 +1,6 @@
 **Clone to local computer**
 ```bash
-git clone
+git clone https://github.com/averkoc/lx.git
 ```
 **Do this in local repo**  
 

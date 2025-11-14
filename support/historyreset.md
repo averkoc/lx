@@ -1,10 +1,10 @@
-**Clone to local computer**
+**Clone the github repo to local computer**
 ```bash
 git clone https://github.com/averkoc/lx.git
 ```
 **Do this in local repo**  
 
-# Repository History Cleanup Procedure
+### Repository History Cleanup Procedure
 
 This procedure creates a fresh, history-free `main` branch while preserving all current files.
 

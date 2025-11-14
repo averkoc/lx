@@ -5,7 +5,7 @@ git clone https://github.com/averkoc/lx.git
 
 ### Repository History Cleanup Procedure
 
-This procedure creates a fresh, history-free `main` branch while preserving all current files.
+This procedure creates a fresh, history-free `main` branch while preserving all current files - you run these in your local repo
 
 ```bash
 # copies the remote as an independent local branch fresh-start

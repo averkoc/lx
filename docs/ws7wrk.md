@@ -1,6 +1,11 @@
 ## Supporting page for "Processes, Jobs and Services mgmt" -video. 
 
-In this workshop, we focus on managing our own user processes. You’ll learn how to run programs interactively in the foreground or silently in the background. While a program is running in the foreground, you can pause it with `Ctrl+Z` and then resume it in the background using `bg`. To bring a background job back to the foreground, use `fg`. You can also stop a foreground job with `Ctrl+C`, check job status with jobs, and locate or terminate your own processes by name using `pgrep` and `pkill`.
+In this workshop, we focus on managing our own user processes. You’ll learn how to run programs interactively in the foreground or silently in the background. While a program is running in the foreground, you can pause it with `Ctrl+Z` and then resume it in the background using `bg`. To bring a background job back to the foreground, use `fg`. You can also stop a foreground job with `Ctrl+C`, check job status with jobs, and locate or terminate your own processes by name using `pgrep` and `pkill`.   
+
+<img width="614" height="360" alt="image" src="https://github.com/user-attachments/assets/84bc8620-bc69-4e79-a89c-d410cf878d81" />
+
+
+
 
 **Job management commands**  
 

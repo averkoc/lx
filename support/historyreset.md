@@ -23,5 +23,5 @@ git branch -D main
 # renames the fresh-start to main
 git branch -m main
 
-# forces the local history-free main to origin
+# forces the local history-free main to origin in github
 git push -f origin main

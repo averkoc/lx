@@ -64,6 +64,7 @@ gcc -o graceful graceful.c
 * `.\longrun > output &`
 * use `jobs` command to see your background jobs
 * attach a screen clip
+  
 <img width="753" height="133" alt="image" src="https://github.com/user-attachments/assets/54339a66-dcdf-48ee-af9e-c9f61cff722e" />
 
 
@@ -73,6 +74,7 @@ gcc -o graceful graceful.c
 * `.\longrun > output &`
 * `pkill longrun`
 * attach a screen clip
+  
 <img width="767" height="144" alt="image" src="https://github.com/user-attachments/assets/8b376f00-25e6-4f96-a5f2-1d3db3549d2d" />
 
 
@@ -90,6 +92,7 @@ An operating system can send various signals to processes (running programs). Ea
 * run the `ignorant` and interrupt it by pressing `ctr-c`
 * compare the last line listed when the program was running and the last line in data.txt file
 * take a screen clip that shows the difference - buffered data was lost due.
+  
 <img width="548" height="541" alt="image" src="https://github.com/user-attachments/assets/17ea89b9-af47-470f-9a9b-c19b74cceb93" />
 
 
@@ -100,7 +103,8 @@ An operating system can send various signals to processes (running programs). Ea
 **Own signal handler takes proper actions when SIGINT is received**  
 * run the `graceful`and interrupt it by pressing `ctrl-c`
 * compare the last line listed when the program was running and the last line in data.txt file
-* take a screen clip that shows the difference - no lost data.  
+* take a screen clip that shows the difference - no lost data.
+  
 <img width="760" height="570" alt="image" src="https://github.com/user-attachments/assets/c15d8ead-c365-4a4a-a82a-b46c470cccd1" />
 
 

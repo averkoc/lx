@@ -2,7 +2,6 @@
 ```bash
 git clone https://github.com/averkoc/lx.git
 ```
-**Do this in local repo**  
 
 ### Repository History Cleanup Procedure
 

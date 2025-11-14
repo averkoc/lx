@@ -54,7 +54,9 @@ gcc -o graceful graceful.c
 * interrupt it by `ctrl-c`
 * attach a screen clip
   
-<img width="666" height="223" alt="image" src="https://github.com/user-attachments/assets/53539f04-724e-49de-ad7f-56df692d07c6" />  
+<img width="724" height="239" alt="image" src="https://github.com/user-attachments/assets/46b1a1ec-5f97-4801-9bf9-0c188bfa976d" />
+
+
 
 ---  
 
@@ -62,7 +64,8 @@ gcc -o graceful graceful.c
 * `.\longrun > output &`
 * use `jobs` command to see your background jobs
 * attach a screen clip
-<img width="827" height="154" alt="image" src="https://github.com/user-attachments/assets/a1f213ad-7593-4bd3-a88c-19b135c6c629" />
+<img width="753" height="133" alt="image" src="https://github.com/user-attachments/assets/54339a66-dcdf-48ee-af9e-c9f61cff722e" />
+
 
 ---  
 
@@ -70,7 +73,9 @@ gcc -o graceful graceful.c
 * `.\longrun > output &`
 * `pkill longrun`
 * attach a screen clip
-<img width="782" height="152" alt="image" src="https://github.com/user-attachments/assets/8c1d6b23-45b4-4f1e-8a0a-e59f475d6ac9" />
+<img width="767" height="144" alt="image" src="https://github.com/user-attachments/assets/8b376f00-25e6-4f96-a5f2-1d3db3549d2d" />
+
+
 
 ---   
 
@@ -85,7 +90,8 @@ An operating system can send various signals to processes (running programs). Ea
 * run the `ignorant` and interrupt it by pressing `ctr-c`
 * compare the last line listed when the program was running and the last line in data.txt file
 * take a screen clip that shows the difference - buffered data was lost due.
-<img width="469" height="438" alt="image" src="https://github.com/user-attachments/assets/a7c10801-b39d-47e3-a181-75cf9acae2ec" />
+<img width="548" height="541" alt="image" src="https://github.com/user-attachments/assets/17ea89b9-af47-470f-9a9b-c19b74cceb93" />
+
 
 
 ---
@@ -95,7 +101,8 @@ An operating system can send various signals to processes (running programs). Ea
 * run the `graceful`and interrupt it by pressing `ctrl-c`
 * compare the last line listed when the program was running and the last line in data.txt file
 * take a screen clip that shows the difference - no lost data.  
-<img width="640" height="468" alt="image" src="https://github.com/user-attachments/assets/3232b4d7-e192-4b57-ad93-9560d4782ff2" />
+<img width="760" height="570" alt="image" src="https://github.com/user-attachments/assets/c15d8ead-c365-4a4a-a82a-b46c470cccd1" />
+
 
 ----
 In addition to the activities mentioned above, the video includes additional demonstrations, such as web server load testing and how the load impacts CPU, memory, and network resources.

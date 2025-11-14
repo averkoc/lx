@@ -1,4 +1,4 @@
-**Clone to local computer and do this**
+**Clone to local computer**
 ```bash
 git clone
 ```

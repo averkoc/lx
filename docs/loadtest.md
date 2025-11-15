@@ -1,47 +1,45 @@
+### Web-server load testing demonstration with siege load generation tool  
 
+**Install htop monitoring tool into Debian server**  
+```bash
+sudo apt update && sudo apt upgrade
+sudo apt install htop
+````
+
+**Install siege into you Mac or Windows wsl**  
+
+```bash
+sakari@smasus:~$sudo apt update  && sudo apt upgrade
+sakari@smasus:~$sudo apt install siege
+````
+**In Windows/Mac**  
+I start siege in my Windows WSL with the given parameters, if you do this you need to replace the server IP with yours Debian IP.  
+```bash
+sakari@SMASUS:~$ siege -c 50 -r 500 -d 1 http://192.168.61.5/index.html
+# Siege simulates 50 users, each making 500 requests, waiting up to 1 second between requests, all hitting the given UR
+````
+Below are the results after the test completed.  
+
+<img width="878" height="374" alt="image" src="https://github.com/user-attachments/assets/980f945b-e0fa-4351-8a10-e5dd79703ac5" />    
+
+The picture below is a screen clip from `htop` during my ssh-session to Debian  while the siege test was running-
 
 <img width="1412" height="629" alt="image" src="https://github.com/user-attachments/assets/c290fa2e-9e2b-49ec-911b-4d7318945fdc" />
 
-✅ 1. CPU Usage (Top Left Bars)
+**htop view explanations**
 
-The colored vertical bars labeled 0, 1, 2, etc. represent individual CPU cores.
-
-* Red = system (kernel) usage
-* Green = user processes
-* Blue = low‑priority jobs (nice)
-* Orange = IRQ
-* Gray/black = idle  
-
-Screenshot shows around 15–25% usage per core, meaning your server is under moderate load but not maxed out.  
-
-✅ 2. Memory and Swap
-
-* Mem: 160M / 1.93G — Apache is using around 160 MB RAM total, which is small.
-* Swp: 0k / 1.08G — no swap is being used (good).
-  
-This means  server is not memory‑constrained.  
-
-✅ 3. System Load   
-Tasks: 41 tasks total, 60 threads, 1 running thread  
-* Load average: 0.42, 0.83, 0.77  
-
-Load averages under 1.0 per core mean the server is not overloaded. If this is a dual‑core system, load <2 is fine.  
-
-✅ 4. Apache Worker Processes  
-
-All the lines showing: `/usr/sbin/apache2 -k start`  
-are Apache worker processes. Apache (with the prefork or event MPM) launches multiple worker processes to handle incoming HTTP requests.  
-
----
-
-**Columns explained:** 
-* PID — Process ID
-* USER — www-data: standard Apache user
-* PRI/NI — priority/niceness (normal = 20 / 0)
-* VIRT — Virtual memory size (about 1.6 GB)
-* RES — Actual physical RAM usage (around 11 MB each)
-* CPU% — CPU consumption by that specific worker
-* MEM% — Percent of physical RAM
-* TIME+ — Total accumulated CPU time
-
-Command — Apache worker command
+| Area / Field     | Meaning                                  |
+|------------------|-------------------------------------------|
+| CPU bars         | Per-core usage (green=user, red=kernel)   |
+| Mem / Swap bars  | RAM and swap usage                        |
+| Load average     | System load (1m, 5m, 15m)                 |
+| Tasks            | Total processes, threads, running count   |
+| PID              | Process ID                                |
+| USER             | User running the process                  |
+| PRI / NI         | Priority and nice value                   |
+| VIRT / RES       | Virtual memory / physical memory used     |
+| SHR              | Shared memory                             |
+| S                | Process state (S=sleep, R=running, etc.)  |
+| CPU% / MEM%      | CPU and RAM used by the process           |
+| TIME+            | Total CPU time consumed                   |
+| Command          | Process executable + arguments            |

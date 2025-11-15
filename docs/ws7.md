@@ -114,7 +114,7 @@ An operating system can send various signals to processes (running programs). Ea
 
 
 ----
-In addition to the activities mentioned above, there is an additional video that demonstrates web server load testing and how the load impacts CPU, memory, and network resources. Here is the supplementary [page](loadtest.md) for the video
+In addition to the activities mentioned above, there is an additional video that demonstrates web server load testing and how the load impacts CPU, memory, and network resources. Here is the supplementary [page](loadtest.md) for the load testing video.
 
 > Here is my old [ws7](ws7old.md), it contains information about service management and package management.
 

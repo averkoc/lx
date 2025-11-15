@@ -55,7 +55,7 @@ gcc -o graceful graceful.c
 ### Foreground / Bakcground demonstrations  
 
 **Interrupt (stop) a foreground program**
-* run the longrunning in foreground: `.\longrunning`
+* run the longrunning in foreground: `./longrunning`
 * interrupt it by `ctrl-c`
 * attach a screen clip
   
@@ -66,7 +66,7 @@ gcc -o graceful graceful.c
 ---  
 
 **Run a program in the background**  
-* `.\longrun > output &`
+* `./longrun > output &`
 * use `jobs` command to see your background jobs
 * attach a screen clip
   
@@ -76,7 +76,7 @@ gcc -o graceful graceful.c
 ---  
 
 **Kill a background job**  
-* `.\longrun > output &`
+* `./longrun > output &`
 * `pkill longrun`
 * attach a screen clip
   

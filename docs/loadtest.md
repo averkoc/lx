@@ -13,7 +13,7 @@ sakari@smasus:~$sudo apt update  && sudo apt upgrade
 sakari@smasus:~$sudo apt install siege
 ````
 **In Windows/Mac**  
-I start siege in my Windows WSL with the given parameters, if you do this you need to replace the server IP with yours Debian IP.  
+I start siege in my Windows WSL with the given parameters, if you do this you need to replace the server IP with your Debian IP.  
 ```bash
 sakari@SMASUS:~$ siege -c 50 -r 500 -d 1 http://192.168.61.5/index.html
 # Siege simulates 50 users, each making 500 requests, waiting up to 1 second between requests, all hitting the given UR

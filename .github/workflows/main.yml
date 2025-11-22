@@ -1,10 +1,7 @@
 name: Generate TOC
 
 on:
-  push:
-    paths:
-      - 'docs/**'  # regenerate when docs change
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
   generate-toc:

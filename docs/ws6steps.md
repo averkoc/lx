@@ -3,7 +3,7 @@ title: ""
 layout: default
 --- 
 
-# Special Permissions Workshop Instructions - Supports the related Video 
+## Special Permissions Workshop Instructions - Supports the related Video 
 
 If you find special permissions somewhat messy, here’s some background:
 _Linux’s special bits are pragmatic add-ons — they patch gaps in the original permission system, solving real needs without breaking existing behavior, even if the solutions are not elegant or easy to understand intuitively._ 

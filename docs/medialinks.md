@@ -1,3 +1,10 @@
+---
+title: ""
+layout: default
+---
+
+
+
 ## Debian Netinst ISO Downloads   
 
 These links point to pages that contain the current installation cd-image for different architectures. The file can be found at the bottom of each page.  The file names are of the following structure: `debian-<version>-<architecture>-netinst.iso`. Macs with Intel cpu may have some additional text before the version.    

@@ -5,7 +5,7 @@ layout: default
 
 
 
-# Overview: systemd-journald & journalctl
+## Overview: systemd-journald & journalctl
 
 ## What is journald?
 `systemd-journald` is the logging service used by `systemd`-based systems.  

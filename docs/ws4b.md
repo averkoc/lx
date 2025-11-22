@@ -22,7 +22,7 @@ _The actual workshop is described in the session recording. The following sectio
 
 ---
 
-## Layer 1: Network Perimeter (Boundary) Control  - The Firewall
+### Layer 1: Network Perimeter (Boundary) Control  - The Firewall
 
 | Component | Example Tools | Role | Security Focus |
 | :--- | :--- | :--- | :--- |

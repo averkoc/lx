@@ -1,3 +1,9 @@
+---
+title: ""
+layout: default
+---
+
+
 ## 🧪 Linux Signals Demo: A Hands-On Worksheet  
 ### 🎯 Objective
 Understand how Linux signals (e.g. SIGINT) can interrupt a program and cause data loss if not handled properly. Learn how to use signal handlers to flush buffered data before exiting.

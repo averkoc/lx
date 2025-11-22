@@ -3,10 +3,10 @@ title: ""
 layout: default
 ---
 
-# IDS/IPS Workshop Instructions - Supports the related video.
+## IDS/IPS Workshop Instructions - Supports the related video.
 
 
-# 🛡️ Layered protection
+### 🛡️ Layered protection
 
 This workshop helps you understand why **layered protection** is used to provide system security. Another commonly used term for this approach to security is **Defense in Depth**.
 
@@ -33,7 +33,7 @@ _The actual workshop is described in the session recording. The following sectio
 
 ---
 
-## Layer 2: Intrusion Detection & Prevention - IDS/IPS
+### Layer 2: Intrusion Detection & Prevention - IDS/IPS
 
 | Component | Example Tools | Role | Security Focus |
 | :--- | :--- | :--- | :--- |
@@ -44,7 +44,7 @@ _The actual workshop is described in the session recording. The following sectio
 
 ---
 
-## Layer 3: Host/Service Hardening - e.g Authentication Policy
+### Layer 3: Host/Service Hardening - e.g Authentication Policy
 
 | Component | Example Policy | Role | Security Focus |
 | :--- | :--- | :--- | :--- |
@@ -55,7 +55,7 @@ _The actual workshop is described in the session recording. The following sectio
 
 ---
 
-## Conclusion: Defense-in-Depth Illustrated
+### Conclusion: Defense-in-Depth Illustrated
 
 Your workshop successfully demonstrates that a single security control is not enough.
 
@@ -69,13 +69,13 @@ The combined effect of these three independent layers provides **resilience** an
 
 ---- 
 
-## 🛠️ Linux Hardening Command Summary
+### 🛠️ Linux Hardening Command Summary
 
 This cheat sheet covers the most essential commands for configuring the **UFW** (Uncomplicated Firewall) and **Fail2ban** (Intrusion Prevention) layers of protection.
 
 ---
 <a id="ufw"></a>
-### 🛡️ UFW (Uncomplicated Firewall)
+#### 🛡️ UFW (Uncomplicated Firewall)
 
 UFW controls network access to the server, implementing the **Network Perimeter** layer.
 
@@ -91,7 +91,7 @@ UFW controls network access to the server, implementing the **Network Perimeter*
 
 ---
 <a id="fail2ban"></a>
-### 🚨 Fail2ban (Intrusion Prevention)
+#### 🚨 Fail2ban (Intrusion Prevention)
 
 Fail2ban monitors logs for attack patterns (like password guessing) and dynamically blocks malicious IPs using the firewall (UFW), implementing the **Detection & Reaction** layer.
 
@@ -109,7 +109,7 @@ Fail2ban monitors logs for attack patterns (like password guessing) and dynamica
 * The main configuration file is typically `/etc/fail2ban/jail.conf`, but you should use **`/etc/fail2ban/jail.local`** for any custom overrides (like changing the `bantime` or `maxretry`) to avoid issues during software updates.
 
 --- 
-### Defence-in-Depth Example 
+#### Defence-in-Depth Example 
 <img width="902" height="950" alt="image" src="https://github.com/user-attachments/assets/b39df6ca-dee4-445f-bada-b0690508f0de" />
 
 

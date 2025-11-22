@@ -3,7 +3,7 @@ title: ""
 layout: default
 ---
 
-# Linux Workshop: Users, Groups, and File Permissions
+## Linux Workshop: Users, Groups, and File Permissions
 
 ## Overview
 In this workshop, you will set up a shared directory that can be accessed by members of a specific group. Only group members will be able to create files in this directory, and access to each file will depend on the permissions set by its owner—allowing other group members to either read or modify the file.

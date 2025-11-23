@@ -16,4 +16,9 @@ layout: default
 ---
 ````
 
+## Github actions  
+* hash.yml - uses [docs/hashes.md](docs/hashes.md) as input and creates hash.html that students can use to check downloaded image files. The hash.html is not automatically inserted to /docs you need to download it from action page and upload to /docs  
+* offlinetoc.yml - creates offline table of contents with correct hyperlinks and hover on feature that shows the beginning of linked file contents
+  
+
 

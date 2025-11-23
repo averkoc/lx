@@ -3,8 +3,30 @@ layout: default
 title: ""
 ---
 
-## Hash comparisons  
+## Hash Comparisons
 
+Pick the reference SHA-256 value by clicking a filename below and paste your calculated hash to **Your hash**:
+
+- {% assign hashes = 
+  "file1.txt,0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef|file2.txt,abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789|file3.txt,abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+  | split: "|" %}
+
+{% for item in hashes %}
+  {% assign parts = item | split: "," %}
+  - [{{ parts[0] }}](#){:onclick="selectHash('{{ parts[1] }}'); return false;"}
+{% endfor %}
+
+---
+
+### Reference
+<input id="hash1" class="hash-input" />
+
+### Your hash
+<input id="hash2" class="hash-input" />
+
+<button id="check" onclick="compareHashes()">Click to compare Hashes</button>
+
+<p id="result"></p>
 
 <script>
 function compareHashes() {

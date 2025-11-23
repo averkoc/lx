@@ -17,19 +17,8 @@ jobs:
       - name: Build Hash Page
         run: python generate_hashpage.py docs/hashes.md docs/hash.html
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload hash.html artifact
+        uses: actions/upload-artifact@v4
         with:
-          path: docs/
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:            # 👈 required for Pages
-      name: github-pages
-    permissions:
-      pages: write
-      id-token: write
-    steps:
-      - name: Deploy
-        uses: actions/deploy-pages@v4
+          name: hash-page
+          path: docs/hash.html

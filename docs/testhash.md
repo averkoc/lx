@@ -10,14 +10,16 @@ Pick the reference SHA-256 value to "reference" by clicking a filename below and
 <nav>
 <ul>
 {% assign hashes = 
-  "file1.txt,0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
-   file2.txt,abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789
-   file3.txt,abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
-   | split: "\n" %}
+  "file1.txt,0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef|file2.txt,abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789|file3.txt,abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+  | split: "|" %}
 
 {% for item in hashes %}
   {% assign parts = item | split: "," %}
-  <li><a href="#" onclick="selectHash('{{ parts[1] | strip }}')">{{ parts[0] | strip }}</a></li>
+  <li>
+    <a href="#" onclick="selectHash('{{ parts[1] }}'); return false;">
+      {{ parts[0] }}
+    </a>
+  </li>
 {% endfor %}
 </ul>
 </nav>

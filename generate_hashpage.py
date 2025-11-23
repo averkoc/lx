@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 <body>
 <h1>Hash Comparisons</h1>
-<p>Pick the reference SHA-256 value to Reference by clicking a filename below:</p>
+<p>Pick the reference SHA-256 value to "reference" by clicking a filename below and paste your calculated hash to "your hash":</p>
 <nav>
 <ul>
 {links}

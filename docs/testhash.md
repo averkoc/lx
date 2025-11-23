@@ -5,7 +5,7 @@ title: ""
 
 ## Hash Comparisons
 
-Pick the reference SHA-256 value to "reference" by clicking a filename below and paste your calculated hash to "your hash":
+Pick the reference SHA-256 value by clicking a filename below and paste your calculated hash to "your hash":
 
 <nav>
 <ul>
@@ -114,8 +114,8 @@ document.addEventListener("DOMContentLoaded", function() {
 .hash-input { font-size: 1.2rem; width: 70%; padding: 5px; text-transform: lowercase; }
 button { padding: 10px 20px; font-size: 1rem; color: white; background-color: orange; border: none; }
 #check { cursor: pointer; }
-#result { font-size: 1.2rem; }
-.collapsible { cursor: pointer; padding: 10px; width: 100%; border: none; text-align: left; background-color: #f1f1f1; }
+#result { font-size: 1.2rem; margin-top: 10px; }
+.collapsible { cursor: pointer; padding: 10px; width: 100%; border: none; text-align: left; background-color: #f1f1f1; margin-top: 5px; }
 .active, .collapsible:hover { background-color: #ccc; }
 .content { display: none; padding: 0 18px; background-color: #f9f9f9; overflow: hidden; }
 .instructions { max-width: 800px; font-size: 1rem; }

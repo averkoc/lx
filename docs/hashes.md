@@ -5,9 +5,9 @@ date: 2025-11-23
 ---
 
 
-# SHA-256 Reference Hashes
+## SHA-256 Reference Hashes
 
-Below are the images and their hashes. Click a filename in the generated HTML to copy its hash into the comparison box.
+This file is the input file for a github action "Build Hash Page". The action produces averkoc.github.io/hash.html that students can use to check the downloaded images. Modify the below strings to match the images you are using on the course. Preserve the formatting because the python program in "Build Hash Pages" action assumes it.
 
 - debian-13.0.0-amd64-netinst.iso `e363cae0f1f22ed73363d0bde50b4ca582cb2816185cf6eac28e93d9bb9e1504`
 - debian-13.0.0-arm64-netinst.iso `f95f35f41850a33f2ab72803600131544a7b4edaa8b63e3553a9cd5364931079`

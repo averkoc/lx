@@ -1,0 +1,6 @@
+- file: file1.txt
+  sha: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdea
+- file: file2.txt
+  sha: abcdef0123456789abcdef0123456789abcdef0123456789abcdef012345678b
+- file: file3.txt
+  sha: abcdef0123456789abcdef0123456789abcdef0123456789abcdef012345678c

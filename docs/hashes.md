@@ -24,5 +24,5 @@ The action just creates the hash.html contained in the hash-page "artefact". Dow
   
 
 
-  > I had problems in updating the pages directly with this action. The action is needed only once a year, so this cumbersome approach may be enough if you want to avoid manual html-page editing.
+  > The action is needed only once a year, even being non-elegant, you avoid manual html-page editing.
 

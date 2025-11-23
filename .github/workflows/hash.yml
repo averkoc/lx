@@ -15,7 +15,7 @@ jobs:
           python-version: "3.x"
 
       - name: Generate HTML
-        run: python generate_html.py hashes.md docs/index.html
+        run: python docs/generate_check.py docs/hashes.md docs/hash.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

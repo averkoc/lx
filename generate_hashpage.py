@@ -89,17 +89,17 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 <body>
 <h1>Hash Comparisons</h1>
-<p>Pick the correct SHA-256 value to hash1 by clicking a filename below:</p>
+<p>Pick the reference SHA-256 value to Reference by clicking a filename below:</p>
 <nav>
 <ul>
 {links}
 </ul>
 </nav>
 <section>
-<label for="hash1">Hash 1:</label>
+<label for="hash1">Reference:</label>
 <input type="text" class="hash-input" id="hash1" />
 <br><br>
-<label for="hash2">Hash 2:</label>
+<label for="hash2">Your hash:</label>
 <input type="text" class="hash-input" id="hash2" />
 <br><br>
 <button id="check" onclick="compareHashes()">Click to compare Hashes</button>

@@ -1,9 +1,5 @@
 name: Generate Offline TOC
-
 on:
-  push:
-    paths:
-      - 'docs/**'
   workflow_dispatch:
 
 jobs:

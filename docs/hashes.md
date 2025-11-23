@@ -9,5 +9,5 @@
 - alpineDT.ova  
   `d55669b9ccdaf64b40c7cdce5d6cf9ed6c6dea7807cc75e10d86010b7f774903`
 
-- debian.ova  
+- debian13.ova  
   `95452b8e7b9c9d78ad2d3b828255f505b32bc5f8857b6eaf60d163d84b6e2830`

@@ -1,10 +1,8 @@
 name: Build Hash Page
 
 on:
-  push:
-    paths:
-      - "hashes.md"
-
+  workflow_dispatch:   # 👈 manual trigger
+  
 jobs:
   build:
     runs-on: ubuntu-latest

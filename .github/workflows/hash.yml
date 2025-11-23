@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: "3.x"
       - name: Generate HTML
-        run: python generate_signature_html.py signatures.md docs/index.html
+        run: python generate_signature_html.py signatures.md docs/hash.html
       - name: Deploy to Pages
         uses: actions/upload-pages-artifact@v3
         with:

@@ -7,7 +7,7 @@ title: ""
 
 Pick the reference SHA-256 value by clicking a filename below and paste your calculated hash to **Your hash**:
 
-- {% assign hashes = 
+ {% assign hashes = 
   "file1.txt,0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef|file2.txt,abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789|file3.txt,abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
   | split: "|" %}
 

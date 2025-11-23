@@ -18,7 +18,11 @@ This file is the input file for a github action "Build Hash Page". The action pr
 The action just creates the hash.html contained in the hash-page "artefact". Download it, extract and then upload the hash.html e.g. to pages folder. See the picture below. <br><br>
 
   <img width="1386" height="242" alt="image" src="https://github.com/user-attachments/assets/eea89e56-92c8-4b2b-b189-23b9c4c30e41" />  
-  <br><br>
+  <br><br>  
+
+  [Run this workflow](https://github.com/averkoc/lx/actions/workflows/hash.yml)  
+  
+
 
   > I had problems in updating the pages directly with this action. The action is needed only once a year, so this cumbersome approach may be enough if you want to avoid manual html-page editing.
 

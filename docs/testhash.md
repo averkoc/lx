@@ -73,3 +73,5 @@ button { padding: 10px 20px; font-size: 1rem; color: white; background-color: or
 #check { cursor: pointer; }
 #result { font-size: 1.2rem; margin-top: 10px; }
 </style>
+
+## How to calculate SHA256  

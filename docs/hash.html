@@ -8,6 +8,8 @@
 label { font-size: 1.5rem; text-transform: lowercase; }
 button { background-color: orange; border: none; color: white; padding: 15px 32px; font-size: 16px; }
 #result { font-size: 1.5rem; }
+.instructions { font-size: 1.3rem; max-width: 800px; }
+.instructions code { background: #eee; padding: 4px; }
 </style>
 <script>
 function compareHashes() {
@@ -39,6 +41,7 @@ function selectHash(hash) { document.getElementById("hash1").value = hash; }
 <li><a href="#" onclick="selectHash('95452b8e7b9c9d78ad2d3b828255f505b32bc5f8857b6eaf60d163d84b6e2830')">debian13.ova</a></li>
 </ul>
 </nav>
+
 <section>
 <label for="hash1">Hash 1:</label>
 <input type="text" class="hash-input" id="hash1" />
@@ -49,5 +52,29 @@ function selectHash(hash) { document.getElementById("hash1").value = hash; }
 <button id="check" onclick="compareHashes()">Click to compare Hashes</button>
 <p id="result"></p>
 </section>
+
+<hr>
+
+<h2>How to Calculate a SHA-256 Hash</h2>
+<div class="instructions">
+
+<h3>Windows (CMD)</h3>
+<p>1. Open the <strong>Command Prompt</strong>.</p>
+<p>2. Run this command (replace <code>filename.ext</code> with your downloaded file):</p>
+<p><code>certutil -hashfile filename.ext SHA256</code></p>
+<p>3. The SHA-256 hash will appear on the next line.</p>
+
+<h3>Windows (PowerShell)</h3>
+<p>1. Open <strong>PowerShell</strong>.</p>
+<p>2. Run the following command:</p>
+<p><code>Get-FileHash filename.ext -Algorithm SHA256</code></p>
+
+<h3>macOS</h3>
+<p>1. Open the <strong>Terminal</strong>.</p>
+<p>2. Run this command:</p>
+<p><code>shasum -a 256 filename.ext</code></p>
+
+</div>
+
 </body>
 </html>

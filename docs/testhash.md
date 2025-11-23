@@ -74,4 +74,26 @@ button { padding: 10px 20px; font-size: 1rem; color: white; background-color: or
 #result { font-size: 1.2rem; margin-top: 10px; }
 </style>
 
-## How to calculate SHA256  
+----
+
+### How to calculate SHA-256 Hash
+
+**Windows (CMD):**  
+```cmd
+certutil -hashfile filename.ext SHA256
+````
+**Powershell**  
+```cmd
+Get-FileHash filename.ext -Algorithm SHA256
+````
+
+**maOS / Linux**  
+```bash
+shasum -a 256 filename.ext
+````
+
+
+
+
+
+

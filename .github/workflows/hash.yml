@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Generate HTML
+      - name: Build Hash Page
         run: python generate_hashpage.py docs/hashes.md docs/hash.html
 
       - name: Upload artifact

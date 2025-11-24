@@ -5,7 +5,7 @@ title: ""
 
 ## Hash Comparisons
 
-Pick the reference SHA-256 value by clicking a filename below and paste your calculated hash to **Your hash**:
+Pick the **Reference** SHA-256 value by clicking a filename below and paste your calculated hash to **Your hash**. 
 
 <ul style="line-height: 1.6;">
 {% for item in site.data.hashes %}

@@ -7,7 +7,7 @@ It is possible to just write markdown pages and refer to them with averkoc.githu
 
 In addition to those I added:
 * [docs/assets/css/copy.js](assets/css/copy.js) that adds copy functionality to code blocks.
-* [docs/_data/hash.yml](docs/_data/hash.yml) that contains imagefile names and shasums. The hash.md page uses liquid-template language to generate correct links to html-page using this as data source. 
+* [docs/_data/hash.yml](_data/hash.yml) that contains imagefile names and shasums. The hash.md page uses liquid-template language to generate correct links to html-page using this as data source. 
 
 ## Tips  
 Do to the added files you need to add the following block into the beginning of each md page. Otherwise the page's first heading is taken as a title to the page and it is presented twice.

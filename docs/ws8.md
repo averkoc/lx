@@ -78,6 +78,9 @@ echo "   pip install <package_name>"
 * Start the program: `python3 demo.py`
 * Now you and others can use `averkoc.github.lx/demo.html` to view the messages that your Debian mqtt-client sends to broker.
 * After you have taken the required screen clips, exit the demo.py and deactivate the virtual environment by issuing command `deactivate`
+
+<img width="1498" height="856" alt="image" src="https://github.com/user-attachments/assets/9d2e259b-e5a7-4a3c-a8e5-bcab3acd6e03" />
+
   
   
 

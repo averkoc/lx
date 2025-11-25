@@ -68,6 +68,6 @@ echo "   pip install <package_name>"
 
 | Link | Notes |
 |------|-------|
-| [indoor2_emqx.html](https://averkoc.github.io/files/indoor2_emqx.html) | Use this to observe my Raspberry Pi live sensor data during a demo session. My Raspberry Pi is active only during the session or when we’ve agreed. |
-| [demo.html](https://averkoc.github.io/files/demo.html) | Used to see your Debian weather station values sent to the MQTT broker. Open in a browser to verify publishing. |
-| [demo.py](https://averkoc.github.io/files/demo.py) | Simulated weather station Python program. Download, modify, and run on Debian to practice with MQTT client code. |
+| [emq.html](https://averkoc.github.io/lx/emq.html) | Use this to observe my Raspberry Pi live sensor data during a demo session. My Raspberry Pi is active only during the session or when we’ve agreed. |
+| [demo.html](https://averkoc.github.io/lx/demo.html) | Used to see your Debian weather station values sent to the MQTT broker. Open in a browser to verify publishing. |
+| [demo.py](https://averkoc.github.io/lx/demo.py) | Simulated weather station Python program. Download, modify, and run on Debian to practice with MQTT client code. |

@@ -64,7 +64,7 @@ echo "   pip install <package_name>"
 - **`build-essential`** → Provides compiler tools (like `gcc`, `make`). Required if you install Python packages that need to compile native C/C++ code.  
 - **`python3-dev`** → Development headers for Python. Needed when building or compiling Python modules that interact with C extensions.  
 
-## How to build your demo 
+## How to build and execute your demo 
 * Copy the `demo.py` program to your home directory:  
   **Windows:** `wget https://averkoc.github.io/lx/demo.py`  
   **macOS:** `curl -O https://averkoc.github.io/lx/demo.py`
@@ -76,6 +76,8 @@ echo "   pip install <package_name>"
 * Install Python MQTT client library: `pip3 install paho-mqtt`  
 * Do the changes in `demo.py` (as shown in the video)  
 * Start the program: `python3 demo.py`
+* Now you and others can use `averkoc.github.lx/demo.html` to view the messages that your Debian mqtt-client sends to broker.
+* After you have taken the required screen clips exit the demo.py and deactivate the virtual environment by issuing command `deactivate`
   
   
 

@@ -19,7 +19,7 @@ To report the workshop, submit a screenshot showing - detailed submission instru
 
 ## Prerequisites for python development 
 
-You will modify the ready-made python "wheather-station" program and to do that you must have python development environment in your Debian. You need to install the following packages: `python3`, `python3-pip` and `python3-venv`. You can copy the script below and save it e.g. by name doinstalls.sh and give execute permission to it for your user account. Then you can run it by issuing ./doinstalls.sh
+You will modify the ready-made python "wheather-station" `demo.py`  and to do that you must have python development environment in your Debian. You need to install the following Debian packages: `python3`, `python3-pip` and `python3-venv`. You can copy the script below and save it e.g. by name doinstalls.sh and give execute permission to it for your user account. Then you can run it by issuing ./doinstalls.sh
 
 
 
@@ -63,6 +63,27 @@ echo "   pip install <package_name>"
 
 - **`build-essential`** → Provides compiler tools (like `gcc`, `make`). Required if you install Python packages that need to compile native C/C++ code.  
 - **`python3-dev`** → Development headers for Python. Needed when building or compiling Python modules that interact with C extensions.  
+
+## How to build your demo 
+* Copy the `demo.py` program to your home directory:  
+  **Windows:** `wget https://averkoc.github.io/lx/demo.py`  
+  **macOS:** `curl -O https://averkoc.github.io/lx/demo.py`
+
+* Create virtual environment: `python3 -m venv mydemo`  
+* Move the `demo.py` to your `mydemo` directory: `mv demo.py mydemo`  
+* Move into `mydemo` directory: `cd mydemo`  
+* Activate the virtual environment: `source bin/activate`  
+* Install Python MQTT client library: `pip3 install paho-mqtt`  
+* Do the changes in `demo.py` (as shown in the video)  
+* Start the program: `python3 demo.py`
+  
+  
+
+
+
+
+  
+
 
 ## Links referred in the video  
 

@@ -12,7 +12,7 @@ In the example, my Raspberry Pi with a connected temperature/pressure sensor act
 
 You will use Python to build a simulated weather station on your Debian system. This program will use the MQTT library to act as an MQTT client, sending simulated temperature and pressure values to a real MQTT broker. You and others can then view these values in a web browser.  
 
-To report the workshop, submit a screenshot showing - detailed submission instructions in video:  
+To report the workshop, submit a screenshot showing:
 - your Debian terminal window with the sensor values printed by the Python program (stdout), and  
 - your browser window displaying the same values retrieved from the MQTT broker.  
 

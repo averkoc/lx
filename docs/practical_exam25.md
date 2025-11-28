@@ -109,9 +109,9 @@ Good luck!
   <li><input type="checkbox"> Verified key-based login</li>
   <li><input type="checkbox"> Checked group memberships</li>
   <li><input type="checkbox"> Copied template.html</li>
-  <li><input type="checkbox"> Updated heading, author, filename</li>
   <li><input type="checkbox"> Applied correct permissions</li>
   <li><input type="checkbox"> Verified file permissions</li>
+  <li><input type="checkbox"> Updated heading, author, filename</li>
 </ul>
 <br><br>  
  

@@ -67,7 +67,7 @@ After this, you will set up SSH key-based authentication and use it for all rema
      firstnamelastname3.html
      ```
 
-     Replace firstname and lastname with your real names as in your Centria email, but do not include any dashes (-) or dots (.) in the filename.
+     **Replace firstname and lastname with your real names as in your Centria email, but do not include any dashes (-) or dots (.) in the filename.**
 
    * Edit each file:
      Update the heading, author, and filename information inside each copy.

@@ -102,15 +102,17 @@ Good luck!
 
 ## Student Checklist
 
-* [ ] Logged in with account and password (server access verified) then logged out.
-* [ ] Created SSH keypair locally
-* [ ] Copied public key to server (`~/.ssh/authorized_keys`)
-* [ ] Verified key-based login by logging into server (no password required) 
-* [ ] Checked group memberships (`groups` or `id`)
-* [ ] Copied `template.html` into three properly named files
-* [ ] Updated heading, author, and filename inside each file
-* [ ] Applied correct permissions for Task1, Task2, Task3
-* [ ] Verified file permissions with `ls -l`
+<ul>
+  <li><input type="checkbox"> Logged in with account and password</li>
+  <li><input type="checkbox"> Created SSH keypair locally</li>
+  <li><input type="checkbox"> Copied public key to server</li>
+  <li><input type="checkbox"> Verified key-based login</li>
+  <li><input type="checkbox"> Checked group memberships</li>
+  <li><input type="checkbox"> Copied template.html</li>
+  <li><input type="checkbox"> Updated heading, author, filename</li>
+  <li><input type="checkbox"> Applied correct permissions</li>
+  <li><input type="checkbox"> Verified file permissions</li>
+</ul>
 <br><br>
 --- 
 ### Linux Practical Exam – Automatic Assessment

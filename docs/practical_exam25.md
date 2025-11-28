@@ -113,8 +113,10 @@ Good luck!
   <li><input type="checkbox"> Applied correct permissions</li>
   <li><input type="checkbox"> Verified file permissions</li>
 </ul>
-<br><br>
---- 
+<br><br>  
+ 
+---  
+
 ### Linux Practical Exam – Automatic Assessment
 
 The assessment script runs at 5-minute intervals and checks whether the user's key-based authentication and file-related tasks have been completed correctly.

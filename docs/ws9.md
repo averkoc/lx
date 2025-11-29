@@ -6,8 +6,11 @@ layout: default
 ## Scripting – Video Companion Page 
 
 ### Motivation
-Scripting is a powerful way to turn repetitive tasks into reliable, repeatable workflows: system administrators use scripts for backups, user and service management, and monitoring; developers and analysts automate builds, tests, and data preparation; and power users speed up everyday tasks. That power comes with risk — a script run with administrative rights can change or destroy large parts of a system in seconds, so always review and test scripts, especially those using sudo, even when working on a system used only by you.
-In this workshop we only touch the surface: you'll observe short, safe examples and experiment with small scripts to gain insight into what scripting can do.
+Scripting turns repetitive tasks into reliable, repeatable workflows. System administrators use scripts for backups, user and service management, and monitoring; developers and analysts automate builds, tests, and data preparation; power users speed up everyday tasks.
+
+**Caution:** A script run with administrative rights can change or destroy large parts of a system in seconds. Always review and test scripts—especially those using `sudo`—even on your personal system.
+
+**What to Expect:** We only touch the surface. You'll observe short, safe examples and experiment with them to gain insight into what scripting can do.
 
 ## Examples 
 #### Example 1 - Automate mqtt-demo _demo.py_ execution  

@@ -73,7 +73,7 @@ publish_temperature()
 In our 'files and directories ownership and permissions' workshop, we created shared directories for project groups. If that need arises often, it is a good candidate for automation. It is not difficult to write a quick-and-dirty script to do the work, but let’s try using an AI tool to generate interactive versions that accomplish the same task. Our primary goal is to have a reliable, maintainable script, createteamdir --options teamname, that creates a shared directory for a student team named teamname. Depending on the option --default or --confidential, the directory will be either world-readable or restricted. 
 
 
-<details>
+<details markdown="1">
 <summary> Prompt to Claude AI: Write "a Quick and Dirty" version to do the described task - Click to see result
 
 </summary> 
@@ -99,8 +99,8 @@ echo "✓ Created $DIR with permissions $PERM"
     
 </details>
 
-<details> 
-    <summary>Interactive session with **Claude AI** to create the script - Click to see results</summary>  
+<details markdown="1">
+    <summary>Interactive session with Claude AI to create the script - Click to see results</summary>  
     
 ```bash
 
@@ -199,7 +199,7 @@ fi
 ### Example 3 - Safe Cleaning of a Project Directory with Backup Option  
 This example shows how to safely clean out the contents of a given project directory while optionally creating a backup. It avoids accidental data loss by checking for the directory’s existence and backing up important files before removal.  
 
-<details>
+<details markdown="1">
     <summary>Script to safely clean project directory</summary> 
     
 ```bash

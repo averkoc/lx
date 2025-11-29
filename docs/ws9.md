@@ -25,9 +25,13 @@ python3 demo.py # below is a version of demo.py that contains signal handling
 
 ````
 
-<details markdown="1">     
-    <summary>Click to see a version of demo.py that handles ctrl-c properly</summary>  
-    
+<div class="accordion">
+  <input type="checkbox" id="accordion1" class="accordion-toggle">
+  <label for="accordion1" class="accordion-header">
+    Click to see a version of demo.py that handles ctrl-c properly
+  </label>
+  <div class="accordion-content" markdown="1">    
+      
 ```python
 import time  
 import random  
@@ -65,7 +69,6 @@ client.connect(broker, port)
 publish_temperature()
 
 ````
-</details>  
 
 > In video we handle questions: Q1: Why is deactivate not needed? Q2: Why should I use `cd ~/mydemo` instead of `cd mydemo` Q3: Where to place the script ?  
 

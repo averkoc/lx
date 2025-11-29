@@ -28,40 +28,41 @@ python3 demo.py # below is a version of demo.py that contains signal handling
     <summary>Click to see a version of demo.py that handles ctrl-c properly</summary>  
     
 ```python
-import time
-import random
-import signal
-import sys
-import paho.mqtt.client as mqtt
+import time  
+import random  
+import signal  
+import sys  
+import paho.mqtt.client as mqtt  
 
-#broker = "test.mosquitto.org"
-#port = 1883
-broker = "broker.emqx.io"
-port = 1883
-topictemp = f"/lx/sakari/temperature"
-topicpressure = f"/lx/sakari/pressure"
+#broker = "test.mosquitto.org"  
+#port = 1883  
+broker = "broker.emqx.io"  
+port = 1883  
+topictemp = f"/lx/sakari/temperature"  
+topicpressure = f"/lx/sakari/pressure"  
 
-client = mqtt.Client()
+client = mqtt.Client()  
 
-def signal_handler(sig, frame):
-    print('\nShutting down gracefully...')
-    client.disconnect()
-    sys.exit(0)
+def signal_handler(sig, frame):   
+    print('\nShutting down gracefully...')   
+    client.disconnect()  
+    sys.exit(0)  
 
-signal.signal(signal.SIGINT, signal_handler)
+signal.signal(signal.SIGINT, signal_handler)  
 
-def publish_temperature():
-    while True:
-        temperature = random.uniform(20.0, 30.0)
-        client.publish(topictemp, f"{temperature:.2f}")
-        print(f"Published: {temperature:.2f} to topic {topictemp}")
-        pressure = random.uniform(1020.0, 1030.0)
-        client.publish(topicpressure, f"{pressure:.2f}")
-        print(f"Published: {pressure:.2f} to topic {topicpressure}")
-        time.sleep(5)
+def publish_temperature():  
+    while True:  
+        temperature = random.uniform(20.0, 30.0)  
+        client.publish(topictemp, f"{temperature:.2f}")  
+        print(f"Published: {temperature:.2f} to topic {topictemp}")  
+        pressure = random.uniform(1020.0, 1030.0)  
+        client.publish(topicpressure, f"{pressure:.2f}")  
+        print(f"Published: {pressure:.2f} to topic {topicpressure}")   
+        time.sleep(5)  
 
-client.connect(broker, port)
+client.connect(broker, port)  
 publish_temperature()
+
 ````
 </details>  
 

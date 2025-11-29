@@ -78,7 +78,7 @@ In our 'files and directories ownership and permissions' workshop, we created sh
 
 
 <div class="accordion">
-  <input type="checkbox" id="accordion1" class="accordion-toggle">
+  <input type="checkbox" id="accordion2" class="accordion-toggle">
   <label for="accordion1" class="accordion-header">
 Prompt to Claude AI: Write "a Quick and Dirty" version to do the described task - Click to see result  </label>
   <div class="accordion-content" markdown="1">       
@@ -105,7 +105,7 @@ echo "✓ Created $DIR with permissions $PERM"
 
 
 <div class="accordion">
-  <input type="checkbox" id="accordion1" class="accordion-toggle">
+  <input type="checkbox" id="accordion3" class="accordion-toggle">
   <label for="accordion1" class="accordion-header">
 Interactive session with Claude AI to create the script - Click to see results</label>
   <div class="accordion-content" markdown="1">    
@@ -208,7 +208,7 @@ fi
 This example shows how to safely clean out the contents of a given project directory while optionally creating a backup. It avoids accidental data loss by checking for the directory’s existence and backing up important files before removal.  
 
 <div class="accordion">
-  <input type="checkbox" id="accordion1" class="accordion-toggle">
+  <input type="checkbox" id="accordion4" class="accordion-toggle">
   <label for="accordion1" class="accordion-header">
 Script to safely clean project directory</label>
   <div class="accordion-content" markdown="1">    
@@ -423,68 +423,4 @@ fi
 echo "========================================="
 
 ````
-
-
-### Linux course mgmt-scripts 
-* accounts creation
-* emailing accounts/passwords
-* checking exam results
-  
-### Other
-checkt that www-folder ownerships and permissions are safe
-
-
-### Example  
-```bash  
-#!/bin/bash
-#
-# create-labgroup1-dir.sh
-#
-# This script creates a shared directory for group 'labgroup1'
-# under /var/labs/. It must be run with sudo because /var/labs
-# is a protected part of the filesystem.
-#
-
-# The group name we want to set ownership for
-GROUP="labgroup1"
-
-# The target directory to create
-TARGET_DIR="/var/labs/labgroup1files"
-
-# Check if the group exists
-if ! getent group "$GROUP" > /dev/null; then
-    echo "Error: Group '$GROUP' does not exist."
-    exit 1
-fi
-
-# Create the base directory /var/labs if it does not exist
-if [ ! -d /var/labs ]; then
-    echo "Creating /var/labs ..."
-    sudo mkdir -p /var/labs || { echo "Failed to create /var/labs"; exit 1; }
-fi
-
-# Create the shared directory
-if [ ! -d "$TARGET_DIR" ]; then
-    echo "Creating directory $TARGET_DIR ..."
-    sudo mkdir -p "$TARGET_DIR" || { echo "Failed to create $TARGET_DIR"; exit 1; }
-else
-    echo "Directory $TARGET_DIR already exists."
-fi
-
-# Set group ownership
-echo "Setting group ownership to $GROUP ..."
-sudo chgrp "$GROUP" "$TARGET_DIR"
-
-# Set permissions: group members can read, write, create files
-echo "Setting permissions ..."
-sudo chmod 2770 "$TARGET_DIR"
-
-echo "Done. Shared directory created at $TARGET_DIR"
-
-````
-
-
-
-
-
 

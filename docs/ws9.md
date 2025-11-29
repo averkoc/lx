@@ -24,7 +24,7 @@ source bin/activate
 python3 demo.py # below is a version of demo.py that contains signal handling
 ````
 
-<details> 
+<details markdown="1">
     <summary>Click to see a version of demo.py that handles ctrl-c properly</summary>  
     
 ```python

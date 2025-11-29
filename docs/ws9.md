@@ -1,3 +1,8 @@
+---
+title: ""
+layout: default
+---
+
 ## Scripting - this page supports the related video
 ### Motivation for Learning 
 Scripting is a powerful way to turn repetitive tasks into reliable, repeatable workflows: system administrators use scripts for backups, user and service management, and monitoring; developers and analysts automate builds, tests, and data preparation; and power users speed up everyday tasks. That power comes with risk — a script run with administrative rights can change or destroy large parts of a system in seconds, so always review and test scripts, especially those using sudo, even when working on a system used only by you.

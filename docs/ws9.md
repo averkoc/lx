@@ -111,7 +111,7 @@ echo "✓ Created $DIR with permissions $PERM"
 <div class="accordion">
   <input type="checkbox" id="accordion3" class="accordion-toggle">
   <label for="accordion3" class="accordion-header">
-    Interactive session with Claude AI to create the script
+    Results from an interactive session with Claude AI
   </label>
   <div class="accordion-content" markdown="1">
 

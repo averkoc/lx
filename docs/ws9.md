@@ -22,9 +22,10 @@ If you are not familiar with Python  that command sequence maybe difficult to re
 cd ~/mydemo
 source bin/activate
 python3 demo.py # below is a version of demo.py that contains signal handling
+
 ````
 
-<details markdown="1">
+<details markdown="1">     
     <summary>Click to see a version of demo.py that handles ctrl-c properly</summary>  
     
 ```python

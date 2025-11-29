@@ -6,7 +6,7 @@ layout: default
 # Teaching Guide: Understanding Shell Scripts
 ## Using `createteamdir` as an Example
 
-I asked Claude AI to generate a teaching guide that uses  the `createteamdir` script as a means  to teach fundamental shell scripting concepts and best practices for students. Here is the result.  
+I asked Claude AI to generate a teaching guide that uses  the `createteamdir.sh` script as a means  to teach fundamental shell scripting concepts and best practices for students. Here is the result.  
 
 ---
 

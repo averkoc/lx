@@ -358,5 +358,5 @@ echo "Team: $TEAMNAME"    # Prints "Team: " (empty) without error!
 6. Test edge cases (empty input, special characters, etc.)
 7. Document your code with comments
 8. Give users feedback about what's happening
-9. Make scripts idempotent when possible (safe to run multiple times)
+9. Make scripts _Repeat-safe_ when possible (safe to run multiple times)
 10. Think about security - especially with user input and elevated privileges

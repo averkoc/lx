@@ -97,6 +97,8 @@ echo "✓ Created $DIR with permissions $PERM"
   </div>
 </div>
 
+I asked Claude AI also to generate a [guide](ws9addon.md) that uses the script below as an example about central shell language structures in scripts and and good scripting conventions. 
+
 <div class="accordion">
   <input type="checkbox" id="accordion3" class="accordion-toggle">
   <label for="accordion3" class="accordion-header">

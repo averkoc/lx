@@ -64,7 +64,7 @@ publish_temperature()
 > In video we handle questions: Q1: Why is deactivate not needed? Q2: Why should I use `cd ~/mydemo` instead of `cd mydemo` Q3: Where to place the script ?  
 
 ### Example 2 - Create a shared directory for a project group 
-In our 'files and directories ownership and permissions' workshop, we created shared directories for project groups. If that need arises often, it is a good candidate for automation. It is not difficult to write a quick-and-dirty script to do the work, but let's try using an AI tool to generate interactive versions that accomplish the same task. Our primary goal is to have a reliable, maintainable script, createteamdir --options teamname, that creates a shared directory for a student team named teamname. Depending on the option --default or --confidential, the directory will be either world-readable or restricted. 
+In our 'files and directories ownership and permissions' workshop, we created shared directories for project groups. If that need arises often, it is a good candidate for automation. It is not difficult to write a quick-and-dirty script to do the work, but let's try using an AI tool to generate interactive versions that accomplish the same task. Our primary goal is to have a reliable, maintainable script, `createteamdir --option teamname`, that creates a shared directory for a student team named teamname under directory `/var/projects`. Depending on the option `--default` or `--confidential`, the directory will be either world-readable or restricted. 
 
 <div class="accordion">
   <input type="checkbox" id="accordion2" class="accordion-toggle">

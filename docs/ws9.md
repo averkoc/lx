@@ -69,6 +69,7 @@ client.connect(broker, port)
 publish_temperature()
 
 ````
+</div>
 
 > In video we handle questions: Q1: Why is deactivate not needed? Q2: Why should I use `cd ~/mydemo` instead of `cd mydemo` Q3: Where to place the script ?  
 
@@ -101,7 +102,7 @@ chown :"$TEAM" "$DIR"
 chmod "$PERM" "$DIR"
 echo "✓ Created $DIR with permissions $PERM" 
 ````
-    
+</div>    
 
 
 <div class="accordion">
@@ -200,7 +201,7 @@ else
 fi
 
 ````
-
+</div>
 
 
 
@@ -423,4 +424,5 @@ fi
 echo "========================================="
 
 ````
+</div>
 

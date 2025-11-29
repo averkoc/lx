@@ -28,7 +28,7 @@ python3 demo.py # below is a version of demo.py that contains signal handling
 <div class="accordion">
   <input type="checkbox" id="accordion1" class="accordion-toggle">
   <label for="accordion1" class="accordion-header">
-    Click to see a version of demo.py that handles ctrl-c properly
+    Use this version of the demo.py that handles ctrl-c properly
   </label>
   <div class="accordion-content" markdown="1">
 
@@ -74,7 +74,7 @@ In our 'files and directories ownership and permissions' workshop, we created sh
 <div class="accordion">
   <input type="checkbox" id="accordion2" class="accordion-toggle">
   <label for="accordion2" class="accordion-header">
-    Prompt to Claude AI: Write "a Quick and Dirty" version to do the described task - Click to see result
+    Prompt to Claude AI: Write "a Quick and Dirty" version to do the described task.
   </label>
   <div class="accordion-content" markdown="1">
 
@@ -102,7 +102,7 @@ echo "✓ Created $DIR with permissions $PERM"
 <div class="accordion">
   <input type="checkbox" id="accordion3" class="accordion-toggle">
   <label for="accordion3" class="accordion-header">
-    Interactive session with Claude AI to create the script - Click to see results
+    Interactive session with Claude AI to create the script
   </label>
   <div class="accordion-content" markdown="1">
 

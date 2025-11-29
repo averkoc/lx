@@ -1,3 +1,8 @@
+---
+title: ""
+layout: default
+---
+
 # Scripting Workshop
 **📹 This page supports the workshop video** - Use it to follow along and reference code examples.
 

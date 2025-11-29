@@ -96,8 +96,8 @@ echo "✓ Created $DIR with permissions $PERM"
 
   </div>
 </div>
+--- 
 
-I asked Claude AI also to generate a [guide](ws9addon.md) that uses the script below as an example about central shell language structures in scripts and and good scripting conventions. 
 
 <div class="accordion">
   <input type="checkbox" id="accordion3" class="accordion-toggle">
@@ -184,7 +184,9 @@ fi
 ```
 
   </div>
-</div>
+</div>  
+
+I also asked Claude AI to generate a [guide](ws9addon.md) that uses the script above as an example to explain central shell language structures in scripts and best scripting practices
 
 ### Example 3 - Safe Cleaning of a Project Directory with Backup Option  
 This example shows how to safely clean out the contents of a given project directory while optionally creating a backup. It avoids accidental data loss by checking for the directory's existence and backing up important files before removal.  

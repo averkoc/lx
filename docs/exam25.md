@@ -130,12 +130,12 @@ If everything is set up properly, you will see the following message after you f
 <div class="accordion">
   <input type="checkbox" id="accordion1" class="accordion-toggle">
   <label for="accordion1" class="accordion-header">
-    Commands needed in exam
+    Some often needed commands
   </label>
   <div class="accordion-content" markdown="1"> 
   
 
-**You may need these commands in the exam** 
+**You may need some of these commands in the exam** 
 
 | Command | Description | Examples |
 |---------|-------------|----------|

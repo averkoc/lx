@@ -132,9 +132,10 @@ If everything is set up properly, you will see the following message after you f
   <label for="accordion1" class="accordion-header">
     Commands needed in exam
   </label>
-  <div class="accordion-content" markdown="1">
+  <div class="accordion-content" markdown="1"> 
+  
 
-# Linux Exam - Command Reference
+**You may need these commands in the exam** 
 
 | Command | Description | Examples |
 |---------|-------------|----------|

@@ -152,5 +152,6 @@ If everything is set up properly, you will see the following message after you f
 | `chmod` | Change file permissions | `chmod u=rwx,g=rx,o=rx file.txt`<br> `chmod u+x file.txt (add execute for user)` |
 | `nano` | Simple text editor | `nano file.txt` |
 | `rm` | Remove a file | `rm myfile` |
-| `cat` | Display file contents | `cat file.txt` |
+| `cat` | Display file contents | `cat file.txt` | 
+
 </div>

@@ -127,5 +127,29 @@ If everything is set up properly, you will see the following message after you f
 > If you have just completed the tasks and immediately logged out and back in, the script may not have processed your results yet. In that case, wait a few minutes and try logging in again.
 
 
+<div class="accordion">
+  <input type="checkbox" id="accordion1" class="accordion-toggle">
+  <label for="accordion1" class="accordion-header">
+    Commands needed in exam
+  </label>
+  <div class="accordion-content" markdown="1">
 
+# Linux Exam - Command Reference
 
+| Command | Description | Examples |
+|---------|-------------|----------|
+| `ssh` | Secure shell remote login | `ssh user@hostname`<br>`ssh -p 2222 user@host` |
+| `ssh-keygen` | Generate SSH key pair | `ssh-keygen`<br>`ssh-keygen -t rsa -b 4096` |
+| `ssh-copy-id` | Copy SSH public key to server | `ssh-copy-id user@hostname` |
+| `exit` | Exit from shell or logout | `exit` |
+| `groups` | Display group memberships | `groups`<br>`groups username` |
+| `id` | Display user and group IDs | `id`<br>`id username` |
+| `pwd` | Print working directory | `pwd` |
+| `cd` | Change directory | `cd /path/to/directory`<br>`cd ..` (go up one level)<br>`cd ~` (go to home directory) |
+| `ls` | List directory contents | `ls -l` (detailed list)<br>`ls -la` (show hidden files) |
+| `cp` | Copy files or directories | `cp source.txt dest.txt`<br>`cp file.txt /path/to/dest/` |
+| `chmod` | Change file permissions | `chmod u=rwx,g=rx,o=rx file.txt`<br> `chmod u+x file.txt (add execute for user)` |
+| `nano` | Simple text editor | `nano file.txt` |
+| `rm` | Remove a file | `rm myfile` |
+| `cat` | Display file contents | `cat file.txt` |
+</div>

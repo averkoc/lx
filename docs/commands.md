@@ -1,6 +1,12 @@
-# Linux Essential Commands for End Users
+---
+title: ""
+layout: default
+---
 
-## File and Directory Management
+
+### Linux Essential Commands for End Users
+
+#### File and Directory Management
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -16,7 +22,7 @@
 | `find` | Search for files | `find . -name "*.txt"`<br>`find /home -type d -name docs` |
 | `locate` | Find files by name (faster) | `locate filename` |
 
-## File Viewing and Editing
+#### File Viewing and Editing
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -29,7 +35,7 @@
 | `vim` | Advanced text editor | `vim file.txt` |
 | `grep` | Search text patterns | `grep "pattern" file.txt`<br>`grep -r "pattern" folder/` (recursive) |
 
-## File Permissions and Ownership
+#### File Permissions and Ownership
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -38,7 +44,7 @@
 | `chgrp` | Change group ownership | `sudo chgrp groupname file.txt` |
 | `umask` | Set default permissions | `umask 022` |
 
-## System Information
+#### System Information
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -53,7 +59,7 @@
 | `top` | Monitor processes in real-time | `top` |
 | `htop` | Interactive process viewer | `htop` |
 
-## Process Management
+#### Process Management
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -65,7 +71,7 @@
 | `jobs` | List background jobs | `jobs` |
 | `&` | Run command in background | `command &` |
 
-## Networking
+#### Networking
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -78,7 +84,7 @@
 | `ssh` | Secure shell remote login | `ssh user@hostname`<br>`ssh -p 2222 user@host` |
 | `scp` | Secure copy files | `scp file.txt user@host:/path/` |
 
-## Package Management (Debian/Ubuntu)
+#### Package Management (Debian/Ubuntu)
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -88,7 +94,7 @@
 | `apt remove` | Remove package | `sudo apt remove package-name` |
 | `apt search` | Search for packages | `apt search keyword` |
 
-## Package Management (Red Hat/CentOS/Fedora)
+#### Package Management (Red Hat/CentOS/Fedora)
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -97,7 +103,7 @@
 | `yum remove` | Remove package | `sudo yum remove package-name` |
 | `dnf install` | Install package (newer systems) | `sudo dnf install package-name` |
 
-## Compression and Archives
+#### Compression and Archives
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -107,7 +113,7 @@
 | `zip` | Create zip archive | `zip -r archive.zip folder/` |
 | `unzip` | Extract zip archive | `unzip archive.zip` |
 
-## User Management
+#### User Management
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -118,7 +124,7 @@
 | `usermod` | Modify user account | `sudo usermod -aG groupname username` |
 | `userdel` | Delete user | `sudo userdel username` |
 
-## Miscellaneous Essential Commands
+#### Miscellaneous Essential Commands
 
 | Command | Description | Examples |
 |---------|-------------|----------|
@@ -132,7 +138,7 @@
 | `sort` | Sort lines of text | `sort file.txt`<br>`sort -r file.txt` (reverse) |
 | `diff` | Compare files | `diff file1.txt file2.txt` |
 
-## Input/Output Redirection
+#### Input/Output Redirection
 
 | Command | Description | Examples |
 |---------|-------------|----------|

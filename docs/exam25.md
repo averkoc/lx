@@ -135,7 +135,6 @@ If everything is set up properly, you will see the following message after you f
   <div class="accordion-content" markdown="1"> 
   
 
-**You may need some of these commands in the exam**  
 
 
 | Command | Description | Examples |
@@ -143,7 +142,7 @@ If everything is set up properly, you will see the following message after you f
 | `ssh` | Secure shell remote login | `ssh user@hostname` |
 | `ssh-keygen` | Generate SSH key pair | `ssh-keygen` |
 | `ssh-copy-id` | Copy SSH public key to server | `ssh-copy-id user@hostname` |
-| `exit` | Exit from shell or logout | `exit` (ctrl-d does the same |
+| `exit` | Exit from shell or logout | `exit` (ctrl-d does the same) |
 | `groups` | Display group memberships | `groups`<br>`groups username` |
 | `id` | Display user and group IDs | `id`<br>`id username` |
 | `pwd` | Print working directory | `pwd` |

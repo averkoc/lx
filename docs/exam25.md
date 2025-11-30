@@ -103,7 +103,7 @@ Good luck!
 ## Student Checklist
 
 <ul>
-  <li><input type="checkbox"> Logged in with account and password</li>
+  <li><input type="checkbox"> Logged in with account and password - logged out</li>
   <li><input type="checkbox"> Created SSH keypair locally</li>
   <li><input type="checkbox"> Copied public key to server</li>
   <li><input type="checkbox"> Verified key-based login</li>

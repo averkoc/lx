@@ -1,14 +1,10 @@
 <div class="accordion">
-  <!-- hidden checkbox toggle -->
   <input type="checkbox" id="{{ include.id }}" class="accordion-toggle">
-
-  <!-- header label tied to the checkbox -->
   <label for="{{ include.id }}" class="accordion-header">
     {{ include.title }}
   </label>
 
-  <!-- collapsible content -->
   <div class="accordion-content">
-    {{ include.content }}
+    {{ include.content | markdownify }}
   </div>
 </div>

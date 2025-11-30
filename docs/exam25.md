@@ -139,8 +139,8 @@ If everything is set up properly, you will see the following message after you f
 
 | Command | Description | Examples |
 |---------|-------------|----------|
-| `ssh` | Secure shell remote login | `ssh user@hostname`<br>`ssh -p 2222 user@host` |
-| `ssh-keygen` | Generate SSH key pair | `ssh-keygen`<br>`ssh-keygen -t rsa -b 4096` |
+| `ssh` | Secure shell remote login | `ssh user@hostname`<br>` |
+| `ssh-keygen` | Generate SSH key pair | `ssh-keygen` |
 | `ssh-copy-id` | Copy SSH public key to server | `ssh-copy-id user@hostname` |
 | `exit` | Exit from shell or logout | `exit` |
 | `groups` | Display group memberships | `groups`<br>`groups username` |

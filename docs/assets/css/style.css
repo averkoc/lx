@@ -150,10 +150,9 @@ tr:nth-child(even) {
 }
 
 .accordion {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin: 1em 0;
+  border: none;
 }
+
 
 .accordion-header {
   background: #f5f5f5;

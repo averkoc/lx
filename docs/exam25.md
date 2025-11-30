@@ -135,7 +135,8 @@ If everything is set up properly, you will see the following message after you f
   <div class="accordion-content" markdown="1"> 
   
 
-**You may need some of these commands in the exam** 
+**You may need some of these commands in the exam**  
+
 
 | Command | Description | Examples |
 |---------|-------------|----------|

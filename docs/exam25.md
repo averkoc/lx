@@ -140,7 +140,7 @@ If everything is set up properly, you will see the following message after you f
 
 | Command | Description | Examples |
 |---------|-------------|----------|
-| `ssh` | Secure shell remote login | `ssh user@hostname`<br>` |
+| `ssh` | Secure shell remote login | `ssh user@hostname` |
 | `ssh-keygen` | Generate SSH key pair | `ssh-keygen` |
 | `ssh-copy-id` | Copy SSH public key to server | `ssh-copy-id user@hostname` |
 | `exit` | Exit from shell or logout | `exit` `ctrl-d` does the same |

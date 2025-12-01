@@ -21,6 +21,11 @@ h1 { font-size: 22px; margin-bottom: 8px; }
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-height: 60vh;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
 }
 .img-wrap {
   position: relative;
@@ -28,6 +33,7 @@ h1 { font-size: 22px; margin-bottom: 8px; }
   border-radius: 8px;
   padding: 4px;
   border: 1px solid #ddd;
+  background: #fafafa;
 }
 .desc {
   font-size: 14px;
@@ -56,21 +62,30 @@ h1 { font-size: 22px; margin-bottom: 8px; }
   display: none;
 }
 .img-wrap:hover .delete-btn { display: block; }
-#toolbar { margin-top: 14px; display: flex; gap: 10px; }
+#toolbar { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
 button { padding: 6px 12px; border: 1px solid #ccc; border-radius: 6px; cursor: pointer; background: #fff; }
 #status { margin-top: 8px; font-size: 13px; color: #555; }
+/* Resize handle */
+.resize-handle {
+  position: absolute;
+  width: 12px; height: 12px;
+  background: #4a90e2;
+  right: 2px; bottom: 2px;
+  cursor: se-resize;
+  border-radius: 2px;
+}
 </style>
 </head>
 <body>
 <h1>Pasteboard for macOS Safari</h1>
 <div id="instructions">
-Paste images by pressing <strong>Cmd+V</strong> (from screenshots or copied images). 
-Click an image to edit its description. Drag using ☰ handle. Resize using the bottom-right corner. 
-Delete with <strong>Delete</strong> key.
+Paste images with <strong>Cmd+V</strong> (screenshots or copied images). 
+Click an image to edit its description. Drag using ☰ handle. Resize via bottom-right corner. 
+Delete with <strong>Delete</strong> key. Scroll the panel to see multiple clips.
 </div>
 
 <div id="toolbar">
-  <button id="copyAllBtn">Copy All (PNG) — Safari may block</button>
+  <button id="copyAllBtn">Save All as PNG</button>
   <button id="clearBtn">Clear All</button>
   <button id="resetBtn">Reset Collection</button>
 </div>
@@ -86,13 +101,14 @@ const output = document.getElementById("output");
 const status = document.getElementById("status");
 const pasteArea = document.getElementById("pasteArea");
 
+let dragSrc = null;
+
 function log(msg, err=false){
   status.textContent = msg;
   status.style.color = err ? "#b22" : "#555";
 }
 
 function scheduleSave(){
-  // Save collection
   const items = [...document.querySelectorAll(".img-wrap")].map(wrap=>{
     const img = wrap.querySelector("img");
     const desc = wrap.querySelector(".desc");
@@ -129,17 +145,13 @@ function addImage(dataURL, props={}){
   del.textContent="×";
   del.onclick = e => { e.stopPropagation(); wrap.remove(); scheduleSave(); };
 
-  // Simple resize
   const resize = document.createElement("div");
-  resize.style.width="12px"; resize.style.height="12px";
-  resize.style.background="#4a90e2";
-  resize.style.position="absolute"; resize.style.right="2px"; resize.style.bottom="2px";
-  resize.style.cursor="se-resize";
+  resize.className="resize-handle";
   resize.addEventListener("mousedown", e=>{
     e.preventDefault();
     const startX=e.clientX, startWidth=img.offsetWidth, startHeight=img.offsetHeight;
     function move(ev){
-      let newW=startWidth + (ev.clientX-startX);
+      let newW=startWidth+(ev.clientX-startX);
       newW=Math.max(50,newW);
       img.style.width=newW+"px";
       img.style.height=startHeight*(newW/startWidth)+"px";
@@ -156,17 +168,20 @@ function addImage(dataURL, props={}){
   handle.addEventListener("dragstart", e=>{
     dragSrc = wrap;
     e.dataTransfer.effectAllowed="move";
-    e.dataTransfer.setData("text/plain",""); // Safari requires data
+    e.dataTransfer.setData("text/plain","");
   });
   wrap.addEventListener("dragover", e=>{
     e.preventDefault();
     wrap.style.borderTop = (e.clientY < wrap.offsetHeight/2) ? "3px solid #4a90e2" : "";
   });
+  wrap.addEventListener("dragleave", e=>{
+    wrap.style.borderTop="";
+  });
   wrap.addEventListener("drop", e=>{
     e.preventDefault();
     wrap.style.borderTop="";
     if(!dragSrc || dragSrc===wrap) return;
-    output.insertBefore(dragSrc, (e.clientY < wrap.offsetHeight/2) ? wrap : wrap.nextSibling);
+    output.insertBefore(dragSrc, (e.clientY<wrap.offsetHeight/2)?wrap:wrap.nextSibling);
     scheduleSave();
   });
 
@@ -182,7 +197,7 @@ function handleBlob(blob){
   reader.readAsDataURL(blob);
 }
 
-// Listen for paste on hidden contenteditable (Safari)
+// Paste images via hidden contenteditable
 pasteArea.addEventListener("paste", e=>{
   const items = e.clipboardData?.items;
   if(!items) return;
@@ -197,12 +212,11 @@ pasteArea.addEventListener("paste", e=>{
   log("Clipboard contains no image", true);
 });
 
-// Focus hidden paste area when user presses Cmd+V
+// Focus hidden paste area on Cmd+V
 document.addEventListener("keydown", e=>{
-  if((e.metaKey || e.ctrlKey) && e.key.toLowerCase()=="v"){
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()=="v"){
     pasteArea.focus();
   }
-  // Delete key
   if(e.key==="Delete"){
     const focused = document.activeElement;
     if(focused && focused.classList.contains("img-wrap")){
@@ -220,8 +234,73 @@ document.getElementById("resetBtn").onclick = ()=>{
     output.innerHTML=""; localStorage.removeItem("clipboard-collection"); log("Collection reset.");
   }
 };
-document.getElementById("copyAllBtn").onclick = ()=>{
-  alert("Copying stacked PNG may be blocked on Safari. This feature works best on Chrome/Edge.");
+document.getElementById("copyAllBtn").onclick = async () => {
+  const wraps = [...document.querySelectorAll(".img-wrap")];
+  if(wraps.length===0){ log("Nothing to save."); return; }
+
+  let blocks = await Promise.all(wraps.map(wrap=>{
+    return new Promise(res=>{
+      const img = wrap.querySelector("img");
+      const desc = wrap.querySelector(".desc");
+      const im = new Image();
+      im.onload = ()=>res({img: im, desc: desc.textContent, width: img.offsetWidth, height: img.offsetHeight});
+      im.src = img.src;
+    });
+  }));
+
+  const padding = 20, fontSize=16, lineHeight=22;
+  let totalHeight=0, maxWidth=0;
+  const tempCanvas = document.createElement("canvas");
+  const tempCtx = tempCanvas.getContext("2d");
+  tempCtx.font=`${fontSize}px system-ui, sans-serif`;
+
+  blocks.forEach(block=>{
+    let lines=[];
+    if(block.desc){
+      const words = block.desc.split(" ");
+      let currentLine="";
+      words.forEach(word=>{
+        const testLine = currentLine ? currentLine+" "+word : word;
+        if(tempCtx.measureText(testLine).width > block.width - padding*2 && currentLine){
+          lines.push(currentLine);
+          currentLine = word;
+        } else currentLine = testLine;
+      });
+      if(currentLine) lines.push(currentLine);
+    }
+    block.textLines = lines;
+    block.textHeight = lines.length*lineHeight + padding;
+    totalHeight += block.textHeight + block.height + padding;
+    maxWidth = Math.max(maxWidth, block.width);
+  });
+  totalHeight += padding;
+
+  const canvas = document.createElement("canvas");
+  canvas.width=maxWidth;
+  canvas.height=totalHeight;
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle="#ffffff";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.font=`${fontSize}px system-ui, sans-serif`;
+  ctx.fillStyle="#000";
+
+  let y=padding;
+  blocks.forEach(block=>{
+    if(block.textLines.length>0) block.textLines.forEach((line,i)=>ctx.fillText(line,padding,y+(i+1)*lineHeight));
+    y += block.textHeight;
+    ctx.drawImage(block.img,0,y,block.width,block.height);
+    y += block.height + padding;
+  });
+
+  canvas.toBlob(blob=>{
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "clipboard_clips.png";
+    a.click();
+    URL.revokeObjectURL(url);
+    log("Saved stacked image to file.");
+  },"image/png");
 };
 
 // Load saved collection

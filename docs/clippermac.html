@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pasteboard for macOS Safari</title>
+<style>
+body {
+  font-family: system-ui, Arial, sans-serif;
+  margin: 20px;
+  color: #222;
+}
+h1 { font-size: 22px; margin-bottom: 8px; }
+#instructions {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+#output {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.img-wrap {
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid #ddd;
+}
+.desc {
+  font-size: 14px;
+  margin-bottom: 4px;
+  padding: 2px 4px;
+  min-height: 20px;
+  border-radius: 4px;
+  outline: none;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+}
+.desc:focus { border-color: #4a90e2; background: #f0f6ff; }
+.drag-handle { cursor: grab; user-select: none; display: inline-block; padding: 2px 6px; color: #666; margin-bottom: 4px; }
+.drag-handle:active { cursor: grabbing; }
+.delete-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: none;
+}
+.img-wrap:hover .delete-btn { display: block; }
+#toolbar { margin-top: 14px; display: flex; gap: 10px; }
+button { padding: 6px 12px; border: 1px solid #ccc; border-radius: 6px; cursor: pointer; background: #fff; }
+#status { margin-top: 8px; font-size: 13px; color: #555; }
+</style>
+</head>
+<body>
+<h1>Pasteboard for macOS Safari</h1>
+<div id="instructions">
+Paste images by pressing <strong>Cmd+V</strong> (from screenshots or copied images). 
+Click an image to edit its description. Drag using ☰ handle. Resize using the bottom-right corner. 
+Delete with <strong>Delete</strong> key.
+</div>
+
+<div id="toolbar">
+  <button id="copyAllBtn">Copy All (PNG) — Safari may block</button>
+  <button id="clearBtn">Clear All</button>
+  <button id="resetBtn">Reset Collection</button>
+</div>
+<div id="status"></div>
+<div id="output"></div>
+
+<!-- Hidden contenteditable for Safari paste -->
+<div id="pasteArea" contenteditable="true" style="position:absolute; left:-9999px;"></div>
+
+<script>
+(() => {
+const output = document.getElementById("output");
+const status = document.getElementById("status");
+const pasteArea = document.getElementById("pasteArea");
+
+function log(msg, err=false){
+  status.textContent = msg;
+  status.style.color = err ? "#b22" : "#555";
+}
+
+function scheduleSave(){
+  // Save collection
+  const items = [...document.querySelectorAll(".img-wrap")].map(wrap=>{
+    const img = wrap.querySelector("img");
+    const desc = wrap.querySelector(".desc");
+    return { src: img.src, width: img.style.width, height: img.style.height, desc: desc.textContent };
+  });
+  localStorage.setItem("clipboard-collection", JSON.stringify(items));
+}
+
+// Add image
+function addImage(dataURL, props={}){
+  const wrap = document.createElement("div");
+  wrap.className = "img-wrap";
+  wrap.setAttribute("tabindex","0");
+
+  const desc = document.createElement("div");
+  desc.className="desc";
+  desc.contentEditable="true";
+  desc.textContent = props.desc || "";
+  desc.addEventListener("input", scheduleSave);
+
+  const handle = document.createElement("div");
+  handle.className="drag-handle";
+  handle.setAttribute("draggable","true");
+  handle.textContent="☰";
+
+  const img = document.createElement("img");
+  img.src = dataURL;
+  img.style.width = props.width || "auto";
+  img.style.height = props.height || "auto";
+  img.style.maxWidth = "90vw";
+
+  const del = document.createElement("button");
+  del.className="delete-btn";
+  del.textContent="×";
+  del.onclick = e => { e.stopPropagation(); wrap.remove(); scheduleSave(); };
+
+  // Simple resize
+  const resize = document.createElement("div");
+  resize.style.width="12px"; resize.style.height="12px";
+  resize.style.background="#4a90e2";
+  resize.style.position="absolute"; resize.style.right="2px"; resize.style.bottom="2px";
+  resize.style.cursor="se-resize";
+  resize.addEventListener("mousedown", e=>{
+    e.preventDefault();
+    const startX=e.clientX, startWidth=img.offsetWidth, startHeight=img.offsetHeight;
+    function move(ev){
+      let newW=startWidth + (ev.clientX-startX);
+      newW=Math.max(50,newW);
+      img.style.width=newW+"px";
+      img.style.height=startHeight*(newW/startWidth)+"px";
+    }
+    function up(){ document.removeEventListener("mousemove",move); document.removeEventListener("mouseup",up); scheduleSave(); }
+    document.addEventListener("mousemove",move);
+    document.addEventListener("mouseup",up);
+  });
+
+  wrap.append(desc, handle, img, resize, del);
+  output.appendChild(wrap);
+
+  // Drag-and-drop
+  handle.addEventListener("dragstart", e=>{
+    dragSrc = wrap;
+    e.dataTransfer.effectAllowed="move";
+    e.dataTransfer.setData("text/plain",""); // Safari requires data
+  });
+  wrap.addEventListener("dragover", e=>{
+    e.preventDefault();
+    wrap.style.borderTop = (e.clientY < wrap.offsetHeight/2) ? "3px solid #4a90e2" : "";
+  });
+  wrap.addEventListener("drop", e=>{
+    e.preventDefault();
+    wrap.style.borderTop="";
+    if(!dragSrc || dragSrc===wrap) return;
+    output.insertBefore(dragSrc, (e.clientY < wrap.offsetHeight/2) ? wrap : wrap.nextSibling);
+    scheduleSave();
+  });
+
+  wrap.onclick = ()=>wrap.focus();
+  log("Image added.");
+  scheduleSave();
+}
+
+// Handle pasted image
+function handleBlob(blob){
+  const reader = new FileReader();
+  reader.onload = e => addImage(e.target.result);
+  reader.readAsDataURL(blob);
+}
+
+// Listen for paste on hidden contenteditable (Safari)
+pasteArea.addEventListener("paste", e=>{
+  const items = e.clipboardData?.items;
+  if(!items) return;
+  for(const it of items){
+    if(it.type.startsWith("image")){
+      const file = it.getAsFile();
+      if(file) handleBlob(file);
+      e.preventDefault();
+      return;
+    }
+  }
+  log("Clipboard contains no image", true);
+});
+
+// Focus hidden paste area when user presses Cmd+V
+document.addEventListener("keydown", e=>{
+  if((e.metaKey || e.ctrlKey) && e.key.toLowerCase()=="v"){
+    pasteArea.focus();
+  }
+  // Delete key
+  if(e.key==="Delete"){
+    const focused = document.activeElement;
+    if(focused && focused.classList.contains("img-wrap")){
+      focused.remove();
+      scheduleSave();
+      log("Image deleted.");
+    }
+  }
+});
+
+// Toolbar buttons
+document.getElementById("clearBtn").onclick = ()=>{ output.innerHTML=""; scheduleSave(); log("All cleared."); };
+document.getElementById("resetBtn").onclick = ()=>{
+  if(confirm("This will permanently delete saved collection. Are you sure?")){
+    output.innerHTML=""; localStorage.removeItem("clipboard-collection"); log("Collection reset.");
+  }
+};
+document.getElementById("copyAllBtn").onclick = ()=>{
+  alert("Copying stacked PNG may be blocked on Safari. This feature works best on Chrome/Edge.");
+};
+
+// Load saved collection
+const saved = localStorage.getItem("clipboard-collection");
+if(saved){
+  JSON.parse(saved).forEach(item=>addImage(item.src,item));
+  log("Restored saved clips.");
+} else {
+  log("Ready — paste images with Cmd+V.");
+}
+})();
+</script>
+</body>
+</html>

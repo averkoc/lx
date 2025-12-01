@@ -138,6 +138,11 @@ const status = document.getElementById("status");
 let dragSrcEl = null;
 let saveTimeout = null;
 
+function log(msg, err=false){
+  status.textContent = msg;
+  status.style.color = err ? "#b22" : "#555";
+}
+
 function saveCollection(){
   try {
     const wraps = [...document.querySelectorAll(".img-wrap")];
@@ -159,63 +164,62 @@ function saveCollection(){
 }
 
 function scheduleSave(){
-  console.log('scheduleSave called');
   clearTimeout(saveTimeout);
-  saveTimeout = setTimeout(() => {
-    console.log('Executing save...');
-    saveCollection();
-  }, 500);
+  saveTimeout = setTimeout(saveCollection, 500);
 }
-function log(msg, err=false){
-  status.textContent = msg;
-  status.style.color = err ? "#b22" : "#555";
-}
-function addImage(dataURL){
+
+/* Add image and return the wrap element */
+function addImage(dataURL, props={}) {
   const wrap = document.createElement("div");
   wrap.className = "img-wrap";
   wrap.setAttribute("tabindex", "0");
+
   // Description
   const desc = document.createElement("div");
   desc.className = "desc";
   desc.setAttribute("contenteditable","true");
-  desc.textContent = "";
+  desc.textContent = props.desc || "";
   desc.addEventListener('mousedown', e => e.stopPropagation());
   desc.addEventListener('click', e => e.stopPropagation());
   desc.addEventListener('pointerdown', e => e.stopPropagation());
   desc.addEventListener('input', scheduleSave);
+
   // Drag handle
   const handle = document.createElement("div");
   handle.className = "drag-handle";
   handle.setAttribute("draggable","true");
   handle.textContent = "☰";
+
   // Image
   const img = document.createElement("img");
   img.src = dataURL;
-  img.style.width = "auto";
-  img.style.height = "auto";
+  img.style.width = props.width || "auto";
+  img.style.height = props.height || "auto";
   img.style.maxWidth = "90vw";
+
   // Delete button
   const del = document.createElement("button");
   del.className = "delete-btn";
   del.textContent = "×";
   del.onclick = e => { e.stopPropagation(); wrap.remove(); scheduleSave(); };
-  // Resize handles (both corners)
+
+  // Resize handles
   const resizeSE = document.createElement("div");
   resizeSE.className = "resize-handle resize-se";
-  
   const resizeSW = document.createElement("div");
   resizeSW.className = "resize-handle resize-sw";
-  
-  // Resize logic for SE (bottom-right) - expand from top-left anchor
-  resizeSE.addEventListener('mousedown', e=>{
+
+  // Resize logic
+  function resizeHandler(e, isSE){
     e.preventDefault();
     e.stopPropagation();
     const startX = e.clientX;
     const startWidth = img.offsetWidth;
     const startHeight = img.offsetHeight;
     function onMouseMove(ev){
-      const newWidth = Math.max(50, startWidth + (ev.clientX - startX));
-      const newHeight = startHeight * (newWidth / startWidth);
+      let newWidth = isSE ? startWidth + (ev.clientX - startX) : startWidth - (ev.clientX - startX);
+      newWidth = Math.max(50,newWidth);
+      const newHeight = startHeight * (newWidth/startWidth);
       img.style.width = newWidth + 'px';
       img.style.height = newHeight + 'px';
     }
@@ -226,37 +230,14 @@ function addImage(dataURL){
     }
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
-  });
-  
-  // Resize logic for SW (bottom-left) - shrink from top-right anchor
-  resizeSW.addEventListener('mousedown', e=>{
-    e.preventDefault();
-    e.stopPropagation();
-    const startX = e.clientX;
-    const startWidth = img.offsetWidth;
-    const startHeight = img.offsetHeight;
-    function onMouseMove(ev){
-      const newWidth = Math.max(50, startWidth - (ev.clientX - startX));
-      const newHeight = startHeight * (newWidth / startWidth);
-      img.style.width = newWidth + 'px';
-      img.style.height = newHeight + 'px';
-    }
-    function onMouseUp(){
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseup', onMouseUp);
-      scheduleSave();
-    }
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-  });
-  wrap.appendChild(desc);
-  wrap.appendChild(handle);
-  wrap.appendChild(img);
-  wrap.appendChild(resizeSE);
-  wrap.appendChild(resizeSW);
-  wrap.appendChild(del);
+  }
+  resizeSE.addEventListener('mousedown', e=>resizeHandler(e,true));
+  resizeSW.addEventListener('mousedown', e=>resizeHandler(e,false));
+
+  wrap.append(desc, handle, img, resizeSE, resizeSW, del);
   output.appendChild(wrap);
   wrap.onclick = () => wrap.focus();
+
   /* Dragging via handle only */
   handle.addEventListener("dragstart", e => {
     dragSrcEl = wrap;
@@ -281,16 +262,19 @@ function addImage(dataURL){
     else output.insertBefore(dragSrcEl,wrap.nextSibling);
     scheduleSave();
   });
+
   log("Image added.");
+  return wrap;
 }
+
+/* Handle clipboard blob */
 function handleBlob(blob){
   const reader = new FileReader();
-  reader.onload = ev => {
-    addImage(ev.target.result);
-    scheduleSave();
-  };
+  reader.onload = ev => { addImage(ev.target.result); scheduleSave(); };
   reader.readAsDataURL(blob);
 }
+
+/* Paste images */
 document.addEventListener("paste", e=>{
   const items = e.clipboardData.items;
   for(const it of items){
@@ -303,6 +287,8 @@ document.addEventListener("paste", e=>{
   }
   log("Clipboard contains no image.", true);
 });
+
+/* Delete via Delete key */
 document.addEventListener("keydown", e=>{
   if(e.key==="Delete"){
     const focused = document.activeElement;
@@ -313,118 +299,82 @@ document.addEventListener("keydown", e=>{
     }
   }
 });
-/* Clear all */
-document.getElementById("clearBtn").onclick = ()=>{
-  output.innerHTML = "";
-  scheduleSave();
-  log("All cleared.");
-};
 
-/* Reset collection */
+/* Toolbar buttons */
+document.getElementById("clearBtn").onclick = ()=>{ output.innerHTML=""; scheduleSave(); log("All cleared."); };
 document.getElementById("resetBtn").onclick = ()=>{
   if(confirm("This will permanently delete your saved collection. Are you sure?")){
     output.innerHTML = "";
-    try {
-      localStorage.removeItem('clipboard-collection');
-      log("Collection reset.");
-    } catch(e) {
-      log("Collection cleared.", false);
-    }
+    localStorage.removeItem('clipboard-collection');
+    log("Collection reset.");
   }
 };
-/* Copy all stacked PNG with descriptions rendered on image */
+
+/* Copy all stacked PNG */
 document.getElementById("copyAllBtn").onclick = async ()=>{
   const wraps = [...document.querySelectorAll(".img-wrap")];
   if(wraps.length===0){ log("Nothing to copy."); return; }
-  
-  // Load all images and collect descriptions with actual displayed size
-  let blocks = await Promise.all(wraps.map(wrap => {
+  let blocks = await Promise.all(wraps.map(wrap=>{
     return new Promise(res=>{
       const img = wrap.querySelector("img");
       const desc = wrap.querySelector(".desc");
-      const descText = desc.textContent.trim();
-      // Get the actual displayed width and height (respects user resizing)
       const displayWidth = img.offsetWidth;
       const displayHeight = img.offsetHeight;
-      let im = new Image();
+      const descText = desc.textContent.trim();
+      const im = new Image();
       im.onload = ()=>res({img: im, desc: descText, width: displayWidth, height: displayHeight});
       im.src = img.src;
     });
   }));
-  
-  // Calculate canvas dimensions
+
   const padding = 20;
   const fontSize = 16;
   const lineHeight = 22;
-  
   let totalHeight = 0;
   let maxWidth = 0;
-  
-  // Measure text and calculate layout
   const tempCanvas = document.createElement("canvas");
   const tempCtx = tempCanvas.getContext("2d");
   tempCtx.font = `${fontSize}px system-ui, sans-serif`;
-  
-  blocks.forEach(block => {
-    if(block.desc) {
+
+  blocks.forEach(block=>{
+    if(block.desc){
       const words = block.desc.split(' ');
       const lines = [];
-      let currentLine = '';
-      
-      words.forEach(word => {
-        const testLine = currentLine ? currentLine + ' ' + word : word;
+      let currentLine='';
+      words.forEach(word=>{
+        const testLine = currentLine ? currentLine+' '+word : word;
         const metrics = tempCtx.measureText(testLine);
-        if(metrics.width > block.width - padding * 2 && currentLine) {
+        if(metrics.width > block.width - padding*2 && currentLine){
           lines.push(currentLine);
           currentLine = word;
-        } else {
-          currentLine = testLine;
-        }
+        } else currentLine = testLine;
       });
       if(currentLine) lines.push(currentLine);
-      
       block.textLines = lines;
-      block.textHeight = lines.length * lineHeight + padding;
-    } else {
-      block.textLines = [];
-      block.textHeight = 0;
-    }
-    
+      block.textHeight = lines.length*lineHeight + padding;
+    } else { block.textLines=[]; block.textHeight=0; }
     totalHeight += block.textHeight + block.height + padding;
     maxWidth = Math.max(maxWidth, block.width);
   });
-  
-  totalHeight += padding; // Bottom padding
-  
-  // Create final canvas
+  totalHeight += padding;
+
   const canvas = document.createElement("canvas");
   canvas.width = maxWidth;
   canvas.height = totalHeight;
   const ctx = canvas.getContext("2d");
-  
-  // White background
   ctx.fillStyle = "#ffffff";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  
-  // Draw each block with description
-  let y = padding;
+  ctx.fillRect(0,0,canvas.width,canvas.height);
   ctx.font = `${fontSize}px system-ui, sans-serif`;
   ctx.fillStyle = "#000000";
-  
-  blocks.forEach(block => {
-    // Draw description text if present
-    if(block.textLines.length > 0) {
-      block.textLines.forEach((line, i) => {
-        ctx.fillText(line, padding, y + (i + 1) * lineHeight);
-      });
-      y += block.textHeight;
-    }
-    
-    // Draw image at the resized dimensions
-    ctx.drawImage(block.img, 0, y, block.width, block.height);
+
+  let y = padding;
+  blocks.forEach(block=>{
+    if(block.textLines.length>0) block.textLines.forEach((line,i)=>ctx.fillText(line,padding,y+(i+1)*lineHeight));
+    y += block.textHeight;
+    ctx.drawImage(block.img,0,y,block.width,block.height);
     y += block.height + padding;
   });
-  
+
   try{
     let blob = await new Promise(r=>canvas.toBlob(r,"image/png"));
     await navigator.clipboard.write([new ClipboardItem({"image/png": blob})]);
@@ -434,50 +384,27 @@ document.getElementById("copyAllBtn").onclick = async ()=>{
   }
 };
 
-/* Load saved collection on startup */
+/* Load saved collection synchronously */
 function loadCollection(){
   try {
     const saved = localStorage.getItem('clipboard-collection');
-    
-    if(saved) {
+    if(saved){
       const items = JSON.parse(saved);
       console.log('Loading', items.length, 'items');
-      
-      // Load all items synchronously
-      items.forEach(item => {
-        addImage(item.src);
-      });
-      
-      // Then apply properties after all images are added
-      setTimeout(() => {
-        const wraps = document.querySelectorAll(".img-wrap");
-        items.forEach((item, index) => {
-          if(wraps[index]) {
-            const img = wraps[index].querySelector("img");
-            const desc = wraps[index].querySelector(".desc");
-            if(img && item.width !== 'auto') img.style.width = item.width;
-            if(img && item.height !== 'auto') img.style.height = item.height;
-            if(desc) desc.textContent = item.desc || '';
-          }
-        });
-        log(`Restored ${items.length} saved clip(s).`);
-      }, 200);
+      items.forEach(item => addImage(item.src, {width:item.width, height:item.height, desc:item.desc}));
+      log(`Restored ${items.length} saved clip(s).`);
     } else {
-      console.log('No saved collection found');
       log("Ready — paste images with Ctrl+V, add descriptions, resize, and reorder.");
     }
-  } catch(e) {
+  } catch(e){
     console.error('Load failed:', e);
     log("Ready — paste images with Ctrl+V, add descriptions, resize, and reorder.");
   }
 }
 
-// Wait for DOM to be fully ready before loading
-if(document.readyState === 'loading') {
+if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded', loadCollection);
-} else {
-  loadCollection();
-}
+} else loadCollection();
 })();
 </script>
 </body>

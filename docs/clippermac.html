@@ -46,7 +46,14 @@ h1 { font-size: 22px; margin-bottom: 8px; }
   border: 1px solid #e0e0e0;
 }
 .desc:focus { border-color: #4a90e2; background: #f0f6ff; }
-.drag-handle { cursor: grab; user-select: none; display: inline-block; padding: 2px 6px; color: #666; margin-bottom: 4px; }
+.drag-handle {
+  cursor: grab;
+  user-select: none;
+  display: inline-block;
+  padding: 2px 6px;
+  color: #666;
+  margin-bottom: 4px;
+}
 .drag-handle:active { cursor: grabbing; }
 .delete-btn {
   position: absolute;
@@ -63,8 +70,15 @@ h1 { font-size: 22px; margin-bottom: 8px; }
 }
 .img-wrap:hover .delete-btn { display: block; }
 #toolbar { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
-button { padding: 6px 12px; border: 1px solid #ccc; border-radius: 6px; cursor: pointer; background: #fff; }
+button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #fff;
+}
 #status { margin-top: 8px; font-size: 13px; color: #555; }
+
 /* Resize handle */
 .resize-handle {
   position: absolute;
@@ -76,6 +90,7 @@ button { padding: 6px 12px; border: 1px solid #ccc; border-radius: 6px; cursor: 
 }
 </style>
 </head>
+
 <body>
 <h1>Pasteboard for macOS Safari</h1>
 <div id="instructions">
@@ -92,8 +107,18 @@ Delete with <strong>Delete</strong> key. Scroll the panel to see multiple clips.
 <div id="status"></div>
 <div id="output"></div>
 
-<!-- Hidden contenteditable for Safari paste -->
-<div id="pasteArea" contenteditable="true" style="position:absolute; left:-9999px;"></div>
+<!-- Safari-compatible hidden contenteditable -->
+<div id="pasteArea"
+     contenteditable="true"
+     style="
+       position: fixed;
+       opacity: 0;
+       pointer-events: none;
+       transform: scale(0);
+       width: 1px;
+       height: 1px;
+     ">
+</div>
 
 <script>
 (() => {
@@ -112,27 +137,31 @@ function scheduleSave(){
   const items = [...document.querySelectorAll(".img-wrap")].map(wrap=>{
     const img = wrap.querySelector("img");
     const desc = wrap.querySelector(".desc");
-    return { src: img.src, width: img.style.width, height: img.style.height, desc: desc.textContent };
+    return {
+      src: img.src,
+      width: img.style.width,
+      height: img.style.height,
+      desc: desc.textContent
+    };
   });
   localStorage.setItem("clipboard-collection", JSON.stringify(items));
 }
 
-// Add image
-function addImage(dataURL, props={}){
+function addImage(dataURL, props={}) {
   const wrap = document.createElement("div");
   wrap.className = "img-wrap";
   wrap.setAttribute("tabindex","0");
 
   const desc = document.createElement("div");
-  desc.className="desc";
-  desc.contentEditable="true";
+  desc.className = "desc";
+  desc.contentEditable = "true";
   desc.textContent = props.desc || "";
   desc.addEventListener("input", scheduleSave);
 
   const handle = document.createElement("div");
-  handle.className="drag-handle";
+  handle.className = "drag-handle";
   handle.setAttribute("draggable","true");
-  handle.textContent="☰";
+  handle.textContent = "☰";
 
   const img = document.createElement("img");
   img.src = dataURL;
@@ -143,83 +172,105 @@ function addImage(dataURL, props={}){
   const del = document.createElement("button");
   del.className="delete-btn";
   del.textContent="×";
-  del.onclick = e => { e.stopPropagation(); wrap.remove(); scheduleSave(); };
+  del.onclick = e => {
+    e.stopPropagation();
+    wrap.remove();
+    scheduleSave();
+  };
 
   const resize = document.createElement("div");
   resize.className="resize-handle";
   resize.addEventListener("mousedown", e=>{
     e.preventDefault();
-    const startX=e.clientX, startWidth=img.offsetWidth, startHeight=img.offsetHeight;
+    const startX = e.clientX;
+    const startWidth = img.offsetWidth;
+    const startHeight = img.offsetHeight;
+
     function move(ev){
-      let newW=startWidth+(ev.clientX-startX);
-      newW=Math.max(50,newW);
-      img.style.width=newW+"px";
-      img.style.height=startHeight*(newW/startWidth)+"px";
+      let newW = startWidth + (ev.clientX - startX);
+      newW = Math.max(50, newW);
+      img.style.width = newW + "px";
+      img.style.height = startHeight * (newW/startWidth) + "px";
     }
-    function up(){ document.removeEventListener("mousemove",move); document.removeEventListener("mouseup",up); scheduleSave(); }
-    document.addEventListener("mousemove",move);
-    document.addEventListener("mouseup",up);
+    function up(){
+      document.removeEventListener("mousemove", move);
+      document.removeEventListener("mouseup", up);
+      scheduleSave();
+    }
+
+    document.addEventListener("mousemove", move);
+    document.addEventListener("mouseup", up);
   });
 
   wrap.append(desc, handle, img, resize, del);
   output.appendChild(wrap);
 
-  // Drag-and-drop
   handle.addEventListener("dragstart", e=>{
     dragSrc = wrap;
-    e.dataTransfer.effectAllowed="move";
-    e.dataTransfer.setData("text/plain","");
+    try { e.dataTransfer.setData("text","drag"); } catch {}
+    e.dataTransfer.effectAllowed = "move";
   });
+
   wrap.addEventListener("dragover", e=>{
     e.preventDefault();
     wrap.style.borderTop = (e.clientY < wrap.offsetHeight/2) ? "3px solid #4a90e2" : "";
   });
-  wrap.addEventListener("dragleave", e=>{
-    wrap.style.borderTop="";
+
+  wrap.addEventListener("dragleave", () => {
+    wrap.style.borderTop = "";
   });
+
   wrap.addEventListener("drop", e=>{
     e.preventDefault();
-    wrap.style.borderTop="";
-    if(!dragSrc || dragSrc===wrap) return;
-    output.insertBefore(dragSrc, (e.clientY<wrap.offsetHeight/2)?wrap:wrap.nextSibling);
+    wrap.style.borderTop = "";
+    if (!dragSrc || dragSrc === wrap) return;
+    output.insertBefore(
+      dragSrc,
+      (e.clientY < wrap.offsetHeight/2) ? wrap : wrap.nextSibling
+    );
     scheduleSave();
   });
 
-  wrap.onclick = ()=>wrap.focus();
+  wrap.onclick = ()=> wrap.focus();
   log("Image added.");
   scheduleSave();
 }
 
-// Handle pasted image
 function handleBlob(blob){
   const reader = new FileReader();
   reader.onload = e => addImage(e.target.result);
   reader.readAsDataURL(blob);
 }
 
-// Paste images via hidden contenteditable
-pasteArea.addEventListener("paste", e=>{
-  const items = e.clipboardData?.items;
-  if(!items) return;
-  for(const it of items){
-    if(it.type.startsWith("image")){
-      const file = it.getAsFile();
-      if(file) handleBlob(file);
+// SAFARI paste handler
+pasteArea.addEventListener("paste", e => {
+  const cd = e.clipboardData;
+  if (!cd) return;
+
+  let found = false;
+
+  for (const item of cd.items) {
+    if (item.type.startsWith("image")) {
+      const file = item.getAsFile();
+      if (file) handleBlob(file);
+      found = true;
       e.preventDefault();
-      return;
+      break;
     }
   }
-  log("Clipboard contains no image", true);
+
+  if (!found) log("Clipboard contains no image", true);
 });
 
-// Focus hidden paste area on Cmd+V
+// Focus on Cmd+V
 document.addEventListener("keydown", e=>{
-  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()=="v"){
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "v") {
     pasteArea.focus();
   }
-  if(e.key==="Delete"){
+
+  if (e.key === "Delete") {
     const focused = document.activeElement;
-    if(focused && focused.classList.contains("img-wrap")){
+    if (focused && focused.classList.contains("img-wrap")) {
       focused.remove();
       scheduleSave();
       log("Image deleted.");
@@ -227,91 +278,127 @@ document.addEventListener("keydown", e=>{
   }
 });
 
-// Toolbar buttons
-document.getElementById("clearBtn").onclick = ()=>{ output.innerHTML=""; scheduleSave(); log("All cleared."); };
+// Toolbar
+document.getElementById("clearBtn").onclick = ()=>{
+  output.innerHTML = "";
+  scheduleSave();
+  log("All cleared.");
+};
+
 document.getElementById("resetBtn").onclick = ()=>{
-  if(confirm("This will permanently delete saved collection. Are you sure?")){
-    output.innerHTML=""; localStorage.removeItem("clipboard-collection"); log("Collection reset.");
+  if (confirm("This will permanently delete saved collection. Are you sure?")) {
+    output.innerHTML="";
+    localStorage.removeItem("clipboard-collection");
+    log("Collection reset.");
   }
 };
+
 document.getElementById("copyAllBtn").onclick = async () => {
   const wraps = [...document.querySelectorAll(".img-wrap")];
-  if(wraps.length===0){ log("Nothing to save."); return; }
+  if (wraps.length === 0){ log("Nothing to save."); return; }
 
   let blocks = await Promise.all(wraps.map(wrap=>{
     return new Promise(res=>{
       const img = wrap.querySelector("img");
       const desc = wrap.querySelector(".desc");
       const im = new Image();
-      im.onload = ()=>res({img: im, desc: desc.textContent, width: img.offsetWidth, height: img.offsetHeight});
+      im.onload = ()=>res({
+        img: im,
+        desc: desc.textContent,
+        width: img.offsetWidth,
+        height: img.offsetHeight
+      });
       im.src = img.src;
     });
   }));
 
   const padding = 20, fontSize=16, lineHeight=22;
-  let totalHeight=0, maxWidth=0;
+  let totalHeight = 0, maxWidth = 0;
+
   const tempCanvas = document.createElement("canvas");
   const tempCtx = tempCanvas.getContext("2d");
-  tempCtx.font=`${fontSize}px system-ui, sans-serif`;
+  tempCtx.font = `${fontSize}px system-ui, sans-serif`;
 
   blocks.forEach(block=>{
-    let lines=[];
-    if(block.desc){
+    let lines = [];
+    if (block.desc) {
       const words = block.desc.split(" ");
-      let currentLine="";
+      let currentLine = "";
+
       words.forEach(word=>{
-        const testLine = currentLine ? currentLine+" "+word : word;
-        if(tempCtx.measureText(testLine).width > block.width - padding*2 && currentLine){
+        const test = currentLine ? currentLine + " " + word : word;
+        if (tempCtx.measureText(test).width > block.width - padding*2 && currentLine) {
           lines.push(currentLine);
           currentLine = word;
-        } else currentLine = testLine;
+        } else {
+          currentLine = test;
+        }
       });
-      if(currentLine) lines.push(currentLine);
+      if (currentLine) lines.push(currentLine);
     }
+
     block.textLines = lines;
-    block.textHeight = lines.length*lineHeight + padding;
+    block.textHeight = lines.length * lineHeight + padding;
     totalHeight += block.textHeight + block.height + padding;
     maxWidth = Math.max(maxWidth, block.width);
   });
+
   totalHeight += padding;
 
   const canvas = document.createElement("canvas");
-  canvas.width=maxWidth;
-  canvas.height=totalHeight;
-  const ctx = canvas.getContext("2d");
-  ctx.fillStyle="#ffffff";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-  ctx.font=`${fontSize}px system-ui, sans-serif`;
-  ctx.fillStyle="#000";
+  canvas.width = maxWidth;
+  canvas.height = totalHeight;
 
-  let y=padding;
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.font = `${fontSize}px system-ui, sans-serif`;
+  ctx.fillStyle = "#000";
+
+  let y = padding;
+
   blocks.forEach(block=>{
-    if(block.textLines.length>0) block.textLines.forEach((line,i)=>ctx.fillText(line,padding,y+(i+1)*lineHeight));
+    block.textLines.forEach((line,i)=>{
+      ctx.fillText(line, padding, y + (i+1)*lineHeight);
+    });
+
     y += block.textHeight;
-    ctx.drawImage(block.img,0,y,block.width,block.height);
+    ctx.drawImage(block.img, 0, y, block.width, block.height);
     y += block.height + padding;
   });
 
+  // SAFARI-COMPATIBLE EXPORT
   canvas.toBlob(blob=>{
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "clipboard_clips.png";
-    a.click();
-    URL.revokeObjectURL(url);
-    log("Saved stacked image to file.");
-  },"image/png");
+    if (blob) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "clipboard_clips.png";
+      a.click();
+      URL.revokeObjectURL(url);
+      log("Saved stacked image.");
+    } else {
+      // Safari fallback
+      const url = canvas.toDataURL("image/png");
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "clipboard_clips.png";
+      a.click();
+      log("Saved using Safari fallback.");
+    }
+  }, "image/png");
 };
 
-// Load saved collection
+// Restore collection
 const saved = localStorage.getItem("clipboard-collection");
-if(saved){
-  JSON.parse(saved).forEach(item=>addImage(item.src,item));
+if (saved) {
+  JSON.parse(saved).forEach(item=>addImage(item.src, item));
   log("Restored saved clips.");
 } else {
   log("Ready — paste images with Cmd+V.");
 }
 })();
 </script>
+
 </body>
 </html>

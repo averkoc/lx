@@ -370,25 +370,23 @@
 
     <script>
         const files = {
-            labgroup1files: [
-                { perms: 'drwxrwx---', links: '2', owner: 'alice', group: 'labgroup1', size: '4096', date: 'Dec 01 10:30', name: '.', isDir: true },
-                { perms: 'drwxr-xr-x', links: '4', owner: 'root', group: 'root', size: '4096', date: 'Nov 28 09:00', name: '..', isDir: true },
-                { perms: '-rw-rw-r--', links: '1', owner: 'alice', group: 'labgroup1', size: '2048', date: 'Dec 02 14:22', name: 'experiment1.txt' },
-                { perms: '-rw-rw----', links: '1', owner: 'bob', group: 'labgroup1', size: '1536', date: 'Dec 03 09:15', name: 'results.csv' },
-                { perms: '-rwxr-x---', links: '1', owner: 'alice', group: 'labgroup1', size: '8192', date: 'Nov 30 16:45', name: 'analyze.sh' },
-                { perms: '-rw-r--r--', links: '1', owner: 'alice', group: 'labgroup1', size: '512', date: 'Dec 01 11:00', name: 'README.md' },
-                { perms: '-rw-rw----', links: '1', owner: 'bob', group: 'labgroup1', size: '3072', date: 'Dec 03 13:20', name: 'data.log' }
-            ],
-            labgroup2files: [
-                { perms: 'drwxrwx---', links: '2', owner: 'charlie', group: 'labgroup2', size: '4096', date: 'Dec 01 10:30', name: '.', isDir: true },
-                { perms: 'drwxr-xr-x', links: '4', owner: 'root', group: 'root', size: '4096', date: 'Nov 28 09:00', name: '..', isDir: true },
-                { perms: '-rw-rw-r--', links: '1', owner: 'charlie', group: 'labgroup2', size: '4096', date: 'Dec 02 10:30', name: 'protocol.txt' },
-                { perms: '-rwxrwx---', links: '1', owner: 'diana', group: 'labgroup2', size: '16384', date: 'Dec 01 15:20', name: 'simulation' },
-                { perms: '-rw-r-----', links: '1', owner: 'charlie', group: 'labgroup2', size: '2560', date: 'Dec 03 08:45', name: 'notes.txt' },
-                { perms: '-rw-rw-rw-', links: '1', owner: 'diana', group: 'labgroup2', size: '1024', date: 'Dec 02 12:00', name: 'shared.txt' },
-                { perms: '-r--r--r--', links: '1', owner: 'charlie', group: 'labgroup2', size: '768', date: 'Nov 29 14:30', name: 'public_info.txt' }
-            ]
-        };
+    labgroup1files: [
+        { perms: '-rw-rw-r--', links: '1', owner: 'alice', group: 'labgroup1', size: '2048', date: 'Dec 02 14:22', name: 'experiment1.txt' },
+        { perms: '-rw-rw----', links: '1', owner: 'bob', group: 'labgroup1', size: '1536', date: 'Dec 03 09:15', name: 'results.csv' },
+        { perms: '-rwxr-x---', links: '1', owner: 'alice', group: 'labgroup1', size: '8192', date: 'Nov 30 16:45', name: 'analyze.sh' },
+        { perms: '-rw-r--r--', links: '1', owner: 'alice', group: 'labgroup1', size: '512', date: 'Dec 01 11:00', name: 'README.md' },
+        { perms: '-rw-rw----', links: '1', owner: 'bob', group: 'labgroup1', size: '3072', date: 'Dec 03 13:20', name: 'data.log' }
+    ],
+
+    labgroup2files: [
+        { perms: '-rw-rw-r--', links: '1', owner: 'charlie', group: 'labgroup2', size: '4096', date: 'Dec 02 10:30', name: 'protocol.txt' },
+        { perms: '-rwxrwx---', links: '1', owner: 'diana', group: 'labgroup2', size: '16384', date: 'Dec 01 15:20', name: 'simulation' },
+        { perms: '-rw-r-----', links: '1', owner: 'charlie', group: 'labgroup2', size: '2560', date: 'Dec 03 08:45', name: 'notes.txt' },
+        { perms: '-rw-rw-rw-', links: '1', owner: 'diana', group: 'labgroup2', size: '1024', date: 'Dec 02 12:00', name: 'shared.txt' },
+        { perms: '-r--r--r--', links: '1', owner: 'charlie', group: 'labgroup2', size: '768', date: 'Nov 29 14:30', name: 'public_info.txt' }
+    ]
+};
+
 
         let selectedFile = null;
         let selectedDir = null;
@@ -415,10 +413,8 @@
                         <span class="filename ${file.isDir ? 'directory' : ''}">${file.name}</span>
                     `;
                     
-                    if (index > 1) {
-                        entry.addEventListener('click', () => selectFile(dir, index));
-                    }
-                    
+                 entry.addEventListener('click', () => selectFile(dir, index));
+
                     container.appendChild(entry);
                 });
             }
@@ -438,26 +434,38 @@
             document.getElementById('actionResult').innerHTML = '<span class="result-info">Try an action to see the result...</span>';
         }
 
-        function updateChmodControls() {
-            if (selectedFile === null) return;
-            
-            const file = files[selectedDir][selectedFile];
-            const perms = file.perms.substring(1);
-            
-            document.getElementById('owner-r').checked = perms[0] === 'r';
-            document.getElementById('owner-w').checked = perms[1] === 'w';
-            document.getElementById('owner-x').checked = perms[2] === 'x';
-            
-            document.getElementById('group-r').checked = perms[3] === 'r';
-            document.getElementById('group-w').checked = perms[4] === 'w';
-            document.getElementById('group-x').checked = perms[5] === 'x';
-            
-            document.getElementById('other-r').checked = perms[6] === 'r';
-            document.getElementById('other-w').checked = perms[7] === 'w';
-            document.getElementById('other-x').checked = perms[8] === 'x';
-            
-            updateNumericMode();
-        }
+function updateChmodControls() {
+    if (selectedFile === null) return;
+    
+    const file = files[selectedDir][selectedFile];
+    const [currentUser, currentGroup] = document.getElementById('currentUser').value.split(':');
+
+    const isOwner = file.owner === currentUser;
+
+    // ⛔ Disable chmod if NOT owner
+    document.querySelectorAll('.permission-group input[type="checkbox"]').forEach(cb => {
+        cb.disabled = !isOwner;
+    });
+
+    document.getElementById('applyChmod').disabled = !isOwner;
+
+    // Load current permissions into checkboxes
+    const perms = file.perms.substring(1);
+    
+    document.getElementById('owner-r').checked = perms[0] === 'r';
+    document.getElementById('owner-w').checked = perms[1] === 'w';
+    document.getElementById('owner-x').checked = perms[2] === 'x';
+    
+    document.getElementById('group-r').checked = perms[3] === 'r';
+    document.getElementById('group-w').checked = perms[4] === 'w';
+    document.getElementById('group-x').checked = perms[5] === 'x';
+    
+    document.getElementById('other-r').checked = perms[6] === 'r';
+    document.getElementById('other-w').checked = perms[7] === 'w';
+    document.getElementById('other-x').checked = perms[8] === 'x';
+
+    updateNumericMode();
+}
 
         function updateNumericMode() {
             const owner = (document.getElementById('owner-r').checked ? 4 : 0) +
@@ -477,7 +485,15 @@
             if (selectedFile === null) return;
             
             const file = files[selectedDir][selectedFile];
+			
             const type = file.perms[0];
+			    const [currentUser] = document.getElementById('currentUser').value.split(':');
+
+    if (file.owner !== currentUser) {
+        alert("Permission denied: Only the file owner may change permissions.");
+        return;
+    }
+			
             
             let perms = type;
             perms += document.getElementById('owner-r').checked ? 'r' : '-';
@@ -730,6 +746,7 @@
         
         document.getElementById('currentUser').addEventListener('change', () => {
             if (selectedFile !== null) {
+			  updateChmodControls();  // <-- FIX
                 updateEffects();
             }
         });

@@ -19,9 +19,12 @@ The `ssh-copy-id` program connects to the server, prompts you for your password,
 "aI" have created a [file permission simulator](perms.html) that you can use to explore how file ownership (user and group) affects what different users can do with a file.
 
 First, select the user you are logged in as, then choose a file by clicking on it. The simulator will show what actions that user is allowed to perform on the selected file.  
-If the selected user is the file’s owner, you can also modify the file’s permissions using the `chmod` command — represented here by adjusting the checkboxes.
+If the selected user is the file’s owner, you can also modify the file’s permissions using the `chmod` command — represented here by adjusting the checkboxes. 
+
 <br>
----
+
+---  
+
 
 
 <div class="accordion">

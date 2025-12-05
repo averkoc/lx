@@ -20,13 +20,16 @@ The `ssh-copy-id` program connects to the server, prompts you for your password,
 
 First, select the user you are logged in as, then choose a file by clicking on it. The simulator will show what actions that user is allowed to perform on the selected file.  
 If the selected user is the file’s owner, you can also modify the file’s permissions using the `chmod` command — represented here by adjusting the checkboxes.
+<br>
+---
+
 
 <div class="accordion">
   <input type="checkbox" id="accordion1" class="accordion-toggle">
   <label for="accordion1" class="accordion-header">
     Some often needed commands
   </label>
-  <div class="accordion-content" markdown="1"> 
+  <div class="accordion-content" markdown="1">  
   
 
 

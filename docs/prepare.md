@@ -1,3 +1,8 @@
+---
+title: ""
+layout: default
+---
+
 
 ## Preparing for the Practical Exam
 

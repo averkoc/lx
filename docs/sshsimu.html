@@ -295,8 +295,11 @@ cmdInput.addEventListener('keydown', (e) => {
     
     if (cmd === 'ssh-keygen' || cmd.startsWith('ssh-keygen')) {
       generateKey();
-    } else if (cmd.startsWith('ssh-copy-id')) {
+    } else if (cmd === 'ssh-copy-id your@server' || cmd === 'ssh-copy-id your@server') {
       sshCopyId();
+    } else if (cmd.startsWith('ssh-copy-id')) {
+      appendUser('$ ' + cmd);
+      appendUser('ERROR: Please specify the server: ssh-copy-id your@server');
     } else if (cmd === 'reset') {
       resetSimulator();
     } else {

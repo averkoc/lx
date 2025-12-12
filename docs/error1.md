@@ -10,6 +10,6 @@ Assume that you are the user john and you want to set up key-based authenticatio
  <img width="1540" height="476" alt="image" src="https://github.com/user-attachments/assets/8ef7c456-aa66-43ef-b380-36bb8207b7ec" />
 
 
-
+[Keybased authentication configuration](ssh.mf) 
 
 

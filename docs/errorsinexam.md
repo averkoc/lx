@@ -4,11 +4,14 @@
 The most common error is to generate the keypair in a wrong computer. Lets assume that you are user john and
  and you want to set up keybased authentication for loggin  to server whose dns-name is remoteserver.example.com. Your account in the remoteserver.example.com server is johnsr.
 
- Correct:
- To generate the keypair you issue the command ssh-keygen in your local computer prompt - some of the following: Alpine Linux, Windows cmd, Windows WSL, even Debian VM.  
+ **Correct:**
+ 
+ To generate the keypair you issue the command ssh-keygen in your local computer prompt - some of the following: Alpine Linux, Windows cmd, Windows WSL, even Debian VM.   
+ 
 ```bash
 localprompt:ssh-keygen
 ... messages omitted
+# the ssh-keygen created private-key file and public-key file
 localprompt:
 # after that you copy the public key to the remote server where you have got an account and password  
 localprompt:ssh-copy-id johnsr@remoteserver.example.com

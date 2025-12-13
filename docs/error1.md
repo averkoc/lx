@@ -19,7 +19,7 @@ Assume that you are the user john and you want to set up key-based authenticatio
 
 ### About the prompts 
 
-In Linux, the shell prompt is typically shown as `user@hostname:~$ `. Administrators often set the hostname to the first part of the domain name. For example, on our example the remote prompt might appear as **`johnsr@remoteserver:~$ `**.  NOT e.g `johnsr@remoteserver.example.com:~$ `  
+In Linux, the shell prompt is typically shown as `user@hostname:~$ `. Administrators often set the hostname to the first part of the domain name. For example, on our example the **remote prompt** might appear as **`johnsr@remoteserver:~$ `**.  NOT e.g `johnsr@remoteserver.example.com:~$ `  
 
-The local prompt, depending on the environment and the user account that John is using, could be, for example, one of the following: `C:\Users\john>`, `alpine:~$`, `john@mywsl`, `john@debian`, `student@debian`, `john@MacBook-Pro ~ %`.
+The **local prompt**, depending on the environment and the user account that John is using, could be, for example, one of the following: `C:\Users\john>`, `alpine:~$`, `john@mywsl`, `john@debian`, `student@debian`, `john@MacBook-Pro ~ %`.
 

@@ -18,3 +18,4 @@ Assume that you are the user john and you want to set up key-based authenticatio
 [Keybased authentication configuration](ssh.md) 
 
 
+> In Linux, the shell prompt is typically shown as `user@hostname:~$ `. Administrators often set the hostname to the first part of the domain name. For example, on our example the remote prompt might appear as `johnsr@remoteserver:~$ `.

@@ -1,0 +1,116 @@
+workshop:
+  id: "Packages"
+  title: "What packages are installed into server"
+  version: "1.0"
+  feedback_level: "detailed"  # or "detailed"
+
+defaults:
+  base_user: "{account}"
+  auto_infer_owner: true
+  file_perms: "0644"
+  dir_perms: "0755" 
+
+preparation:
+  commands:
+    - command: "systemctl is-active sshd > /tmp/lxcheck_sshd.txt"
+    - command: "grep \"Commandline:\" /var/log/apt/history.log* > /tmp/packages.txt"
+    - command: "sudo journalctl -p err -n 50 --no-pager > /tmp/lxcheck_errors.log"
+
+
+
+checks:
+  - name: "Do users student and {account} exist"
+    type: user
+    users:
+      - "student"
+      - "{account}"
+
+  - name: "sudo group exist"
+    type: group
+    groups:
+      - "sudo"
+
+  - name: "{account} in sudo group"
+    type: user_groups
+    user: "{account}"                 # User to check (firstname)
+    groups:                           # Groups user should belong to
+      - sudo
+
+  - name: "sudo package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'sudo'
+
+  - name: "apache2 package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'apache2'
+
+  # directs log to files and can send/receive logs to/from other servers 
+  - name: "rsyslog package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'rsyslog'
+
+  - name: "fail2ban package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'fail2ban'
+
+  - name: "ufw package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'ufw'
+
+  # mdns service for service discovery in local network
+  - name: "avahi-daemon package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'avahi-daemon'
+
+
+
+  - name: "python3-pip package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'python3-pip'
+
+  - name: "python3-venv package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'python3-venv'
+
+  # Web access.log analyis tool
+  - name: "goaccess package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'goaccess'
+
+  # mosquitto_pub and mosquitto_sub MQTT clients
+  - name: "mosquitto-client package installed"
+    type: file
+    path: "/tmp/packages.txt"
+    contains:
+      - 'mosquitto-clients'
+
+  - name: "ssh service running"
+    type: file
+    path: "/tmp/lxcheck_sshd.txt"
+    matches:
+      - "^active$"
+
+  - name: "no critical errors in logs"
+    type: file
+    path: "/tmp/lxcheck_errors.log"
+    not_matches:
+      - "kernel panic"
+      - "segmentation fault"

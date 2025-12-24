@@ -1,10 +1,15 @@
-name: Generate Offline TOC
+name: Generate All TOCs
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'docs/**' # Optional: auto-run when docs change
 
 jobs:
   generate-toc:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Important for pushing changes
 
     steps:
     - name: Checkout repository
@@ -16,12 +21,29 @@ jobs:
         python-version: "3.x"
 
     - name: Generate TOC files
-      run: python generate_offline_toc.py
+      run: |
+        # Run the script that creates TOC.md
+        if [ -f generate_online_toc.py ]; then python generate_online_toc.py; fi
+        
+        # Run the script that creates TOC_offline.html and TOC_offline.md
+        python generate_offline_toc.py
 
     - name: Commit TOC files
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add TOC.md TOC_offline.md TOC_offline.html
-        git diff --cached --quiet || git commit -m "Update TOCs [skip ci]"
-        git push
+        
+        # Stage only the files that actually exist to avoid the "pathspec" error
+        for file in TOC.md TOC_offline.md TOC_offline.html; do
+          if [ -f "$file" ]; then
+            git add "$file"
+          fi
+        done
+
+        # Only commit if there are changes
+        if ! git diff --cached --quiet; then
+          git commit -m "Update TOCs [skip ci]"
+          git push
+        else
+          echo "No changes detected in TOC files."
+        fi

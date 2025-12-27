@@ -5,6 +5,7 @@
 - [Pythondev](https://averkoc.github.io/lx/assets/pythondev)
 - [Commands](https://averkoc.github.io/lx/commands)
 - [Cprograms](https://averkoc.github.io/lx/cprograms)
+- [Debian_Installation](https://averkoc.github.io/lx/debian_installation)
 - [Debianinstall](https://averkoc.github.io/lx/debianinstall)
 - [Dem](https://averkoc.github.io/lx/dem)
 - [Error1](https://averkoc.github.io/lx/error1)

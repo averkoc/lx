@@ -6,7 +6,10 @@ Audience:
 - Goal: conceptual understanding + practical command-line competence
 
 Task:
-{DESCRIBE THE TASK CLEARLY}
+Introduction to Linux shell (bash assumed).
+- what actually the is the shell (a program that interacts with user)
+- what are the typical tasks
+- etc
 
 Constraints:
 - Use distribution-agnostic language (Ubuntu, Debian, RHEL family)
@@ -15,7 +18,7 @@ Constraints:
 - Prefer POSIX-compliant commands when possible
 
 Output Requirements:
-- Clear explanations in plain English
+- Clear explanations in plain English in Github markdown (Jekyll included)
 - Realistic command examples
 - Short, copy-paste-ready code blocks
 - Note where behavior or output may vary by distribution

@@ -1,6 +1,8 @@
 # Classification of Suspicious Access Log Paths
 Pick from access.log `awk '$9 ~ /4[0-9]{2}/ {print $0}' access.log | grep '"GET [^"]*"'`  
 `awk '$9 ~ /4[0-9]{2}/ {print $0}' access.log | grep -o '"GET [^"]*"'`  
+`awk '$9 ~ /4[0-9]{2}/ {print $0}' access.log | grep -o '"GET [^"]*"' |sort |uniq`  
+
 
 ## 🔐 Credential & Secret Files
 Attackers searching for exposed credentials, API keys, and authentication tokens.

@@ -1,0 +1,51 @@
+name: Localize GitHub attachment images
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'docs/*.md'
+
+permissions:
+  contents: write
+
+jobs:
+  localize-attachments:
+    if: github.actor != 'github-actions'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Copy attachment images into docs/images and rewrite links
+        run: |
+          set -euo pipefail
+
+          IMG_DIR="docs/images"
+          mkdir -p "$IMG_DIR"
+
+          # Extract GitHub attachment image URLs from docs/*.md
+          grep -hoE '!\[[^]]*\]\((https://(private-)?user-images\.githubusercontent\.com/[^)]+)\)' docs/*.md \
+            | sed -E 's/.*\((https[^)]+)\).*/\1/' \
+            | sort -u > image_urls.txt || true
+
+          # Download images and rewrite references
+          while read -r url; do
+            hash=$(echo -n "$url" | sha256sum | cut -c1-12)
+            base=$(basename "${url%%\?*}")
+            fname="${hash}_${base}"
+
+            curl -fsSL "$url" -o "$IMG_DIR/$fname"
+
+            sed -i "s|$url|$IMG_DIR/$fname|g" docs/*.md
+          done < image_urls.txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add docs/images docs/*.md
+          git commit -m "Localize GitHub attachment images into docs/images" || echo "No changes"
+          git push

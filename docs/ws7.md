@@ -9,9 +9,6 @@ In this workshop, we focus on managing our own user processes. You’ll learn ho
 
 <img width="614" height="360" alt="image" src="docs/images/a24812307964.png" /> 
 
-[image](images/a24812307964.png)
-
-
 
 
 **Job management commands**  

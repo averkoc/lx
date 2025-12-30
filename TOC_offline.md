@@ -22,6 +22,7 @@
 - [Medialinks](https://averkoc.github.io/lx/medialinks)
 - [Mermaidtest](https://averkoc.github.io/lx/mermaidtest)
 - [Motivation3](https://averkoc.github.io/lx/motivation3)
+- [Practical_Exam25](https://averkoc.github.io/lx/practical_exam25)
 - [Prepare](https://averkoc.github.io/lx/prepare)
 - [Process](https://averkoc.github.io/lx/process)
 - [Pythontips](https://averkoc.github.io/lx/pythontips)

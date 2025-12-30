@@ -64,7 +64,7 @@ gcc -o graceful graceful.c
 * interrupt it by `ctrl-c`
 * attach a screen clip
   
-<img width="724" height="239" alt="image" src="docs/images/4759aa772dba.png" />
+<img width="724" height="239" alt="image" src="images/4759aa772dba.png" />
 
 
 
@@ -85,7 +85,7 @@ gcc -o graceful graceful.c
 * `pkill longrun`
 * attach a screen clip
   
-<img width="767" height="144" alt="image" src="docs/images/410406f5a821.png" />
+<img width="767" height="144" alt="image" src="images/410406f5a821.png" />
 
 
 
@@ -115,7 +115,7 @@ An operating system can send various signals to processes (running programs). Ea
 * compare the last line listed when the program was running and the last line in data.txt file
 * take a screen clip that shows the difference - no lost data.
   
-<img width="760" height="570" alt="image" src="docs/images/31b5e67278e1.png" />
+<img width="760" height="570" alt="image" src="images/31b5e67278e1.png" />
 
 
 ----

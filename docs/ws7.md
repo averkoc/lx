@@ -75,7 +75,7 @@ gcc -o graceful graceful.c
 * use `jobs` command to see your background jobs
 * attach a screen clip
   
-<img width="753" height="133" alt="image" src="docs/images/9df88c11e39b.png" />
+<img width="753" height="133" alt="image" src="images/9df88c11e39b.png" />
 
 
 ---  
@@ -103,7 +103,7 @@ An operating system can send various signals to processes (running programs). Ea
 * compare the last line listed when the program was running and the last line in data.txt file
 * take a screen clip that shows the difference - buffered data was lost due.
   
-<img width="548" height="541" alt="image" src="docs/images/adad0f051713.png" />
+<img width="548" height="541" alt="image" src="images/adad0f051713.png" />
 
 
 

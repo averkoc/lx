@@ -18,23 +18,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Copy attachment images into docs/images and rewrite links
+      - name: Scan docs, copy attachments, update links
         run: |
           set -euo pipefail
 
           IMG_DIR="docs/images"
           mkdir -p "$IMG_DIR"
 
-          # Extract GitHub attachment image URLs from docs/*.md
-          grep -hoE '!\[[^]]*\]\((https://(private-)?user-images\.githubusercontent\.com/[^)]+)\)' docs/*.md \
-            | sed -E 's/.*\((https[^)]+)\).*/\1/' \
+          # 1) Scan docs/*.md for attachment image URLs
+          grep -hoE 'src="https://github.com/user-attachments/assets/[^"]+"' docs/*.md \
+            | sed -E 's/src="([^"]+)"/\1/' \
             | sort -u > image_urls.txt || true
 
-          # Download images and rewrite references
+          # 2) Copy images locally and
+          # 3) Update src links in docs/*.md
           while read -r url; do
             hash=$(echo -n "$url" | sha256sum | cut -c1-12)
-            base=$(basename "${url%%\?*}")
-            fname="${hash}_${base}"
+            fname="${hash}.png"
 
             curl -fsSL "$url" -o "$IMG_DIR/$fname"
 

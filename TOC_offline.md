@@ -41,7 +41,6 @@
 - [T1](https://averkoc.github.io/lx/t1)
 - [Thread](https://averkoc.github.io/lx/thread)
 - [Tmpl](https://averkoc.github.io/lx/tmpl)
-- [Ws2Ideas](https://averkoc.github.io/lx/ws2ideas)
 - [Ws3Ex1](https://averkoc.github.io/lx/ws3ex1)
 - [Ws3Ex2](https://averkoc.github.io/lx/ws3ex2)
 - [Ws4B](https://averkoc.github.io/lx/ws4b)

@@ -65,9 +65,7 @@ Copy the following files that we need on hands-on activities.
 {% include wget.html file="/assets/newusers.txt" %}
 ````
 
-
-
-
+<br/>
   
 {% capture commands_content %}
 {% include_relative commands.html %}

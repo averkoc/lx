@@ -5,9 +5,10 @@ layout: default
 
 ## Shell Basics  
 
-![shell](../images/shell.png)
 
-**What is the Shell?** A program that starts when you log in. You can check your assigned shell in `/etc/passwd`.
+
+**What is the Shell?** A program that starts when you log in. You can check your assigned shell in `/etc/passwd`.  
+![shell](../images/shell.png)  
 
 **What is it used for?**   
 - **Administrators:** Manage users (create new users, modify permissions), install software packages, monitor the system, etc.  

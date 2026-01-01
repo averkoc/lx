@@ -12,5 +12,7 @@ If you are a Mac user, you will use UTM virtualization software to build a confi
 Before you start read [this](virtualization.md) to get idea what can be achieved by virtualization.  
 
 ## Reporting  
-You will report the workshop completion by submitting a picture from a situation where you have connected from your host-computer and Alpine Desktop Linux with browser to web-server application in the Debian server VM, see the [picture](../images/ws1browserconnections.png).
+You will report the workshop completion by submitting a picture from a situation where you have connected from your host-computer and Alpine Desktop Linux with browser to web-server application in the Debian server VM, see the [picture](../images/ws1browserconnections.png). If you are a Mac user you don't need to have the Alpine Desktop VM and thus you are allowed to miss the Alpine Desktop browser connection. The picture should contain: 1) browser window from host to Debian VM (Windows/Mac), 2) browser windows from Alpine to Debian server (Wndows users) 3) your host desktop background (Windows/Mac).
+
+> Remember to edit the index.html file in Debian VM's /var/www/html directory, so that the page shows your firstname. 
 

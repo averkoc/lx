@@ -1,3 +1,8 @@
+---
+title: ""
+layout: default
+---
+
 ## Shell  
 
 **Basics**
@@ -33,7 +38,7 @@ john@debian:~$
 
 ## Hands-on activities - see video
 
-Copy the following files that we need on hands-on activities.  
+Copy the following files that we need on hands-on activities.
 
 ```bash
 {% include wget.html file="/assets/courses.txt" %}
@@ -41,5 +46,23 @@ Copy the following files that we need on hands-on activities.
 ```bash
 {% include wget.html file="/assets/newusers.txt" %}
 ````
+## Results reporting 
+The related video shows the screenshots that you need to paste to LMS answerbox.  
+
+
+<br/>
+  
+{% capture commands_content %}
+{% include_relative commands.html %}
+{% endcapture %}
+
+{% include accordion.html
+    id="commands"
+    title="Some common commands - you need only a very small subset during this course"
+    content=commands_content
+%}
+
+
+
 
 

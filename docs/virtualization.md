@@ -15,3 +15,4 @@ Virtualization is widely used in data centers. The isolation between virtual mac
 Virtual machines are also very useful to software developers and IT staff. They can test different configurations without multiplying hardware. A ready-made virtual machine can then be copied to a different place - e.g., from local premises to a cloud platform.
 
 In teaching we use these VM's e.g., to demonstrate virtualization, Linux based operating systems, networking topics, server and client applications and security.
+

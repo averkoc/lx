@@ -14,10 +14,10 @@ Before you start read [this](virtualization.md) to get idea what can be achieved
 
 ### Configuring the server VM 
 The recording contains instructions for the activities you need to do in the server after setting up the configuration. They include etc. 
-* verifying that your server can acces Internet and it can be reached by the host-computer (PC/Mac)
-* ensuring that the system is up-to-date
-* adding a personal account using your firstname as the account-name.
-* giving admin rights to your personal account
+* verify that your server can acces Internet and it can be reached by the host-computer (PC/Mac)
+* ensure that the system is up-to-date
+* add a personal account using your firstname as the account-name.
+* give admin rights to your personal account
 * modify the web-server index.html page to contain your account name.
 * install workshop test program that you will use to test your
   

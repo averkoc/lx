@@ -30,9 +30,9 @@ The screenshot must show a scenario in which you have connected:
 - From your **host computer** to the **Debian server VM** using a web browser, and  
 - From the **Alpine Desktop Linux VM** to the **Debian server VM** using a web browser.
 
-Refer to the example image: [ws1browserconnections.png](../images/ws1browserconnections.png).
+Refer to the example image: [ws1browserconnections](../images/ws1browserconnections.png).
 
-## Exceptions
+#### Exceptions
 - If you are a **Mac user**, you are not required to use the Alpine Desktop VM. In this case, the Alpine Desktop browser connection may be omitted.
 
 ## Screenshot Requirements

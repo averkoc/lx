@@ -3,7 +3,7 @@ title: ""
 layout: default
 ---
 
-## Building the environment for Linux workshops   
+## Build the environment for Linux workshops   
 ### Overview
 
 If you are a Windows user, you will use VirtualBox virtualization software to build a configuration consisting of three computers: a Windows PC, a Debian Linux server virtual machine, and an Alpine Linux desktop virtual machine. I have prepared ready-to-use virtual machines that you only need to download and import to set up the configuration.

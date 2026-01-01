@@ -24,7 +24,23 @@ The recording contains instructions for the activities you need to do in the ser
 
 
 ### Reporting  
-You will report the workshop completion by submitting a picture from a situation where you have connected from your host-computer and Alpine Desktop Linux with browser to web-server application in the Debian server VM, see the [picture](../images/ws1browserconnections.png). If you are a Mac user you don't need to have the Alpine Desktop VM and thus you are allowed to miss the Alpine Desktop browser connection. The picture should contain: 1) browser window from host to Debian VM (Windows/Mac), 2) browser windows from Alpine to Debian server (Wndows users) 3) your host desktop background (Windows/Mac).
+You will report the completion of the workshop by submitting a screenshot that demonstrates connectivity between the required systems.
+
+The screenshot must show a scenario in which you have connected:
+- From your **host computer** to the **Debian server VM** using a web browser, and  
+- From the **Alpine Desktop Linux VM** to the **Debian server VM** using a web browser.
+
+Refer to the example image: [ws1browserconnections.png](../images/ws1browserconnections.png).
+
+## Exceptions
+- If you are a **Mac user**, you are not required to use the Alpine Desktop VM. In this case, the Alpine Desktop browser connection may be omitted.
+
+## Screenshot Requirements
+The screenshot must include:
+1. A browser window on the **host machine (Windows or Mac)** connected to the **Debian VM**.
+2. A browser window on the **Alpine Desktop VM** connected to the **Debian server** (**Windows users only**).
+3. The **host machine’s desktop background** (Windows or Mac) visible in the screenshot.
+
 
 > Remember to edit the index.html file in Debian VM's /var/www/html directory, so that the page shows your firstname. 
 

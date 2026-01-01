@@ -5,4 +5,5 @@ layout: default
 
 ## Building the environment for Linux workshops  
 
-![virtualization](virtualization.md)  
+Read [this](virtualization.md) about virtualization.  
+

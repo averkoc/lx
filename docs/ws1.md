@@ -3,7 +3,14 @@ title: ""
 layout: default
 ---
 
-## Building the environment for Linux workshops  
+## Building the environment for Linux workshops   
 
-Read [this](virtualization.md) about virtualization.  
+If you are a Windows user, you will use VirtualBox virtualization software to build a configuration consisting of three computers: a Windows PC, a Debian Linux server virtual machine, and an Alpine Linux desktop virtual machine. I have prepared ready-to-use virtual machines that you only need to download and import to set up the configuration.
+
+If you are a Mac user, you will use UTM virtualization software to build a configuration consisting of two computers: your Mac and a Debian Linux server virtual machine. You will need to perform the Debian installation yourself with the help of my recorded instructions.
+
+Before you start read [this](virtualization.md) to get idea what can be achieved by virtualization.  
+
+## Reporting  
+You will report the workshop completion by submitting a picture from a situation where you have connected from your host-computer and Alpine Desktop Linux with browser to web-server application in the Debian server VM, see the [picture](../images/ws1browserconnections.png).
 

@@ -16,7 +16,8 @@ Virtual machines are also very useful to software developers and IT staff. They 
 
 In teaching we use these VM's e.g., to demonstrate virtualization, Linux based operating systems, networking topics, server and client applications and security.
 
-### Example configuration - How it looks in practice
+### Example configuration - How it looks in practice  
+In the picture below, you can see that I have three independent computers on my Windows PC, each with its own IP address.    
 
 ![Example](../images/ws1ips.png)
 

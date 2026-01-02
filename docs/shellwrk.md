@@ -36,7 +36,9 @@ john@debian:~$
 
 
 
-## Hands-on activities - see video
+## Hands-on activities - see video  
+
+These [screenshots](../images/shell1steps.png) show some of the activities we do during the session - we discuss about each of them.  
 
 Copy the following files that we need on hands-on activities.
 

@@ -122,11 +122,12 @@ But it’s there when needed.
 auto lo
 iface lo inet loopback
 
-auto enp0s3
+allow-hotplug enp0s3
 iface enp0s3 inet dhcp
 
-auto enp0s8
+allow-hotplug enp0s8
 iface enp0s8 inet dhcp
+
 ```
 
 Works for NAT, Bridged, and Host‑Only without modification.

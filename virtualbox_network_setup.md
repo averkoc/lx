@@ -1,3 +1,7 @@
+---
+layout: default
+topic: ""
+---
 
 # **VirtualBox Networking Best Practices for Classroom VMs**  
 ### *A reliable, universal configuration for NAT, Bridged, and Host‑Only networking*

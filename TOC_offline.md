@@ -4,6 +4,7 @@
 - [_Siteinstructions](https://averkoc.github.io/lx/_siteinstructions)
 - [Accesslog_Suspicious](https://averkoc.github.io/lx/accesslog_suspicious)
 - [Pythondev](https://averkoc.github.io/lx/assets/pythondev)
+- [Bestpracticevm](https://averkoc.github.io/lx/bestpracticevm)
 - [Commands](https://averkoc.github.io/lx/commands)
 - [Cprograms](https://averkoc.github.io/lx/cprograms)
 - [Debian_Installation](https://averkoc.github.io/lx/debian_installation)

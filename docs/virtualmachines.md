@@ -6,7 +6,7 @@ title: ""
 ## Debian 
 
 ### Networkig  
-preoare OVA-file with
+prepare OVA-file with
 * two NAT adapters (students will change after importing the latter to **Bridged**/(Hostonly is errorprone but last resort in some VPN,802.1X environments)
 * /etc/network/interfaces -file contens:
   

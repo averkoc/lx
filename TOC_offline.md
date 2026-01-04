@@ -44,7 +44,6 @@
 - [Tmpl](https://averkoc.github.io/lx/tmpl)
 - [Virtualization](https://averkoc.github.io/lx/virtualization)
 - [Virtualmachines](https://averkoc.github.io/lx/virtualmachines)
-- [Vmnetwork](https://averkoc.github.io/lx/vmnetwork)
 - [Ws1](https://averkoc.github.io/lx/ws1)
 - [Ws2Ideas](https://averkoc.github.io/lx/ws2ideas)
 - [Ws3Ex1](https://averkoc.github.io/lx/ws3ex1)

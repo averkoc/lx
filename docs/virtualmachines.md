@@ -19,6 +19,8 @@ iface enp0s3 inet dhcp
 
 allow-hotplug enp0s8
 iface enp0s8 inet dhcp
+
+# The first adapter automatically gets better metrics e.g. when both have Internet access
 ````
 ## Alpine  
 * Update OVA-file: 1) import current OVA 2) upgrade according to [this](https://wiki.alpinelinux.org/wiki/Upgrading_Alpine_Linux_to_a_new_release_branch) 3) export to OVA

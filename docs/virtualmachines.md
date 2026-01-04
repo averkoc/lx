@@ -33,7 +33,7 @@ iface enp0s8 inet dhcp
 * Update OVA-file: 1) import current OVA 2) upgrade according to [this](https://wiki.alpinelinux.org/wiki/Upgrading_Alpine_Linux_to_a_new_release_branch) 3) export to OVA
 * The OVA contains gedit and .profile should contain setxkbmap fi  (because the XFCE's keyboard layout may not change layout even FI layout is added)
 * Centria background is [here](../images/centria_alpine.png) for xfce desktop. Put to `/usr/share/backgrounds/xfce`. 
-* Here are the [instructions](https://github.com/averkoc/lx/edit/main/docs/virtualmachines.md), if someone wants to add guest additions.
+* Here are the [instructions](https://wiki.alpinelinux.org/wiki/VirtualBox_guest_additions), if someone wants to add guest additions.
 
 ### Installing from installation media 
 Download the image targeted to [VMs ](https://www.alpinelinux.org/downloads/). Define VM and boot. Login as root and run setup-alpine after that run setup-desktop and select xfce-desktop.  

@@ -24,9 +24,9 @@ iface enp0s8 inet dhcp
 ````
 
 ### Packages
-sudo  
-rsyslog  
-(avahi-daemon)
+* sudo  
+* rsyslog  
+* (avahi-daemon)
 
 ## Alpine  
 * Update OVA-file: 1) import current OVA 2) upgrade according to [this](https://wiki.alpinelinux.org/wiki/Upgrading_Alpine_Linux_to_a_new_release_branch) 3) export to OVA

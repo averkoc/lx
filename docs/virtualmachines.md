@@ -23,9 +23,9 @@ iface enp0s8 inet dhcp
 # The first adapter automatically gets better metrics e.g. when both have Internet access
 ````
 
-### packages
-sudo
-rsyslog
+### Packages
+sudo  
+rsyslog  
 (avahi-daemon)
 
 ## Alpine  

@@ -40,6 +40,8 @@ Shutdown, change boot-order and boot. Install setxkbmap, gedit and nano. Edit .p
 
 ## Misc
 The VM-icons in VirtualBox can be changed - they are embedded in the .vbox file (the machine row ... icon="base64 coded 128x128 or 256x256 png-file with lines" 
+In my home directory is a Powershell script `.\makevmicon.ps1 cnt.png` that makes 128x128 and 256x256 png files from the input file and also base64 versions of them. The 128x128 base64 can be used as virtual machine icon in VirtuaBox UI.
+
 
 
 

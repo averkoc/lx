@@ -26,7 +26,6 @@
 - [Prepare](https://averkoc.github.io/lx/prepare)
 - [Process](https://averkoc.github.io/lx/process)
 - [Pythontips](https://averkoc.github.io/lx/pythontips)
-- [Search](https://averkoc.github.io/lx/search)
 - [Server_Keyboard](https://averkoc.github.io/lx/server_keyboard)
 - [Sftp](https://averkoc.github.io/lx/sftp)
 - [Shareddirectory](https://averkoc.github.io/lx/shareddirectory)

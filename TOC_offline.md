@@ -8,7 +8,6 @@
 - [Cprograms](https://averkoc.github.io/lx/cprograms)
 - [Debian_Installation](https://averkoc.github.io/lx/debian_installation)
 - [Debianinstall](https://averkoc.github.io/lx/debianinstall)
-- [Dem](https://averkoc.github.io/lx/dem)
 - [Error1](https://averkoc.github.io/lx/error1)
 - [Exam25](https://averkoc.github.io/lx/exam25)
 - [Faq](https://averkoc.github.io/lx/faq)

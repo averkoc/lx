@@ -23,9 +23,6 @@ jobs:
     - name: Generate TOC files
       run: |
         # Run the script that creates TOC.md
-        if [ -f generate_online_toc.py ]; then python generate_online_toc.py; fi
-        
-        # Run the script that creates TOC_offline.html and TOC_offline.md
         python generate_offline_toc.py
 
     - name: Commit TOC files
@@ -42,7 +39,7 @@ jobs:
 
         # Only commit if there are changes
         if ! git diff --cached --quiet; then
-          git commit -m "Update TOCs [skip ci]"
+          git commit -m "Update TOC"
           git push
         else
           echo "No changes detected in TOC files."

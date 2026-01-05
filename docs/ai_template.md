@@ -22,7 +22,7 @@ TASK:
 [Clearly state the specific topic or problem to be addressed.
 Example: "Introduce the Linux shell (bash): what it is, what problems it solves, and common beginner tasks."]
 
-Use clear, plain English explanations.
+Use clear, plain English explanations and github markdown syntac with code blocks when applicable.
 When teaching, structure responses with:
 - purpose / why it matters
 - core concepts

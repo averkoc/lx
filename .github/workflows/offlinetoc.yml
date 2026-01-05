@@ -1,4 +1,4 @@
-name: Generate All TOCs
+name: Generate offline TOC
 on:
   workflow_dispatch:
   push:

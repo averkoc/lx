@@ -3,6 +3,7 @@
 - [404Original](https://averkoc.github.io/lx/404original)
 - [_Siteinstructions](https://averkoc.github.io/lx/_siteinstructions)
 - [Accesslog_Suspicious](https://averkoc.github.io/lx/accesslog_suspicious)
+- [Ai_Template](https://averkoc.github.io/lx/ai_template)
 - [Pythondev](https://averkoc.github.io/lx/assets/pythondev)
 - [Commands](https://averkoc.github.io/lx/commands)
 - [Cprograms](https://averkoc.github.io/lx/cprograms)

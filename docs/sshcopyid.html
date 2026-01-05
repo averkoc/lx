@@ -40,7 +40,7 @@
 <body>
 
 <div class="card">
-    <h2>SSH Key Setup (Windows PowerShell)</h2>
+    <h2> ssh-copy-id builder for Windows PowerShell</h2>
     <p class="hint">Fill in your details to generate the deployment commands.</p>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
         <div>
@@ -52,7 +52,7 @@
             <input type="text" id="hostname" placeholder="e.g. server.school.edu" oninput="updateAll()">
         </div>
     </div>
-    <label for="keyfile">Public Key File</label>
+    <label for="keyfile">Give your Public Key filename</label>
     <select id="keyfile" onchange="toggleCustomInput()">
         <option value="id_ed25519.pub">id_ed25519.pub (Modern Default)</option>
         <option value="id_rsa.pub">id_rsa.pub (Classic Default)</option>

@@ -3,7 +3,8 @@ title: ""
 layout: default
 ---
 
-## Pass criteria 
+## Admin (draft)
+### Pass criteria 
 * Workshops: submitted in acceptable form within deadlines
 * Practical exam: must be passed
 * Netacad comprehensive final exam: >=65  %

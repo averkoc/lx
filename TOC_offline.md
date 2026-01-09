@@ -4,7 +4,7 @@
 - [_Siteinstructions](https://averkoc.github.io/lx/_siteinstructions)
 - [Accesslog_Suspicious](https://averkoc.github.io/lx/accesslog_suspicious)
 - [Ai_Template](https://averkoc.github.io/lx/ai_template)
-- [Admin_Draft](https://averkoc.github.io/lx/assets/admin_draft)
+- [Admin](https://averkoc.github.io/lx/assets/admin)
 - [Pythondev](https://averkoc.github.io/lx/assets/pythondev)
 - [Commands](https://averkoc.github.io/lx/commands)
 - [Cprograms](https://averkoc.github.io/lx/cprograms)

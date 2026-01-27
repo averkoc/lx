@@ -18,6 +18,9 @@ Name column formula: =Last&", "&First
 * Exam column formula: =AND(Key=Account;Files=Account)
 * Peppi column formula: =AND(WST>30;EXAM;FCE>52)
 * Marked: Merkitään se arvo, mikä on laitettu Peppiin. Tällä tavoin näkee esim. onnistuneen uusintakokeen jälkeen, että Peppi sarakkeessa on True mutta Marked sarakkeessa ennen merkintää 0 tai tyhjä.
+* Filter saraketta voi käyttää wordissa poimimaan ne rivit, jotka halutaan lähettää. Käytä Wordissä Edit Recipients toimintoa, jolla voit määrittää minkä muikaiset arvot poimitaan.
+* 
+
 
   
 

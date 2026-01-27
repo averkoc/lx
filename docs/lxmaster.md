@@ -17,9 +17,8 @@ Name column formula: =Last&", "&First
 * Email is used to retrieve FCE (Final Comprehensive value) from netacad-sheet that contains netacad gradebook
 * Exam column formula: =AND(Key=Account;Files=Account)
 * Peppi column formula: =AND(WST>30;EXAM;FCE>52)
-* Marked: Merkitään se arvo, mikä on laitettu Peppiin. Tällä tavoin näkee esim. onnistuneen uusintakokeen jälkeen, että Peppi sarakkeessa on True mutta Marked sarakkeessa ennen merkintää 0 tai tyhjä.
-* Filter saraketta voi käyttää wordissa poimimaan ne rivit, jotka halutaan lähettää. Käytä Wordissä Edit Recipients toimintoa, jolla voit määrittää minkä muikaiset arvot poimitaan.
-
+* Marked: the value that has been put in Peppi. This way, for example, after a successful resit, you can see that the Peppi column is True but the Marked column before the marking is 0 or empty.
+* The Filter column can be used in Word to select the rows that you want to send. Use the Edit Recipients function in Word to specify which values ​​are selected.
 
 
 

@@ -10,7 +10,7 @@ layout: default
 | 1      | Virta     | Juho       | Juho,  Virta         | juho.virta@centria.fi          | NTISXX        | 55  |30   | juhovi  | juhovi  | juhovi  | TRUE  | TRUE  | S      |
 
 
-1) Prepare the table by downloading course's students from Peppi 2) delete extra column and add column name 3) the other columns can be added later  
+1) Prepare the table by downloading course's students from Peppi 2) delete extra columns and add column name 3) the other columns, presented above, can be added later.    
 
 
 Name column formula: =Last&", "&First  

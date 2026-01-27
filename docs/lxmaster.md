@@ -10,6 +10,9 @@ layout: default
 | 1      | Virta     | Juho       | Juho,  Virta         | juho.virta@centria.fi          | NTISXX        | 55  |30   | juhovi  | juhovi  | juhovi  | TRUE  | TRUE  | S      |
 
 
+1) Prepare the table by downloading course's students from Peppi 2) delete extra column and add column name 3) the other columns can be added later  
+
+
 Name column formula: =Last&", "&First  
 * Name column is used to retrieve WST-value from ItsLearning Gradebook that is exported and copied as one sheet (named to Its) in the Excel-file. The WST value is the sum of workshop-points calculated column in Its-sheet
 * Email is used to retrieve Account from Accounts-sheet  

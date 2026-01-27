@@ -20,7 +20,7 @@
 - [Loadtest](https://averkoc.github.io/lx/loadtest)
 - [Loadtestdemo](https://averkoc.github.io/lx/loadtestdemo)
 - [Logging](https://averkoc.github.io/lx/logging)
-- [Lxmaster_Model](https://averkoc.github.io/lx/lxmaster_model)
+- [Lxmaster](https://averkoc.github.io/lx/lxmaster)
 - [Medialinks](https://averkoc.github.io/lx/medialinks)
 - [Mermaidtest](https://averkoc.github.io/lx/mermaidtest)
 - [Motivation3](https://averkoc.github.io/lx/motivation3)

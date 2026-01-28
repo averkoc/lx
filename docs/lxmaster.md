@@ -23,6 +23,8 @@ Name column formula: =Last&", "&First
 * Marked: the value that has been put in Peppi. This way, for example, after a successful resit, you can see that the Peppi column is True but the Marked column before the marking is 0 or empty.
 * The Filter column can be used in Word to select the rows that you want to send. Use the Edit Recipients function in Word to specify which values ​​are selected.  
 
+----
+The following screenshots show how word mailing feature can be used to send emails to users that are based on the excel data. It also contains some mailing function related features that may be interesting in some other situations. Note: in mailing you can toggle the visibility of field codes with alt-f9. Sometimes you may want to insert calculation - a formula can be inserted by ctrl-9.  
 
 ![mailing results](../images/mailing_results.png)
 

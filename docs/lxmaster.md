@@ -24,7 +24,7 @@ Name column formula: =Last&", "&First
 * The Filter column can be used in Word to select the rows that you want to send. Use the Edit Recipients function in Word to specify which values ​​are selected.  
 
 
-![mailing results](../images/mailing_results.md)
+![mailing results](../images/mailing_results.png)
 
   
 

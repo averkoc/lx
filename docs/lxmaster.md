@@ -15,7 +15,8 @@ layout: default
 
 Name column formula: =Last&", "&First  
 * Name column is used to retrieve WST-value from ItsLearning Gradebook that is exported and copied as one sheet (named to Its) in the Excel-file. The WST value is the sum of workshop-points calculated column in Its-sheet
-* Email is used to retrieve Account from Accounts-sheet  
+* Email is used to retrieve Account from Accounts-sheet
+* Account value is got by retrieving it using email as key from the accounts-sheet - the data in accounts sheet is generated in lxcentria.  
 * Account is used to retrieve Key and Files value from sheet that contain practical exam key and files task values
 * Email is used to retrieve FCE (Final Comprehensive value) from netacad-sheet that contains netacad gradebook
 * Exam column formula: =AND(Key=Account;Files=Account)

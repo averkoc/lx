@@ -14,6 +14,7 @@
 - [Exam25](https://averkoc.github.io/lx/exam25)
 - [Faq](https://averkoc.github.io/lx/faq)
 - [Hash](https://averkoc.github.io/lx/hash)
+- [Import](https://averkoc.github.io/lx/import)
 - [Index](https://averkoc.github.io/lx/index)
 - [Interfaces](https://averkoc.github.io/lx/interfaces)
 - [Journalctl](https://averkoc.github.io/lx/journalctl)

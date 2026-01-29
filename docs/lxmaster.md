@@ -3,6 +3,7 @@ title: ""
 layout: default
 ---
 
+## LXMASTER_GRP.xlsx excel file structure  
 
 | Filter | Last      | First      | Name                 | Email                          | group         | FCE | WST | Account | Key     | Files   | Exam  | Peppi | Marked |
 |--------|-----------|------------|----------------------|--------------------------------|---------------|-----|-----|---------|---------|---------|-------|-------|--------|
@@ -20,7 +21,7 @@ Name column formula: =Last&", "&First
 * Email is used to retrieve FCE (Final Comprehensive value) from netacad-sheet that contains netacad gradebook
 * Exam column formula: =AND(Key=Account;Files=Account)
 * Peppi column formula: =AND(WST>30;EXAM;FCE>52)
-* Marked: the value that has been put in Peppi. This way, for example, after a successful resit, you can see that the Peppi column is True but the Marked column before the marking is 0 or empty.
+* Marked: the value that has been put in Peppi. You can download Peppi-grades and copying the sheet and using XLOOKUP-function. Coloring passed values and passed grade it easy to see if there is some grade missing.  
 * The Filter column can be used in Word to select the rows that you want to send. Use the Edit Recipients function in Word to specify which values ​​are selected.  
 
 ----

@@ -32,7 +32,8 @@ The FCE (Final Comprehensive Exam) column gets its values from netacad sheet tha
 
 
 
-----
+---- 
+### Mailing  
 The following screenshots show how word mailing feature can be used to send emails to users that are based on the excel data. It also contains some mailing function related features that may be interesting in some other situations. 
 
 ![mailing results](../images/mailing_results.png)  

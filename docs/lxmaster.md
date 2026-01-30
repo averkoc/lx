@@ -27,7 +27,7 @@ Name column formula: =Last&", "&First
 --- 
 ### Processing netacad gradebook  
 
-The FCE (Final Comprehensive Exam) column gets its values from netacad sheet that is got by downloading netacad gradebook and processing it by process_gradebook.py program before adding to the master-file. [process_gradebook.py](../assets/process_gradebook.py)  
+The FCE (Final Comprehensive Exam) column gets its values from netacad sheet that is got by downloading netacad gradebook and processing it by [process_gradebook.py](../assets/process_gradebook.py) program before adding to the master-file.   
 
 
 

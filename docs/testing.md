@@ -34,7 +34,76 @@ sudo lxcheck ws5.enc
 sudo lxcheck ws6.enc
 
 ````
+--- 
 
+### Example usage
+
+John tests his workshop5  
+
+```bash
+john@dbn:~$ sudo lxcheck ws5.enc
+Using logged-in user account: john
+Running preparation commands...
+
+Running checks for workshop: Logging
+Student account: john
+============================================================
+✓ PASS | john is member of sudo group (user_groups)
+       Check passed
+✓ PASS | User edited 000-default.conf (file)
+       Check passed
+✓ PASS | Document Root warning found in error log (file)
+       Check passed
+✓ PASS | Page not found error logged in access log (file)
+       Check passed
+============================================================
+Results: 4/4 checks passed
+✓ Results submitted successfully
+john@dbn:~$
+```
+John tests his workshop6  
+```bash
+john@dbn:~$ sudo lxcheck ws6.enc
+Using logged-in user account: john
+
+Running checks for workshop: WS6 Special bits
+Student account: john
+============================================================
+✓ PASS | workshop user accounts exist (user)
+       Check passed
+✓ PASS | team1,team2,team3 groups exist (group)
+       Check passed
+✓ PASS | john1 in team1 (user_groups)
+       Check passed
+✓ PASS | john2 in team1 (user_groups)
+       Check passed
+✓ PASS | john3 in team2 (user_groups)
+       Check passed
+✓ PASS | john4 in team2 and team3 (user_groups)
+       Check passed
+✓ PASS | john5 in team2 and team3 (user_groups)
+       Check passed
+✓ PASS | john6 in team2 and team3 (user_groups)
+       Check passed
+✓ PASS | team1 directory (directory)
+       Check passed
+✓ PASS | team2 directory with SGID (directory)
+       Check passed
+✓ PASS | team3 directory with SGID and STICKY bit (directory)
+       Check passed
+✓ PASS | john1 files in team1files directory (file)
+       Check passed
+✓ PASS | john4 files in team2files directory (file)
+       Check passed
+✓ PASS | john4 files in team3files directory (file)
+       Check passed
+============================================================
+Results: 14/14 checks passed
+✓ Results submitted successfully
+john@dbn:~$
+```
+
+ 
 
 
 

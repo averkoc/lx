@@ -15,7 +15,7 @@ All the steps below and after assume that you are logged in to your debian with 
 
 * Dowload the `lxcheck` test program to your debian home directory
 ```bash
-wget https://averkoc.github.io/assets/lxcheck
+wget https://averkoc.github.io/lx/assets/lxcheck
 ```
 * Move the downloaded test program to /usr/local/bin and make it executable
 ```bash

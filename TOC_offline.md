@@ -43,7 +43,7 @@
 - [Ssh_Scenarios](https://averkoc.github.io/lx/ssh_scenarios)
 - [Ssh_Scenarios2](https://averkoc.github.io/lx/ssh_scenarios2)
 - [T1](https://averkoc.github.io/lx/t1)
-- [Testprogram](https://averkoc.github.io/lx/testprogram)
+- [Testing](https://averkoc.github.io/lx/testing)
 - [Thread](https://averkoc.github.io/lx/thread)
 - [Tmpl](https://averkoc.github.io/lx/tmpl)
 - [Virtualization](https://averkoc.github.io/lx/virtualization)

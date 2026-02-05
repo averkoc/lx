@@ -461,23 +461,23 @@
                     <h3>Workshop Metadata</h3>
                     <div class="form-group">
                         <label>Workshop ID</label>
-                        <input type="text" id="wsId" placeholder="ws3" value="ws3">
+                        <input type="text" id="wsId" placeholder="ws3" value="ws3" oninput="generateYAML()">
                     </div>
                     <div class="form-group">
                         <label>Title</label>
-                        <input type="text" id="wsTitle" placeholder="Shared directories for project groups">
+                        <input type="text" id="wsTitle" placeholder="Shared directories for project groups" oninput="generateYAML()">
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea id="wsDesc" placeholder="Verify group collaboration setup with proper permissions"></textarea>
+                        <textarea id="wsDesc" placeholder="Verify group collaboration setup with proper permissions" oninput="generateYAML()"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Author</label>
-                        <input type="text" id="wsAuthor" placeholder="Instructor Name">
+                        <input type="text" id="wsAuthor" placeholder="Instructor Name" oninput="generateYAML()">
                     </div>
                     <div class="form-group">
                         <label>Feedback Level</label>
-                        <select id="wsFeedback">
+                        <select id="wsFeedback" onchange="generateYAML()">
                             <option value="brief">Brief (hide expected values)</option>
                             <option value="detailed">Detailed (show expected values)</option>
                         </select>
@@ -488,7 +488,7 @@
                     <h3>Preparation Commands (Optional)</h3>
                     <div class="form-group">
                         <label>Commands to run before checks (one per line)</label>
-                        <textarea id="prepCommands" placeholder="sudo systemctl status apache2 > /tmp/status.txt&#10;rm -f /tmp/test.log" rows="3"></textarea>
+                        <textarea id="prepCommands" placeholder="sudo systemctl status apache2 > /tmp/status.txt&#10;rm -f /tmp/test.log" rows="3" oninput="generateYAML()"></textarea>
                         <div class="small-text">These commands run with sudo before checks execute</div>
                     </div>
                 </div>
@@ -1124,7 +1124,7 @@
                     formHTML += `<input type="number" id="editMinSize" value="${check.min_size || ''}"></div>`;
                     formHTML += '<div class="form-group"><label>Min Lines</label>';
                     formHTML += `<input type="number" id="editMinLines" value="${check.min_lines || ''}"></div>`;
-                    formHTML += '<div class="form-group"><label><input type="checkbox" id="editMustNotExist" ${check.must_not_exist ? 'checked' : ''}> Must NOT exist</label></div>';
+                    formHTML += `<div class="form-group"><label><input type="checkbox" id="editMustNotExist" ${check.must_not_exist ? 'checked' : ''}> Must NOT exist</label></div>`;
                     break;
             }
 

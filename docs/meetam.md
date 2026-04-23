@@ -4,7 +4,7 @@ title: "Sheet music to expressive midi for SWAM instruments"
 --- 
 ## Agenda 
 1. participants presentations - Emanuele Parravicini (AM), Sakari Männistö (SM)  
-2. Audiomodelling's needs   
+2. Audio Modelling's needs   
 3. SM: potential areas where I may help either in definition, implementation or organizing - some of these can be selected.   
 3.1 converter finalizing, parameter tune up process with human resources and technical framework  
 3.2 other: e.g. plugin for Musescore   
@@ -21,6 +21,7 @@ title: "Sheet music to expressive midi for SWAM instruments"
 5  
 
 
-
+resources: 
+[Audio Modelling](https://audiomodeling.com/)  
 [Current prototype](https://github.com/averkoc/music)
   

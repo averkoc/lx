@@ -23,6 +23,7 @@
 - [Logging](https://averkoc.github.io/lx/logging)
 - [Lxmaster](https://averkoc.github.io/lx/lxmaster)
 - [Medialinks](https://averkoc.github.io/lx/medialinks)
+- [Meetam](https://averkoc.github.io/lx/meetam)
 - [Mermaidtest](https://averkoc.github.io/lx/mermaidtest)
 - [Motivation3](https://averkoc.github.io/lx/motivation3)
 - [Practical_Exam25](https://averkoc.github.io/lx/practical_exam25)

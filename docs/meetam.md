@@ -2,7 +2,7 @@
 layout: default
 title: "Sheet music to expressive midi for SWAM instruments"
 --- 
-## Sheet Music to expressive MIDI for SWAM instruments - meeting agenda 
+## Meeting agenda 
 1. participants presentations - Emanuele Parravicini (AM), Sakari Männistö (SM)  
 2. Audio Modelling's needs   
 3. SM: potential areas where I may help either in definition, implementation or organizing - some of these can be selected.   

@@ -1,10 +1,7 @@
 ---
 layout: default
-title: ""
+title: "Sheet music to expressive midi for SWAM instruments"
 --- 
-
-### Participants: with Emanuele Parravicini, Sakari Männistö (SM)
-
 ## Agenda 
 * participant presentations - Emanuele Parravicini, Sakari Männistö (SM)  
 * Audimodelling's (AM) needs

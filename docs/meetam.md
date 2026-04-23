@@ -14,5 +14,5 @@ title: "Sheet music to expressive midi for SWAM instruments"
  ---
 
 #### Meeting notes  
-
+[Current prototype](https://github.com/averkoc/music)
   

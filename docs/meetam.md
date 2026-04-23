@@ -21,7 +21,8 @@ title: "Sheet music to expressive midi for SWAM instruments"
 5  
 
 
-resources: 
+resources:   
+
 [Audio Modelling](https://audiomodeling.com/)  
 [Current prototype](https://github.com/averkoc/music)
   

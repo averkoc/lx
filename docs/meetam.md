@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Musicxml -> enriched midi for SWAM instruments"
+title: ""
 --- 
 
 ### Participants: with Emanuele Parravicini, Sakari Männistö (SM)

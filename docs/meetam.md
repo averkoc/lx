@@ -11,3 +11,8 @@ title: "Sheet music to expressive midi for SWAM instruments"
 * Form of co-operation
 * Closing
   
+ ---
+
+#### Meeting notes  
+
+  

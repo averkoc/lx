@@ -5,6 +5,9 @@ This guide is optimized for your specific scoring practice where:
 1. Both **Viulu** (Violin) and **Sello** (Cello) use Treble Clef.
 2. The **Sello** staff sounds **one octave lower** than written.
 
+<img width="615" height="283" alt="image" src="https://github.com/user-attachments/assets/116e54d7-a0b5-4310-8157-a09b2d9d60f7" />
+
+
 ### The Interval Reference Table
 
 | Visual Interval (on your score) | Sounding Interval | Semitones (mod 12) | Harmonic Character | Drama & Usage |

@@ -47,6 +47,7 @@
 - [Testing](https://averkoc.github.io/lx/testing)
 - [Thread](https://averkoc.github.io/lx/thread)
 - [Tmpl](https://averkoc.github.io/lx/tmpl)
+- [Violin](https://averkoc.github.io/lx/violin)
 - [Virtualization](https://averkoc.github.io/lx/virtualization)
 - [Virtualmachines](https://averkoc.github.io/lx/virtualmachines)
 - [Ws1](https://averkoc.github.io/lx/ws1)

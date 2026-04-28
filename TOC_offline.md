@@ -7,6 +7,7 @@
 - [Admin](https://averkoc.github.io/lx/assets/admin)
 - [Pythondev](https://averkoc.github.io/lx/assets/pythondev)
 - [Commands](https://averkoc.github.io/lx/commands)
+- [Compose1](https://averkoc.github.io/lx/compose1)
 - [Cprograms](https://averkoc.github.io/lx/cprograms)
 - [Debian_Installation](https://averkoc.github.io/lx/debian_installation)
 - [Debianinstall](https://averkoc.github.io/lx/debianinstall)

@@ -1,7 +1,8 @@
----
-layout:default
-title:""
----
+---  
+layout: default  
+title: ""  
+---  
+
 
 # 🎼 Quick Composition Guide (Concert Pitch, C Major)
 

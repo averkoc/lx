@@ -6,6 +6,7 @@
 - [Ai_Template](https://averkoc.github.io/lx/ai_template)
 - [Admin](https://averkoc.github.io/lx/assets/admin)
 - [Pythondev](https://averkoc.github.io/lx/assets/pythondev)
+- [Call Response Techniques](https://averkoc.github.io/lx/call-response-techniques)
 - [Commands](https://averkoc.github.io/lx/commands)
 - [Compose1](https://averkoc.github.io/lx/compose1)
 - [Cprograms](https://averkoc.github.io/lx/cprograms)
